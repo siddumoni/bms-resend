@@ -1,76 +1,29 @@
 {
   "shows": {
-    "INPR|63813|20260730|ELITE": {
+    "INPR|63967|20260802|ELITE": {
       "venue": "INOX: LUXE Phoenix Market City, Velachery",
       "time": "07:10 PM",
-      "date": "20260730",
+      "date": "20260802",
       "cat": "ELITE",
       "price": "210.98",
-      "status": "1"
+      "status": "3"
     },
-    "INPR|63813|20260730|BUDGET": {
+    "INPR|63967|20260802|BUDGET": {
       "venue": "INOX: LUXE Phoenix Market City, Velachery",
       "time": "07:10 PM",
-      "date": "20260730",
+      "date": "20260802",
       "cat": "BUDGET",
       "price": "61.74",
       "status": "3"
-    },
-    "INPR|63814|20260730|ELITE": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "10:30 PM",
-      "date": "20260730",
-      "cat": "ELITE",
-      "price": "210.98",
-      "status": "1"
-    },
-    "INPR|63814|20260730|BUDGET": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "10:30 PM",
-      "date": "20260730",
-      "cat": "BUDGET",
-      "price": "61.74",
-      "status": "3"
-    },
-    "INPR|63859|20260731|ELITE": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "07:10 PM",
-      "date": "20260731",
-      "cat": "ELITE",
-      "price": "210.98",
-      "status": "0"
-    },
-    "INPR|63859|20260731|BUDGET": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "07:10 PM",
-      "date": "20260731",
-      "cat": "BUDGET",
-      "price": "61.74",
-      "status": "2"
-    },
-    "INPR|63860|20260731|ELITE": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "10:30 PM",
-      "date": "20260731",
-      "cat": "ELITE",
-      "price": "210.98",
-      "status": "0"
-    },
-    "INPR|63860|20260731|BUDGET": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "10:30 PM",
-      "date": "20260731",
-      "cat": "BUDGET",
-      "price": "61.74",
-      "status": "1"
     }
   },
   "dates": {
+    "20260729": "AVAILABLE",
     "20260730": "AVAILABLE",
-    "20260731": "BOOKABLE",
+    "20260731": "AVAILABLE",
     "20260801": "AVAILABLE",
     "20260802": "AVAILABLE",
-    "20260803": "AVAILABLE",
+    "20260803": "BOOKABLE",
     "20260804": "AVAILABLE",
     "20260805": "AVAILABLE",
     "20260806": "AVAILABLE"
