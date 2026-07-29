@@ -1,5 +1,150 @@
 {
-  "shows": {},
+  "shows": {
+    "PVHR|39899|20260731|PRIME": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "04:00 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "2"
+    },
+    "PVHR|39899|20260731|CLASSIC": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "04:00 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "3"
+    },
+    "PVHR|39905|20260731|PRIME": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "07:40 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "1"
+    },
+    "PVHR|39905|20260731|CLASSIC": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "07:40 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "3"
+    },
+    "PVHR|39901|20260731|PRIME": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "10:50 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "1"
+    },
+    "PVHR|39901|20260731|CLASSIC": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "10:50 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "3"
+    },
+    "PVHC|30560|20260731|PRIME": {
+      "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+      "time": "07:45 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "0"
+    },
+    "PVHC|30560|20260731|CLASSIC": {
+      "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+      "time": "07:45 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "1"
+    },
+    "PCAN|42422|20260731|PRIME": {
+      "venue": "PVR: VR Chennai, Anna Nagar",
+      "time": "04:20 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "0"
+    },
+    "PCAN|42422|20260731|CLASSIC": {
+      "venue": "PVR: VR Chennai, Anna Nagar",
+      "time": "04:20 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "1"
+    },
+    "PVPZ|36013|20260731|ELITE": {
+      "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+      "time": "06:30 PM",
+      "date": "20260731",
+      "cat": "ELITE",
+      "price": "210.98",
+      "status": "1"
+    },
+    "PVPZ|36013|20260731|BUDGET": {
+      "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+      "time": "06:30 PM",
+      "date": "20260731",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "2"
+    },
+    "PSKL|22123|20260731|PRIME": {
+      "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+      "time": "10:25 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "2"
+    },
+    "PSKL|22123|20260731|CLASSIC": {
+      "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+      "time": "10:25 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "66.74",
+      "status": "0"
+    },
+    "PGRA|21444|20260731|PRIME": {
+      "venue": "PVR: Grand Galada, Pallavaram",
+      "time": "08:05 PM",
+      "date": "20260731",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "1"
+    },
+    "PGRA|21444|20260731|CLASSIC": {
+      "venue": "PVR: Grand Galada, Pallavaram",
+      "time": "08:05 PM",
+      "date": "20260731",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "0"
+    },
+    "PVSR|26354|20260731|ELITE": {
+      "venue": "PVR: Sathyam, Royapettah",
+      "time": "08:10 PM",
+      "date": "20260731",
+      "cat": "ELITE",
+      "price": "210.98",
+      "status": "0"
+    },
+    "PVSR|26354|20260731|BUDGET": {
+      "venue": "PVR: Sathyam, Royapettah",
+      "time": "08:10 PM",
+      "date": "20260731",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "3"
+    }
+  },
   "dates": {
     "20260730": "AVAILABLE",
     "20260731": "BOOKABLE",
