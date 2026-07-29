@@ -69,7 +69,7 @@ REGION_MAP = {
     "kolkata":    ("KOLK",   "kolkata",    "22.573", "88.364", "tun"),
     "pune":       ("PUNE",   "pune",       "18.520", "73.856", "te2"),
     "kochi":      ("KOCH",   "kochi",      "9.932",  "76.267", "t9z"),
-    "coimbatore": ("COIM",   "coimbatore"  "11.016845", "76.955832", "t9y"),
+    "coimbatore": ("COIM",   "coimbatore",  "11.016845", "76.955832", "t9y"),
 }
 
 
