@@ -1,5 +1,118 @@
 {
-  "shows": {},
+  "shows": {
+    "PVES|32081|20260730|ELITE": {
+      "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+      "time": "07:00 PM",
+      "date": "20260730",
+      "cat": "ELITE",
+      "price": "210.98",
+      "status": "2"
+    },
+    "PVES|32081|20260730|BUDGET": {
+      "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+      "time": "07:00 PM",
+      "date": "20260730",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "0"
+    },
+    "PVES|32082|20260730|ELITE": {
+      "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+      "time": "10:45 PM",
+      "date": "20260730",
+      "cat": "ELITE",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PVES|32082|20260730|BUDGET": {
+      "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+      "time": "10:45 PM",
+      "date": "20260730",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "0"
+    },
+    "PCAN|42270|20260730|PRIME": {
+      "venue": "PVR: VR Chennai, Anna Nagar",
+      "time": "07:15 PM",
+      "date": "20260730",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PCAN|42270|20260730|CLASSIC": {
+      "venue": "PVR: VR Chennai, Anna Nagar",
+      "time": "07:15 PM",
+      "date": "20260730",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "3"
+    },
+    "PVHC|30517|20260730|PRIME": {
+      "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+      "time": "10:45 PM",
+      "date": "20260730",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PVHC|30517|20260730|CLASSIC": {
+      "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+      "time": "10:45 PM",
+      "date": "20260730",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "2"
+    },
+    "PVSR|26266|20260730|ELITE": {
+      "venue": "PVR: Sathyam, Royapettah",
+      "time": "11:10 PM",
+      "date": "20260730",
+      "cat": "ELITE",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PVSR|26266|20260730|BUDGET": {
+      "venue": "PVR: Sathyam, Royapettah",
+      "time": "11:10 PM",
+      "date": "20260730",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "3"
+    },
+    "PVHR|39892|20260730|PRIME": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "10:10 PM",
+      "date": "20260730",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PVHR|39892|20260730|CLASSIC": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "10:10 PM",
+      "date": "20260730",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "3"
+    },
+    "PGMV|20979|20260730|PRIME": {
+      "venue": "PVR: Grand Mall, Velachery",
+      "time": "07:35 PM",
+      "date": "20260730",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PGMV|20979|20260730|CLASSIC": {
+      "venue": "PVR: Grand Mall, Velachery",
+      "time": "07:35 PM",
+      "date": "20260730",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "0"
+    }
+  },
   "dates": {
     "20260729": "AVAILABLE",
     "20260730": "BOOKABLE",
