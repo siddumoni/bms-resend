@@ -1,38 +1,5 @@
 {
-  "shows": {
-    "GKCP|3590|20260730|LOUNGE 1": {
-      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
-      "time": "07:01 PM",
-      "date": "20260730",
-      "cat": "LOUNGE 1",
-      "price": "190.00",
-      "status": "2"
-    },
-    "GKCP|3590|20260730|SIGNATURE CLASS": {
-      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
-      "time": "07:01 PM",
-      "date": "20260730",
-      "cat": "SIGNATURE CLASS",
-      "price": "190.00",
-      "status": "3"
-    },
-    "GKCP|3591|20260730|LOUNGE 1": {
-      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
-      "time": "10:55 PM",
-      "date": "20260730",
-      "cat": "LOUNGE 1",
-      "price": "190.00",
-      "status": "3"
-    },
-    "GKCP|3591|20260730|SIGNATURE CLASS": {
-      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
-      "time": "10:55 PM",
-      "date": "20260730",
-      "cat": "SIGNATURE CLASS",
-      "price": "190.00",
-      "status": "3"
-    }
-  },
+  "shows": {},
   "dates": {
     "20260729": "AVAILABLE",
     "20260730": "BOOKABLE",
