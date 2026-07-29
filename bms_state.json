@@ -1,36 +1,52 @@
 {
   "shows": {
-    "BWCB|50596|20260730|ELITE": {
-      "venue": "Broadway Cinemas: Coimbatore",
-      "time": "07:15 PM",
+    "INTO|88262|20260730|CLUB": {
+      "venue": "INOX: The Marina Mall, OMR",
+      "time": "07:20 PM",
       "date": "20260730",
-      "cat": "ELITE",
-      "price": "508.34",
-      "status": "1"
-    },
-    "BWCB|50596|20260730|LOUNGER": {
-      "venue": "Broadway Cinemas: Coimbatore",
-      "time": "07:15 PM",
-      "date": "20260730",
-      "cat": "LOUNGER",
-      "price": "508.34",
+      "cat": "CLUB",
+      "price": "210.98",
       "status": "3"
     },
-    "BWCB|50597|20260730|ELITE": {
-      "venue": "Broadway Cinemas: Coimbatore",
-      "time": "11:00 PM",
+    "INTO|88262|20260730|EXECUTIVE": {
+      "venue": "INOX: The Marina Mall, OMR",
+      "time": "07:20 PM",
+      "date": "20260730",
+      "cat": "EXECUTIVE",
+      "price": "61.74",
+      "status": "0"
+    },
+    "INCH|79391|20260730|Club": {
+      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
+      "time": "07:05 PM",
+      "date": "20260730",
+      "cat": "Club",
+      "price": "210.98",
+      "status": "3"
+    },
+    "INCH|79391|20260730|Executive": {
+      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
+      "time": "07:05 PM",
+      "date": "20260730",
+      "cat": "Executive",
+      "price": "66.74",
+      "status": "3"
+    },
+    "INPR|63800|20260730|ELITE": {
+      "venue": "INOX: LUXE Phoenix Market City, Velachery",
+      "time": "04:10 PM",
       "date": "20260730",
       "cat": "ELITE",
-      "price": "508.34",
-      "status": "1"
-    },
-    "BWCB|50597|20260730|LOUNGER": {
-      "venue": "Broadway Cinemas: Coimbatore",
-      "time": "11:00 PM",
-      "date": "20260730",
-      "cat": "LOUNGER",
-      "price": "508.34",
+      "price": "210.98",
       "status": "3"
+    },
+    "INPR|63800|20260730|BUDGET": {
+      "venue": "INOX: LUXE Phoenix Market City, Velachery",
+      "time": "04:10 PM",
+      "date": "20260730",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "2"
     }
   },
   "dates": {
@@ -41,6 +57,7 @@
     "20260802": "AVAILABLE",
     "20260803": "AVAILABLE",
     "20260804": "AVAILABLE",
-    "20260805": "AVAILABLE"
+    "20260805": "AVAILABLE",
+    "20260806": "AVAILABLE"
   }
 }
