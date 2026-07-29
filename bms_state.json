@@ -1,99 +1,35 @@
 {
   "shows": {
-    "INTO|88239|20260729|CLUB": {
-      "venue": "INOX: The Marina Mall, OMR",
-      "time": "06:20 PM",
-      "date": "20260729",
-      "cat": "CLUB",
-      "price": "183.80",
+    "GKCP|3590|20260730|LOUNGE 1": {
+      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+      "time": "07:01 PM",
+      "date": "20260730",
+      "cat": "LOUNGE 1",
+      "price": "190.00",
       "status": "2"
     },
-    "INTO|88239|20260729|EXECUTIVE": {
-      "venue": "INOX: The Marina Mall, OMR",
-      "time": "06:20 PM",
-      "date": "20260729",
-      "cat": "EXECUTIVE",
-      "price": "54.35",
-      "status": "0"
-    },
-    "INTO|88254|20260730|CLUB": {
-      "venue": "INOX: The Marina Mall, OMR",
-      "time": "04:00 PM",
+    "GKCP|3590|20260730|SIGNATURE CLASS": {
+      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+      "time": "07:01 PM",
       "date": "20260730",
-      "cat": "CLUB",
-      "price": "183.80",
+      "cat": "SIGNATURE CLASS",
+      "price": "190.00",
       "status": "3"
     },
-    "INTO|88254|20260730|EXECUTIVE": {
-      "venue": "INOX: The Marina Mall, OMR",
-      "time": "04:00 PM",
+    "GKCP|3591|20260730|LOUNGE 1": {
+      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+      "time": "10:55 PM",
       "date": "20260730",
-      "cat": "EXECUTIVE",
-      "price": "54.35",
-      "status": "2"
-    },
-    "FMCN|103689|20260730|SILVER": {
-      "venue": "INOX National: Arcot Road",
-      "time": "06:40 PM",
-      "date": "20260730",
-      "cat": "SILVER",
-      "price": "183.80",
+      "cat": "LOUNGE 1",
+      "price": "190.00",
       "status": "3"
     },
-    "FMCN|103689|20260730|PREMIERE": {
-      "venue": "INOX National: Arcot Road",
-      "time": "06:40 PM",
+    "GKCP|3591|20260730|SIGNATURE CLASS": {
+      "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+      "time": "10:55 PM",
       "date": "20260730",
-      "cat": "PREMIERE",
-      "price": "54.35",
-      "status": "1"
-    },
-    "INPR|63796|20260730|ELITE": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "04:20 PM",
-      "date": "20260730",
-      "cat": "ELITE",
-      "price": "183.80",
-      "status": "3"
-    },
-    "INPR|63796|20260730|BUDGET": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "04:20 PM",
-      "date": "20260730",
-      "cat": "BUDGET",
-      "price": "54.35",
-      "status": "3"
-    },
-    "INPR|63792|20260730|ELITE": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "04:35 PM",
-      "date": "20260730",
-      "cat": "ELITE",
-      "price": "183.80",
-      "status": "3"
-    },
-    "INPR|63792|20260730|BUDGET": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "04:35 PM",
-      "date": "20260730",
-      "cat": "BUDGET",
-      "price": "54.35",
-      "status": "3"
-    },
-    "INCH|79386|20260730|Club": {
-      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
-      "time": "06:00 PM",
-      "date": "20260730",
-      "cat": "Club",
-      "price": "183.80",
-      "status": "3"
-    },
-    "INCH|79386|20260730|Executive": {
-      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
-      "time": "06:00 PM",
-      "date": "20260730",
-      "cat": "Executive",
-      "price": "54.35",
+      "cat": "SIGNATURE CLASS",
+      "price": "190.00",
       "status": "3"
     }
   },
