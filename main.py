@@ -389,6 +389,103 @@ def detect_changes(old_state, new_state):
 def _cat_status_label(status):
     return AVAIL_STATUS_MAP.get(status, ("UNKNOWN", ""))[0]
 
+def _format_date(date_code):
+    """20260730 -> 30 Jul 2026"""
+    try:
+        return datetime.strptime(date_code, "%Y%m%d").strftime("%d %b %Y")
+    except Exception:
+        return date_code or "-"
+
+
+def _time_sort_key(show):
+    try:
+        return int(show.time_code)
+    except Exception:
+        return 9999
+
+
+def _group_shows(shows):
+    """
+    Returns:
+    {
+        theatre:{
+            date:[
+                ShowInfo...
+            ]
+        }
+    }
+    """
+    grouped = {}
+
+    for s in sorted(
+        shows,
+        key=lambda x: (
+            x.venue_name.lower(),
+            x.date_code,
+            _time_sort_key(x),
+        ),
+    ):
+        grouped.setdefault(s.venue_name, {})
+        grouped[s.venue_name].setdefault(s.date_code, [])
+        grouped[s.venue_name][s.date_code].append(s)
+
+    return grouped
+
+
+def _status_cells(show):
+    """
+    Returns html/text for each status column.
+    """
+    cols = {
+        "3": [],   # Available
+        "1": [],   # Almost Full
+        "2": [],   # Filling Fast
+        "0": []    # Sold Out
+    }
+
+    for c in show.categories:
+        cols.setdefault(c.status, []).append(
+            f"{escape(c.name)} ₹{escape(c.price)}"
+        )
+
+    def build(items):
+        if not items:
+            return "—"
+        return "<br>".join(items)
+
+    return (
+        build(cols["3"]),
+        build(cols["1"]),
+        build(cols["2"]),
+        build(cols["0"]),
+    )
+
+
+def _status_text(show):
+    """
+    Plain text version.
+    """
+    cols = {
+        "3": [],
+        "1": [],
+        "2": [],
+        "0": [],
+    }
+
+    for c in show.categories:
+        cols.setdefault(c.status, []).append(
+            f"{c.name} ₹{c.price}"
+        )
+
+    def build(items):
+        return ", ".join(items) if items else "-"
+
+    return (
+        build(cols["3"]),
+        build(cols["1"]),
+        build(cols["2"]),
+        build(cols["0"]),
+    )
 
 def send_email(subject, changes, shows, movie_info):
     api_key = RESEND_API_KEY.strip()
@@ -399,106 +496,287 @@ def send_email(subject, changes, shows, movie_info):
         print("  ⚠️  Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
         return
 
-    now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
     movie_name = movie_info.get("name", "Movie")
+    now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
 
-    # Build changes HTML
-    changes_html = ""
+    grouped = _group_shows(shows)
+
+    total_theatres = len(grouped)
+    total_showtimes = sum(
+        len(show_list)
+        for dates in grouped.values()
+        for show_list in dates.values()
+    )
+
+    available_count = 0
+    almost_count = 0
+    filling_count = 0
+    sold_count = 0
+
+    for s in shows:
+        for c in s.categories:
+            if c.status == "3":
+                available_count += 1
+            elif c.status == "1":
+                almost_count += 1
+            elif c.status == "2":
+                filling_count += 1
+            elif c.status == "0":
+                sold_count += 1
+
     if changes:
-        rows = "".join(
-            f'<li style="padding:3px 0;font-size:14px;">{escape(c)}</li>'
+        change_items = "".join(
+            f"<li style='margin-bottom:6px'>{escape(c)}</li>"
             for c in changes
         )
+
         changes_html = f"""
-        <h3 style="margin:0 0 8px 0;font-size:15px;font-weight:bold;color:#333;">
-            Changes Detected
-        </h3>
-        <ul style="margin:0 0 20px 0;padding-left:20px;line-height:1.6;color:#333;">
-            {rows}
-        </ul>"""
+        <div style="margin-bottom:25px;">
+            <h2 style="margin:0 0 10px 0;color:#d97706;">
+                🚨 Changes Detected
+            </h2>
 
-    # Build shows section grouped by venue
-    venue_groups = {}
-    for s in shows:
-        venue_groups.setdefault(s.venue_name, []).append(s)
+            <ul style="padding-left:20px;margin:0;">
+                {change_items}
+            </ul>
+        </div>
+        """
+    else:
+        changes_html = ""
 
-    shows_html = ""
-    for vname, vshows in venue_groups.items():
-        show_rows = ""
-        for s in vshows:
-            cats = " | ".join(
-                f"{escape(c.name)} Rs.{escape(c.price)} ({_cat_status_label(c.status)})"
-                for c in s.categories
-            )
-            fmt = f" [{escape(s.screen_attr)}]" if s.screen_attr else ""
-            show_rows += (
-                f'<tr>'
-                f'<td style="padding:5px 8px;border-bottom:1px solid #ddd;'
-                f'font-size:13px;vertical-align:top;">'
-                f'{escape(s.time)}{fmt}</td>'
-                f'<td style="padding:5px 8px;border-bottom:1px solid #ddd;'
-                f'font-size:13px;vertical-align:top;">'
-                f'{cats}</td>'
-                f'</tr>'
-            )
+    theatre_html = ""
 
-        shows_html += f"""
-        <p style="margin:14px 0 4px 0;font-size:14px;font-weight:bold;color:#333;">
-            {escape(vname)}
-        </p>
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+    for theatre_name, dates in grouped.items():
+
+        theatre_html += f"""
+        <div style="
+            margin-top:28px;
+            border:1px solid #ddd;
+            border-radius:8px;
+            overflow:hidden;
+        ">
+
+        <div style="
+            background:#1f2937;
+            color:white;
+            padding:12px 16px;
+            font-size:18px;
+            font-weight:bold;
+        ">
+            📍 {escape(theatre_name)}
+        </div>
+
+        <div style="padding:16px;">
+        """
+
+        for date_code in sorted(dates.keys()):
+
+            theatre_html += f"""
+            <h3 style="
+                margin-top:0;
+                margin-bottom:10px;
+                color:#2563eb;
+            ">
+                📅 {_format_date(date_code)}
+            </h3>
+
+            <table style="
+                width:100%;
+                border-collapse:collapse;
+                margin-bottom:22px;
+                font-size:13px;
+            ">
+
             <tr style="background:#f5f5f5;">
-                <th style="padding:5px 8px;text-align:left;border-bottom:1px solid #ddd;
-                           font-weight:bold;">Time</th>
-                <th style="padding:5px 8px;text-align:left;border-bottom:1px solid #ddd;
-                           font-weight:bold;">Categories</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">Time</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">🟢 Available</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">🟡 Almost Full</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">🟠 Filling Fast</th>
+                <th style="padding:8px;border:1px solid #ddd;text-align:left;">🔴 Sold Out</th>
             </tr>
-            {show_rows}
-        </table>"""
+            """
 
-    html = f"""<!doctype html>
+            for show in sorted(dates[date_code], key=_time_sort_key):
+
+                available, almost, filling, sold = _status_cells(show)
+
+                screen = (
+                    f"<br><span style='color:#666;font-size:12px'>[{escape(show.screen_attr)}]</span>"
+                    if show.screen_attr
+                    else ""
+                )
+
+                theatre_html += f"""
+                <tr>
+
+                    <td style="
+                        padding:8px;
+                        border:1px solid #ddd;
+                        vertical-align:top;
+                        white-space:nowrap;
+                    ">
+                        <b>{escape(show.time)}</b>
+                        {screen}
+                    </td>
+
+                    <td style="padding:8px;border:1px solid #ddd;">
+                        {available}
+                    </td>
+
+                    <td style="padding:8px;border:1px solid #ddd;">
+                        {almost}
+                    </td>
+
+                    <td style="padding:8px;border:1px solid #ddd;">
+                        {filling}
+                    </td>
+
+                    <td style="padding:8px;border:1px solid #ddd;">
+                        {sold}
+                    </td>
+
+                </tr>
+                """
+
+            theatre_html += "</table>"
+
+        theatre_html += """
+        </div>
+        </div>
+        """
+            html = f"""
+<!doctype html>
 <html>
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;
-             font-size:14px;color:#333;background:#fff;">
-    <h2 style="margin:0 0 4px 0;font-size:18px;color:#111;">
-        BMS Alert: {escape(movie_name)}
-    </h2>
-    <p style="margin:0 0 20px 0;font-size:13px;color:#666;">
-        {escape(now_str)}
-    </p>
-    <hr style="border:none;border-top:1px solid #ddd;margin:0 0 20px 0;">
-    {changes_html}
-    <h3 style="margin:0 0 8px 0;font-size:15px;font-weight:bold;color:#333;">
-        Current Showtimes
-    </h3>
-    {shows_html}
-    <p style="margin:24px 0 0 0;font-size:12px;color:#999;">
-        This is an automated alert from BMS Ticket Notifier.
-    </p>
-</body>
-</html>"""
+<head>
+<meta charset="utf-8">
+</head>
 
-    # Build plain-text version with full show details
-    plain_lines = [subject, "", f"Checked at: {now_str}", ""]
+<body style="
+    margin:0;
+    padding:24px;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f5f5;
+">
+
+<div style="
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:24px;
+    border-radius:10px;
+">
+
+<h1 style="margin-top:0;">
+🎬 {escape(movie_name)}
+</h1>
+
+<p style="color:#666;margin-top:-8px;">
+Checked: {now_str}
+</p>
+
+<div style="
+    background:#f8fafc;
+    border:1px solid #ddd;
+    padding:16px;
+    border-radius:8px;
+    margin:20px 0;
+">
+
+<h2 style="margin-top:0;">
+📊 Summary
+</h2>
+
+<table style="border-collapse:collapse;">
+
+<tr><td style="padding:4px 20px 4px 0;">🎭 Theatres</td><td><b>{total_theatres}</b></td></tr>
+<tr><td style="padding:4px 20px 4px 0;">🎬 Showtimes</td><td><b>{total_showtimes}</b></td></tr>
+<tr><td style="padding:4px 20px 4px 0;">🟢 Available</td><td><b>{available_count}</b></td></tr>
+<tr><td style="padding:4px 20px 4px 0;">🟡 Almost Full</td><td><b>{almost_count}</b></td></tr>
+<tr><td style="padding:4px 20px 4px 0;">🟠 Filling Fast</td><td><b>{filling_count}</b></td></tr>
+<tr><td style="padding:4px 20px 4px 0;">🔴 Sold Out</td><td><b>{sold_count}</b></td></tr>
+
+</table>
+
+</div>
+
+{changes_html}
+
+{theatre_html}
+
+<hr style="margin-top:30px;">
+
+<p style="font-size:12px;color:#888;">
+Generated automatically by your BookMyShow Ticket Notifier.
+</p>
+
+</div>
+
+</body>
+</html>
+"""
+
+    # ---------- Plain Text ----------
+
+    plain = []
+
+    plain.append(subject)
+    plain.append("")
+    plain.append(f"Checked: {now_str}")
+    plain.append("")
+
     if changes:
-        plain_lines.append("Changes Detected:")
-        plain_lines.extend(f"  - {c}" for c in changes)
-        plain_lines.append("")
-    plain_lines.append("Current Showtimes:")
-    for vname, vshows in venue_groups.items():
-        plain_lines.append(f"\n{vname}")
-        for s in vshows:
-            cats = " | ".join(
-                f"{c.name} Rs.{c.price} ({_cat_status_label(c.status)})"
-                for c in s.categories
-            )
-            fmt = f" [{s.screen_attr}]" if s.screen_attr else ""
-            plain_lines.append(f"  {s.time}{fmt} - {cats}")
-    plain_lines.extend(["", "This is an automated alert from BMS Ticket Notifier."])
-    plain = "\n".join(plain_lines)
+        plain.append("Changes Detected")
+        plain.append("----------------")
+
+        for c in changes:
+            plain.append(c)
+
+        plain.append("")
+
+    plain.append("Summary")
+    plain.append("-------")
+    plain.append(f"Theatres      : {total_theatres}")
+    plain.append(f"Showtimes     : {total_showtimes}")
+    plain.append(f"Available     : {available_count}")
+    plain.append(f"Almost Full   : {almost_count}")
+    plain.append(f"Filling Fast  : {filling_count}")
+    plain.append(f"Sold Out      : {sold_count}")
+    plain.append("")
+
+    for theatre_name, dates in grouped.items():
+
+        plain.append("=" * 70)
+        plain.append(theatre_name)
+        plain.append("=" * 70)
+
+        for date_code in sorted(dates.keys()):
+
+            plain.append(_format_date(date_code))
+
+            for show in sorted(dates[date_code], key=_time_sort_key):
+
+                a, af, ff, so = _status_text(show)
+
+                plain.append(f"  {show.time}")
+
+                if a != "-":
+                    plain.append(f"      Available    : {a}")
+
+                if af != "-":
+                    plain.append(f"      Almost Full  : {af}")
+
+                if ff != "-":
+                    plain.append(f"      Filling Fast : {ff}")
+
+                if so != "-":
+                    plain.append(f"      Sold Out     : {so}")
+
+            plain.append("")
+
+    plain = "\n".join(plain)
 
     try:
+
         resp = requests.post(
             "https://api.resend.com/emails",
             headers={
@@ -506,17 +784,21 @@ def send_email(subject, changes, shows, movie_info):
                 "Content-Type": "application/json",
             },
             json={
-                "from": frm, "to": [to],
+                "from": frm,
+                "to": [to],
                 "subject": subject,
-                "text": plain, "html": html,
+                "html": html,
+                "text": plain,
             },
             timeout=15,
         )
+
         if resp.status_code in (200, 201):
             print(f"  ✅ Email sent to {to}")
         else:
             print(f"  ❌ Resend {resp.status_code}: {resp.text}")
             sys.exit(1)
+
     except requests.RequestException as e:
         print(f"  ❌ Email failed: {e}")
         sys.exit(1)
