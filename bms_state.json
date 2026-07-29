@@ -144,22 +144,6 @@
       "price": "66.74",
       "status": "3"
     },
-    "PVHR|40008|20260802|PRIME": {
-      "venue": "PVR: Heritage RSL ECR, Chennai",
-      "time": "10:30 PM",
-      "date": "20260802",
-      "cat": "PRIME",
-      "price": "210.98",
-      "status": "3"
-    },
-    "PVHR|40008|20260802|CLASSIC": {
-      "venue": "PVR: Heritage RSL ECR, Chennai",
-      "time": "10:30 PM",
-      "date": "20260802",
-      "cat": "CLASSIC",
-      "price": "61.74",
-      "status": "3"
-    },
     "PGMV|21045|20260802|PRIME": {
       "venue": "PVR: Grand Mall, Velachery",
       "time": "07:35 PM",
@@ -191,15 +175,30 @@
       "cat": "CLASSIC",
       "price": "61.74",
       "status": "1"
+    },
+    "PVHR|40008|20260802|PRIME": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "10:30 PM",
+      "date": "20260802",
+      "cat": "PRIME",
+      "price": "210.98",
+      "status": "3"
+    },
+    "PVHR|40008|20260802|CLASSIC": {
+      "venue": "PVR: Heritage RSL ECR, Chennai",
+      "time": "10:30 PM",
+      "date": "20260802",
+      "cat": "CLASSIC",
+      "price": "61.74",
+      "status": "3"
     }
   },
   "dates": {
-    "20260729": "AVAILABLE",
     "20260730": "AVAILABLE",
     "20260731": "AVAILABLE",
     "20260801": "AVAILABLE",
-    "20260802": "AVAILABLE",
-    "20260803": "BOOKABLE",
+    "20260802": "BOOKABLE",
+    "20260803": "AVAILABLE",
     "20260804": "AVAILABLE",
     "20260805": "AVAILABLE",
     "20260806": "AVAILABLE"
