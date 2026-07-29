@@ -644,7 +644,7 @@ def send_email(subject, changes, shows, movie_info):
         </div>
         </div>
         """
-            html = f"""
+    html = f"""
 <!doctype html>
 <html>
 <head>
