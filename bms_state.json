@@ -1,58 +1,8 @@
 {
-  "shows": {
-    "INTO|88262|20260730|CLUB": {
-      "venue": "INOX: The Marina Mall, OMR",
-      "time": "07:20 PM",
-      "date": "20260730",
-      "cat": "CLUB",
-      "price": "210.98",
-      "status": "3"
-    },
-    "INTO|88262|20260730|EXECUTIVE": {
-      "venue": "INOX: The Marina Mall, OMR",
-      "time": "07:20 PM",
-      "date": "20260730",
-      "cat": "EXECUTIVE",
-      "price": "61.74",
-      "status": "0"
-    },
-    "INCH|79391|20260730|Club": {
-      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
-      "time": "07:05 PM",
-      "date": "20260730",
-      "cat": "Club",
-      "price": "210.98",
-      "status": "3"
-    },
-    "INCH|79391|20260730|Executive": {
-      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
-      "time": "07:05 PM",
-      "date": "20260730",
-      "cat": "Executive",
-      "price": "66.74",
-      "status": "3"
-    },
-    "INPR|63800|20260730|ELITE": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "04:10 PM",
-      "date": "20260730",
-      "cat": "ELITE",
-      "price": "210.98",
-      "status": "3"
-    },
-    "INPR|63800|20260730|BUDGET": {
-      "venue": "INOX: LUXE Phoenix Market City, Velachery",
-      "time": "04:10 PM",
-      "date": "20260730",
-      "cat": "BUDGET",
-      "price": "61.74",
-      "status": "2"
-    }
-  },
+  "shows": {},
   "dates": {
-    "20260729": "AVAILABLE",
-    "20260730": "BOOKABLE",
-    "20260731": "AVAILABLE",
+    "20260730": "AVAILABLE",
+    "20260731": "BOOKABLE",
     "20260801": "AVAILABLE",
     "20260802": "AVAILABLE",
     "20260803": "AVAILABLE",
