@@ -383,11 +383,56 @@ def detect_changes(old_state, new_state):
     return changes
 
 
-# ──────────────────────────────────────────────────────────────────────
-# EMAIL NOTIFICATION (Resend)
-# ──────────────────────────────────────────────────────────────────────
+# Lines to replace: 2116-2304
+
 def _cat_status_label(status):
     return AVAIL_STATUS_MAP.get(status, ("UNKNOWN", ""))[0]
+
+
+def _parse_show_time_value(time_str):
+    if not time_str:
+        return (24, 0)
+
+    cleaned = time_str.strip().lower().replace(".", "")
+    suffix = ""
+    if cleaned.endswith("am") or cleaned.endswith("pm"):
+        suffix = cleaned[-2:]
+        cleaned = cleaned[:-2].strip()
+
+    digits = "".join(ch for ch in cleaned if ch.isdigit() or ch == ":")
+    parts = digits.split(":") if ":" in digits else [digits]
+
+    try:
+        hour = int(parts[0]) if parts and parts[0] else 0
+        minute = int(parts[1]) if len(parts) > 1 and parts[1] else 0
+    except ValueError:
+        return (24, 0)
+
+    if suffix == "am":
+        hour = 0 if hour == 12 else hour
+    elif suffix == "pm":
+        hour = 12 if hour == 12 else hour + 12
+
+    return (hour, minute)
+
+
+def _sort_shows_for_email(shows):
+    return sorted(
+        shows,
+        key=lambda s: (
+            s.date_code or "99999999",
+            _parse_show_time_value(s.time),
+            (s.venue_name or "").lower(),
+            (s.screen_attr or "").lower(),
+        ),
+    )
+
+
+def _group_shows_by_date(shows):
+    grouped = {}
+    for s in _sort_shows_for_email(shows):
+        grouped.setdefault(s.date_code or "", []).append(s)
+    return grouped
 
 
 def send_email(subject, changes, shows, movie_info):
@@ -396,11 +441,12 @@ def send_email(subject, changes, shows, movie_info):
     frm = RESEND_FROM_EMAIL.strip() or "onboarding@resend.dev"
 
     if not api_key or not to:
-        print("  ⚠️  Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
+        print(" ⚠️ Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
         return
 
     now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
     movie_name = movie_info.get("name", "Movie")
+    grouped_shows = _group_shows_by_date(shows)
 
     # Build changes HTML
     changes_html = ""
@@ -410,72 +456,83 @@ def send_email(subject, changes, shows, movie_info):
             for c in changes
         )
         changes_html = f"""
-        <h3 style="margin:0 0 8px 0;font-size:15px;font-weight:bold;color:#333;">
+        <div style="margin:0 0 20px 0;padding:16px;border:1px solid #ffe1b5;border-radius:14px;background:#fffaf2;">
+          <div style="margin:0 0 10px 0;font-size:15px;font-weight:700;color:#8a5a00;">
             Changes Detected
-        </h3>
-        <ul style="margin:0 0 20px 0;padding-left:20px;line-height:1.6;color:#333;">
+          </div>
+          <ul style="margin:0;padding-left:20px;line-height:1.6;color:#333;">
             {rows}
-        </ul>"""
+          </ul>
+        </div>"""
 
-    # Build shows section grouped by venue
-    venue_groups = {}
-    for s in shows:
-        venue_groups.setdefault(s.venue_name, []).append(s)
-
+    # Build show cards grouped by date, sorted chronologically
     shows_html = ""
-    for vname, vshows in venue_groups.items():
-        show_rows = ""
-        for s in vshows:
-            cats = " | ".join(
-                f"{escape(c.name)} Rs.{escape(c.price)} ({_cat_status_label(c.status)})"
-                for c in s.categories
-            )
-            fmt = f" [{escape(s.screen_attr)}]" if s.screen_attr else ""
-            show_rows += (
-                f'<tr>'
-                f'<td style="padding:5px 8px;border-bottom:1px solid #ddd;'
-                f'font-size:13px;vertical-align:top;">'
-                f'{escape(s.time)}{fmt}</td>'
-                f'<td style="padding:5px 8px;border-bottom:1px solid #ddd;'
-                f'font-size:13px;vertical-align:top;">'
-                f'{cats}</td>'
-                f'</tr>'
-            )
+    for date_code, date_shows in grouped_shows.items():
+        if date_code:
+            try:
+                date_label = datetime.strptime(date_code, "%Y%m%d").strftime("%a, %d %b %Y")
+            except ValueError:
+                date_label = escape(date_code)
+        else:
+            date_label = "Unknown Date"
+
+        show_cards = ""
+        for s in date_shows:
+            time_label = escape(s.time)
+            fmt = f" · {escape(s.screen_attr)}" if s.screen_attr else ""
+
+            category_badges = ""
+            for c in s.categories:
+                category_badges += (
+                    f'<span style="display:inline-block;margin:0 8px 8px 0;padding:6px 10px;'
+                    f'border:1px solid #e5e7eb;border-radius:999px;background:#f9fafb;'
+                    f'font-size:12px;line-height:1.2;color:#111827;">'
+                    f'<strong>{escape(c.name)}</strong> · Rs.{escape(c.price)} · {_cat_status_label(c.status)}'
+                    f'</span>'
+                )
+
+            show_cards += f"""
+            <div style="padding:14px 0;border-top:1px solid #eef2f7;">
+              <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between;">
+                <div style="font-size:14px;font-weight:700;color:#111827;">{time_label}{fmt}</div>
+                <div style="font-size:12px;color:#6b7280;">{escape(s.venue_name)}</div>
+              </div>
+              <div style="margin-top:10px;">{category_badges}</div>
+            </div>"""
 
         shows_html += f"""
-        <p style="margin:14px 0 4px 0;font-size:14px;font-weight:bold;color:#333;">
-            {escape(vname)}
-        </p>
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
-            <tr style="background:#f5f5f5;">
-                <th style="padding:5px 8px;text-align:left;border-bottom:1px solid #ddd;
-                           font-weight:bold;">Time</th>
-                <th style="padding:5px 8px;text-align:left;border-bottom:1px solid #ddd;
-                           font-weight:bold;">Categories</th>
-            </tr>
-            {show_rows}
-        </table>"""
+        <div style="margin:0 0 16px 0;padding:16px;border:1px solid #e5e7eb;border-radius:16px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.04);">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+            <div style="font-size:16px;font-weight:800;color:#111827;">{date_label}</div>
+            <div style="font-size:12px;color:#6b7280;">{len(date_shows)} show(s)</div>
+          </div>
+          {show_cards}
+        </div>"""
 
     html = f"""<!doctype html>
 <html>
 <head><meta charset="utf-8"></head>
-<body style="margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;
-             font-size:14px;color:#333;background:#fff;">
-    <h2 style="margin:0 0 4px 0;font-size:18px;color:#111;">
-        BMS Alert: {escape(movie_name)}
-    </h2>
-    <p style="margin:0 0 20px 0;font-size:13px;color:#666;">
-        {escape(now_str)}
-    </p>
-    <hr style="border:none;border-top:1px solid #ddd;margin:0 0 20px 0;">
-    {changes_html}
-    <h3 style="margin:0 0 8px 0;font-size:15px;font-weight:bold;color:#333;">
-        Current Showtimes
-    </h3>
-    {shows_html}
-    <p style="margin:24px 0 0 0;font-size:12px;color:#999;">
-        This is an automated alert from BMS Ticket Notifier.
-    </p>
+<body style="margin:0;padding:0;background:#f6f8fb;font-family:Arial,Helvetica,sans-serif;color:#111827;">
+  <div style="max-width:720px;margin:0 auto;padding:24px;">
+    <div style="padding:20px 22px;border-radius:18px;background:#111827;color:#ffffff;">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#cbd5e1;">BMS Alert</div>
+      <div style="margin-top:8px;font-size:24px;font-weight:800;line-height:1.25;">{escape(movie_name)}</div>
+      <div style="margin-top:8px;font-size:13px;color:#d1d5db;">Checked at {escape(now_str)}</div>
+    </div>
+
+    <div style="margin-top:18px;">
+      {changes_html}
+    </div>
+
+    <div style="margin-top:18px;padding:18px 18px 8px 18px;border-radius:18px;background:#ffffff;border:1px solid #e5e7eb;">
+      <div style="margin:0 0 14px 0;font-size:18px;font-weight:800;color:#111827;">Showtimes</div>
+      {shows_html}
+    </div>
+
+    <div style="margin-top:16px;padding:0 4px;font-size:12px;color:#6b7280;text-align:center;">
+      This is an automated alert from BMS Ticket Notifier.
+    </div>
+  </div>
 </body>
 </html>"""
 
@@ -483,18 +540,29 @@ def send_email(subject, changes, shows, movie_info):
     plain_lines = [subject, "", f"Checked at: {now_str}", ""]
     if changes:
         plain_lines.append("Changes Detected:")
-        plain_lines.extend(f"  - {c}" for c in changes)
+        plain_lines.extend(f" - {c}" for c in changes)
         plain_lines.append("")
+
     plain_lines.append("Current Showtimes:")
-    for vname, vshows in venue_groups.items():
-        plain_lines.append(f"\n{vname}")
-        for s in vshows:
+
+    for date_code, date_shows in grouped_shows.items():
+        if date_code:
+            try:
+                date_label = datetime.strptime(date_code, "%Y%m%d").strftime("%a, %d %b %Y")
+            except ValueError:
+                date_label = date_code
+        else:
+            date_label = "Unknown Date"
+
+        plain_lines.append(f"\n{date_label}")
+        for s in date_shows:
             cats = " | ".join(
                 f"{c.name} Rs.{c.price} ({_cat_status_label(c.status)})"
                 for c in s.categories
             )
             fmt = f" [{s.screen_attr}]" if s.screen_attr else ""
-            plain_lines.append(f"  {s.time}{fmt} - {cats}")
+            plain_lines.append(f" {s.time}{fmt} - {s.venue_name} - {cats}")
+
     plain_lines.extend(["", "This is an automated alert from BMS Ticket Notifier."])
     plain = "\n".join(plain_lines)
 
@@ -506,19 +574,23 @@ def send_email(subject, changes, shows, movie_info):
                 "Content-Type": "application/json",
             },
             json={
-                "from": frm, "to": [to],
+                "from": frm,
+                "to": [to],
                 "subject": subject,
-                "text": plain, "html": html,
+                "text": plain,
+                "html": html,
             },
             timeout=15,
         )
+
         if resp.status_code in (200, 201):
-            print(f"  ✅ Email sent to {to}")
+            print(f" ✅ Email sent to {to}")
         else:
-            print(f"  ❌ Resend {resp.status_code}: {resp.text}")
+            print(f" ❌ Resend {resp.status_code}: {resp.text}")
             sys.exit(1)
+
     except requests.RequestException as e:
-        print(f"  ❌ Email failed: {e}")
+        print(f" ❌ Email failed: {e}")
         sys.exit(1)
 
 
