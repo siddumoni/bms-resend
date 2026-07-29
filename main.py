@@ -458,163 +458,196 @@ def _build_status_badge(status):
     )
 
 
+# REPLACE THE EXISTING send_email(...) BODY IN main.py WITH THE FOLLOWING
+
 def send_email(subject, changes, shows, movie_info):
     api_key = RESEND_API_KEY.strip()
     to = RESEND_TO_EMAIL.strip()
     frm = RESEND_FROM_EMAIL.strip() or "onboarding@resend.dev"
 
     if not api_key or not to:
-        print("  ⚠️  Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
+        print(" ⚠️ Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
         return
 
     now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
     movie_name = movie_info.get("name", "Movie")
-    grouped_shows = _group_sorted_shows(shows)
+
+    def _parse_time_value(time_str):
+        if not time_str:
+            return (99, 99)
+        cleaned = time_str.strip().upper().replace(".", "")
+        cleaned = cleaned.replace(" ", "")
+        for fmt in ("%I:%M%p", "%I%p", "%H:%M"):
+            try:
+                dt = datetime.strptime(cleaned, fmt)
+                return (dt.hour, dt.minute)
+            except ValueError:
+                pass
+        return (99, 99)
+
+    def _format_date_display(date_code):
+        if not date_code:
+            return "Unknown date"
+        for fmt in ("%Y%m%d", "%d%m%Y", "%Y-%m-%d"):
+            try:
+                dt = datetime.strptime(date_code, fmt)
+                return dt.strftime("%a, %d %b %Y")
+            except ValueError:
+                pass
+        return date_code
+
+    def _format_time_display(time_str):
+        if not time_str:
+            return "Unknown time"
+        cleaned = time_str.strip().upper().replace(".", "")
+        cleaned = cleaned.replace(" ", "")
+        for fmt in ("%I:%M%p", "%I%p", "%H:%M"):
+            try:
+                dt = datetime.strptime(cleaned, fmt)
+                return dt.strftime("%I:%M %p").lstrip("0")
+            except ValueError:
+                pass
+        return time_str
+
+    def _parse_show_sort_key(show):
+        return (
+            show.date_code or "",
+            _parse_time_value(show.time),
+            (show.venue_name or "").lower(),
+            (show.time or "").lower(),
+        )
+
+    # Show ordering: chronological by date, then time
+    ordered_shows = sorted(shows, key=_parse_show_sort_key)
 
     # Build changes HTML
     changes_html = ""
     if changes:
         rows = "".join(
-            f'<li style="padding:4px 0;font-size:14px;line-height:1.5;">{escape(c)}</li>'
+            f'<li style="padding:3px 0;font-size:14px;line-height:1.5;color:#2b2b2b;">{escape(c)}</li>'
             for c in changes
         )
         changes_html = f"""
-        <div style="margin:0 0 20px 0;padding:16px;border:1px solid #e5e7eb;border-radius:14px;background:#fafafa;">
-            <h3 style="margin:0 0 10px 0;font-size:15px;font-weight:700;color:#111827;">
-                Changes Detected
-            </h3>
-            <ul style="margin:0;padding-left:20px;color:#374151;">
-                {rows}
-            </ul>
+        <div style="margin:0 0 18px 0;padding:16px 16px 4px 16px;background:#f8f9fb;border:1px solid #e7e9ee;border-radius:16px;">
+          <div style="margin:0 0 10px 0;font-size:14px;font-weight:700;letter-spacing:.2px;color:#111827;">
+            Changes Detected
+          </div>
+          <ul style="margin:0;padding-left:18px;">
+            {rows}
+          </ul>
         </div>"""
 
-    # Build shows section grouped by venue and sorted chronologically
-    shows_html = ""
-    for vname, vshows in grouped_shows:
-        show_rows = ""
-        for s in vshows:
-            cat_rows = ""
-            for c in sorted(
-                s.categories,
-                key=lambda x: (
-                    int(x.status) if str(x.status).isdigit() else 9,
-                    int(x.price) if str(x.price).isdigit() else 999999,
-                    (x.name or "").lower(),
-                ),
-            ):
-                cat_rows += f"""
-                <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;
-                            padding:10px 0;border-top:1px solid #eef2f7;">
-                    <div style="min-width:0;flex:1;">
-                        <div style="font-size:14px;font-weight:700;color:#111827;line-height:1.35;">
-                            {escape(c.name)}
-                        </div>
-                        <div style="margin-top:4px;font-size:12px;color:#6b7280;line-height:1.35;">
-                            Status: {_build_status_badge(c.status)}
-                        </div>
+    # Group by date, then venue inside each date
+    date_groups = {}
+    for s in ordered_shows:
+        date_groups.setdefault(s.date_code or "", []).append(s)
+
+    show_cards_html = ""
+    for date_code in sorted(date_groups.keys()):
+        date_label = _format_date_display(date_code)
+        date_shows = date_groups[date_code]
+
+        venue_groups = {}
+        for s in date_shows:
+            venue_groups.setdefault(s.venue_name, []).append(s)
+
+        date_cards = ""
+        for vname in sorted(venue_groups.keys()):
+            vshows = sorted(venue_groups[vname], key=lambda s: (_parse_time_value(s.time), (s.time or "").lower()))
+            venue_items = ""
+            for s in vshows:
+                time_label = _format_time_display(s.time)
+                screen_attr = f" • {escape(s.screen_attr)}" if s.screen_attr else ""
+                venue_items += f"""
+                <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid #eef0f4;">
+                  <div style="min-width:88px;flex:0 0 88px;">
+                    <div style="display:inline-block;padding:7px 10px;border-radius:999px;background:#111827;color:#ffffff;font-size:13px;font-weight:700;line-height:1.2;">
+                      {escape(time_label)}
                     </div>
-                    <div style="font-size:14px;font-weight:700;color:#111827;white-space:nowrap;">
-                        ₹{escape(c.price)}
+                  </div>
+                  <div style="flex:1 1 auto;min-width:0;">
+                    <div style="font-size:15px;line-height:1.45;color:#111827;font-weight:700;">
+                      {escape(vname)}{screen_attr}
                     </div>
+                  </div>
                 </div>"""
 
-            screen_html = (
-                f'<div style="margin-top:6px;font-size:12px;color:#6b7280;">'
-                f'Screen: {escape(s.screen_attr)}</div>'
-                if s.screen_attr else ""
-            )
-
-            show_rows += f"""
-            <div style="padding:14px 0;border-top:1px solid #e5e7eb;">
-                <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;">
-                    <div style="min-width:0;flex:1;">
-                        <div style="font-size:15px;font-weight:700;color:#111827;line-height:1.35;">
-                            {_format_show_label(s)}
-                        </div>
-                        {screen_html}
-                    </div>
-                </div>
-                <div style="margin-top:10px;">
-                    {cat_rows}
-                </div>
+            date_cards += f"""
+            <div style="margin-top:12px;padding:16px;border:1px solid #e7e9ee;border-radius:16px;background:#ffffff;">
+              <div style="font-size:14px;font-weight:700;color:#111827;margin:0 0 4px 0;">
+                {escape(vname)}
+              </div>
+              <div style="font-size:12px;color:#6b7280;margin:0 0 2px 0;">
+                {escape(date_label)}
+              </div>
+              {venue_items}
             </div>"""
 
-        shows_html += f"""
-        <div style="margin:0 0 18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:14px;background:#fff;">
-            <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;">
-                <h3 style="margin:0;font-size:16px;font-weight:800;color:#111827;">
-                    {escape(vname)}
-                </h3>
-                <span style="font-size:12px;color:#6b7280;">
-                    {len(vshows)} showtime(s)
-                </span>
-            </div>
-            {show_rows}
+        show_cards_html += f"""
+        <div style="margin:0 0 18px 0;">
+          <div style="font-size:15px;font-weight:800;color:#111827;margin:0 0 10px 2px;">
+            {escape(date_label)}
+          </div>
+          {date_cards}
         </div>"""
 
     html = f"""<!doctype html>
 <html>
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#f6f7fb;font-family:Arial,Helvetica,sans-serif;color:#111827;">
-    <div style="max-width:760px;margin:0 auto;padding:24px;">
-        <div style="padding:24px;border-radius:18px;background:#ffffff;border:1px solid #e5e7eb;">
-            <div style="margin:0 0 18px 0;">
-                <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;">
-                    BMS Alert
-                </div>
-                <h2 style="margin:6px 0 8px 0;font-size:24px;line-height:1.25;color:#111827;">
-                    {escape(movie_name)}
-                </h2>
-                <div style="font-size:13px;color:#6b7280;line-height:1.5;">
-                    Checked at {escape(now_str)}
-                </div>
-            </div>
-
-            {changes_html}
-
-            <div style="margin:0 0 12px 0;">
-                <h3 style="margin:0;font-size:18px;font-weight:800;color:#111827;">
-                    Current Showtimes
-                </h3>
-                <div style="margin-top:6px;font-size:13px;color:#6b7280;line-height:1.5;">
-                    Sorted by date and show time for easier reading.
-                </div>
-            </div>
-
-            {shows_html}
-
-            <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;">
-                This is an automated alert from BMS Ticket Notifier.
-            </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif;color:#111827;">
+  <div style="max-width:720px;margin:0 auto;padding:16px;">
+    <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:20px;overflow:hidden;">
+      <div style="padding:0;">
+        <div style="padding:22px 20px;background:linear-gradient(135deg,#111827 0%,#1f2937 100%);">
+          <div style="display:inline-block;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;">
+            Movie Alert
+          </div>
+          <div style="margin:14px 0 0 0;font-size:28px;line-height:1.2;font-weight:800;color:#ffffff;">
+            {escape(movie_name)}
+          </div>
+          <div style="margin:8px 0 0 0;font-size:13px;line-height:1.5;color:#d1d5db;">
+            Checked at {escape(now_str)}
+          </div>
         </div>
+
+        <div style="padding:20px;">
+          {changes_html}
+          <div style="margin:0 0 14px 2px;font-size:16px;font-weight:800;color:#111827;">
+            Showtimes
+          </div>
+          {show_cards_html}
+          <div style="margin-top:8px;font-size:12px;line-height:1.6;color:#6b7280;">
+            This is an automated alert from BMS Ticket Notifier.
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 </html>"""
 
-    # Build plain-text version with chronological order
+    # Build plain-text version with full show details
     plain_lines = [subject, "", f"Checked at: {now_str}", ""]
     if changes:
         plain_lines.append("Changes Detected:")
-        plain_lines.extend(f"  - {c}" for c in changes)
+        plain_lines.extend(f" - {c}" for c in changes)
         plain_lines.append("")
-    plain_lines.append("Current Showtimes:")
-    for vname, vshows in grouped_shows:
-        plain_lines.append(f"\n{vname}")
-        for s in vshows:
-            plain_lines.append(f"  {s.date_code or 'TBD'} | {s.time or 'TBD'}")
-            if s.screen_attr:
-                plain_lines.append(f"    Screen: {s.screen_attr}")
-            for c in sorted(
-                s.categories,
-                key=lambda x: (
-                    int(x.status) if str(x.status).isdigit() else 9,
-                    int(x.price) if str(x.price).isdigit() else 999999,
-                    (x.name or "").lower(),
-                ),
-            ):
-                plain_lines.append(
-                    f"    - {c.name} | ₹{c.price} | {_cat_status_label(c.status)}"
-                )
+
+    plain_lines.append("Showtimes:")
+    for date_code in sorted(date_groups.keys()):
+        plain_lines.append(f"\n{_format_date_display(date_code)}")
+        venue_groups = {}
+        for s in date_groups[date_code]:
+            venue_groups.setdefault(s.venue_name, []).append(s)
+        for vname in sorted(venue_groups.keys()):
+            plain_lines.append(f"  {vname}")
+            for s in sorted(venue_groups[vname], key=lambda s: (_parse_time_value(s.time), (s.time or "").lower())):
+                fmt = f" [{s.screen_attr}]" if s.screen_attr else ""
+                plain_lines.append(f"    - {_format_time_display(s.time)}{fmt}")
+
     plain_lines.extend(["", "This is an automated alert from BMS Ticket Notifier."])
     plain = "\n".join(plain_lines)
 
@@ -626,19 +659,22 @@ def send_email(subject, changes, shows, movie_info):
                 "Content-Type": "application/json",
             },
             json={
-                "from": frm, "to": [to],
+                "from": frm,
+                "to": [to],
                 "subject": subject,
-                "text": plain, "html": html,
+                "text": plain,
+                "html": html,
             },
             timeout=15,
         )
+
         if resp.status_code in (200, 201):
-            print(f"  ✅ Email sent to {to}")
+            print(f" ✅ Email sent to {to}")
         else:
-            print(f"  ❌ Resend {resp.status_code}: {resp.text}")
+            print(f" ❌ Resend {resp.status_code}: {resp.text}")
             sys.exit(1)
     except requests.RequestException as e:
-        print(f"  ❌ Email failed: {e}")
+        print(f" ❌ Email failed: {e}")
         sys.exit(1)
 
 
