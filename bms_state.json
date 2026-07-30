@@ -1,11 +1,76 @@
 {
-  "shows": {},
+  "shows": {
+    "INTO|88374|20260802|CLUB": {
+      "venue": "INOX: The Marina Mall, OMR",
+      "time": "12:10 PM",
+      "date": "20260802",
+      "cat": "CLUB",
+      "price": "210.98",
+      "status": "3"
+    },
+    "INTO|88374|20260802|EXECUTIVE": {
+      "venue": "INOX: The Marina Mall, OMR",
+      "time": "12:10 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "61.74",
+      "status": "3"
+    },
+    "INTO|88376|20260802|CLUB": {
+      "venue": "INOX: The Marina Mall, OMR",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "CLUB",
+      "price": "210.98",
+      "status": "3"
+    },
+    "INTO|88376|20260802|EXECUTIVE": {
+      "venue": "INOX: The Marina Mall, OMR",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "61.74",
+      "status": "3"
+    },
+    "INCH|79441|20260802|Club": {
+      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
+      "time": "07:05 PM",
+      "date": "20260802",
+      "cat": "Club",
+      "price": "210.98",
+      "status": "3"
+    },
+    "INCH|79441|20260802|Executive": {
+      "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
+      "time": "07:05 PM",
+      "date": "20260802",
+      "cat": "Executive",
+      "price": "66.74",
+      "status": "3"
+    },
+    "INPR|63967|20260802|ELITE": {
+      "venue": "INOX: LUXE Phoenix Market City, Velachery",
+      "time": "07:10 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "210.98",
+      "status": "3"
+    },
+    "INPR|63967|20260802|BUDGET": {
+      "venue": "INOX: LUXE Phoenix Market City, Velachery",
+      "time": "07:10 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "61.74",
+      "status": "3"
+    }
+  },
   "dates": {
     "20260730": "AVAILABLE",
     "20260731": "AVAILABLE",
     "20260801": "AVAILABLE",
-    "20260802": "AVAILABLE",
-    "20260803": "BOOKABLE",
+    "20260802": "BOOKABLE",
+    "20260803": "AVAILABLE",
     "20260804": "AVAILABLE",
     "20260805": "AVAILABLE",
     "20260806": "AVAILABLE"
