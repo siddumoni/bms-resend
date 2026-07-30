@@ -1,19 +1,507 @@
 {
   "shows": {
-    "PBMC|23525|20260802|ELITE": {
-      "venue": "PVR: Brookefields Mall, Coimbatore",
+    "BWCB|50833|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50833|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50829|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "11:45 AM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50829|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "11:45 AM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50819|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "11:50 AM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50819|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "11:50 AM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50735|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "12:45 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "441.51",
+      "status": "3"
+    },
+    "BWCB|50741|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "12:45 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "300.00",
+      "status": "2"
+    },
+    "BWCB|50830|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "03:15 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50830|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "03:15 PM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50820|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "03:20 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50820|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "03:20 PM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50742|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "04:25 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "300.00",
+      "status": "2"
+    },
+    "BWCB|50821|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "06:55 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50821|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "06:55 PM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50831|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "07:00 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50831|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "07:00 PM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50737|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "07:15 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "441.51",
+      "status": "2"
+    },
+    "BWCB|50837|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "BWCB|50837|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50832|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
       "time": "10:45 PM",
       "date": "20260802",
       "cat": "ELITE",
-      "price": "210.98",
+      "price": "183.80",
       "status": "3"
     },
-    "PBMC|23525|20260802|BUDGET": {
-      "venue": "PVR: Brookefields Mall, Coimbatore",
+    "BWCB|50832|20260802|ECONOMY": {
+      "venue": "Broadway Cinemas: Coimbatore",
       "time": "10:45 PM",
       "date": "20260802",
+      "cat": "ECONOMY",
+      "price": "54.35",
+      "status": "3"
+    },
+    "BWCB|50744|20260802|ELITE": {
+      "venue": "Broadway Cinemas: Coimbatore",
+      "time": "11:05 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "300.00",
+      "status": "3"
+    },
+    "PFSC|16244|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "11:00 AM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16244|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "11:00 AM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16244|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "11:00 AM",
+      "date": "20260802",
       "cat": "BUDGET",
-      "price": "61.74",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16236|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "12:05 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16236|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "12:05 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16236|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "12:05 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16245|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "02:45 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16245|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "02:45 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16245|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "02:45 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16237|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "03:45 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16237|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "03:45 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16237|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "03:45 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16246|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "06:30 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16246|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "06:30 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16246|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "06:30 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16238|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "07:25 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16238|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "07:25 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16238|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "07:25 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16247|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16247|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16247|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PFSC|16239|20260802|PRIME PLUS": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "11:05 PM",
+      "date": "20260802",
+      "cat": "PRIME PLUS",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16239|20260802|EXECUTIVE": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "11:05 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PFSC|16239|20260802|BUDGET": {
+      "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
+      "time": "11:05 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23521|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "09:05 AM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23521|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "09:05 AM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23502|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "10:40 AM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23502|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "10:40 AM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23512|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "12:05 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23512|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "12:05 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23503|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "02:30 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23503|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "02:30 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23504|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "06:20 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23504|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "06:20 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23514|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "06:55 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23514|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "06:55 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23505|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "10:10 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23505|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "10:10 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "3"
+    },
+    "PBMC|23515|20260802|ELITE": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "10:40 PM",
+      "date": "20260802",
+      "cat": "ELITE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "PBMC|23515|20260802|BUDGET": {
+      "venue": "PVR: Brookefields Mall, Coimbatore",
+      "time": "10:40 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
       "status": "3"
     }
   },
@@ -21,9 +509,10 @@
     "20260730": "AVAILABLE",
     "20260731": "AVAILABLE",
     "20260801": "AVAILABLE",
-    "20260802": "BOOKABLE",
-    "20260803": "NOT_OPEN",
-    "20260804": "NOT_OPEN",
-    "20260805": "NOT_OPEN"
+    "20260802": "AVAILABLE",
+    "20260803": "BOOKABLE",
+    "20260804": "AVAILABLE",
+    "20260805": "AVAILABLE",
+    "20260806": "AVAILABLE"
   }
 }
