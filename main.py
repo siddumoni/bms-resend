@@ -10,6 +10,7 @@ import os
 import re
 import sys
 import json
+import time
 from html import escape
 from datetime import datetime
 from dataclasses import dataclass, field
@@ -136,7 +137,7 @@ API_URL = (
 
 
 def fetch_bms(event_code, date_code, region_code, region_slug,
-              lat, lon, geohash):
+              lat, lon, geohash, max_retries=3):
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -170,15 +171,24 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
         "memberId": "", "lsId": "", "subCode": "",
         "lat": lat, "lon": lon,
     }
-    try:
-        resp = requests.get(API_URL, headers=headers,
-                            params=params, timeout=15)
-        if resp.status_code == 200:
-            return resp.json()
-        print(f"  HTTP {resp.status_code}")
-        print(f"  Response snippet: {resp.text[:300]!r}")
-    except requests.RequestException as e:
-        print(f"  Request failed: {e}")
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = requests.get(API_URL, headers=headers,
+                                params=params, timeout=15)
+            if resp.status_code == 200:
+                return resp.json()
+            print(f"  HTTP {resp.status_code} (attempt {attempt}/{max_retries})")
+            if resp.status_code in (403, 429) and attempt < max_retries:
+                wait = 3 * attempt
+                print(f"  Transient block — retrying in {wait}s...")
+                time.sleep(wait)
+                continue
+            print(f"  Response snippet: {resp.text[:300]!r}")
+        except requests.RequestException as e:
+            print(f"  Request failed: {e}")
+            if attempt < max_retries:
+                time.sleep(3 * attempt)
+                continue
     return None
 
 
@@ -681,7 +691,9 @@ def main():
     all_dates = []
     movie_info = {"name": "Unknown", "language": ""}
 
-    for dc in date_list:
+    for i, dc in enumerate(date_list):
+        if i > 0:
+            time.sleep(2)  # space out requests to avoid tripping rate limits
         data = fetch_bms(event_code, dc, region_code,
                          region_slug_r, lat, lon, geohash)
         if not data:
