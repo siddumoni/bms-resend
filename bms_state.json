@@ -1,91 +1,73 @@
 {
   "shows": {
-    "ACON|46375|20260802|DIAMOND": {
-      "venue": "AGS Cinemas OMR: Navlur",
-      "time": "07:10 PM",
-      "date": "20260802",
-      "time_code": "1910",
-      "cat": "DIAMOND",
-      "price": "210.00",
-      "status": "1"
-    },
-    "ACON|46375|20260802|PEARL": {
-      "venue": "AGS Cinemas OMR: Navlur",
-      "time": "07:10 PM",
-      "date": "20260802",
-      "time_code": "1910",
-      "cat": "PEARL",
-      "price": "60.00",
-      "status": "0"
-    },
-    "ACVM|54772|20260802|DIAMOND": {
+    "ACVM|54684|20260803|DIAMOND": {
       "venue": "AGS Cinemas: Villivakkam",
-      "time": "01:20 PM",
-      "date": "20260802",
-      "time_code": "1320",
-      "cat": "DIAMOND",
-      "price": "210.00",
-      "status": "1"
-    },
-    "ACVM|54772|20260802|PEARL": {
-      "venue": "AGS Cinemas: Villivakkam",
-      "time": "01:20 PM",
-      "date": "20260802",
-      "time_code": "1320",
-      "cat": "PEARL",
-      "price": "60.00",
-      "status": "0"
-    },
-    "ACTN|44727|20260802|DIAMOND": {
-      "venue": "AGS Cinemas: T. Nagar",
-      "time": "04:45 PM",
-      "date": "20260802",
-      "time_code": "1645",
-      "cat": "DIAMOND",
-      "price": "210.00",
-      "status": "1"
-    },
-    "ACTN|44727|20260802|PEARL": {
-      "venue": "AGS Cinemas: T. Nagar",
-      "time": "04:45 PM",
-      "date": "20260802",
-      "time_code": "1645",
-      "cat": "PEARL",
-      "price": "60.00",
-      "status": "0"
-    },
-    "ACVM|54771|20260803|DIAMOND": {
-      "venue": "AGS Cinemas: Villivakkam",
-      "time": "01:20 PM",
+      "time": "07:45 PM",
       "date": "20260803",
-      "time_code": "1320",
+      "time_code": "1945",
       "cat": "DIAMOND",
       "price": "210.00",
       "status": "3"
     },
-    "ACVM|54771|20260803|PEARL": {
+    "ACVM|54684|20260803|PEARL": {
       "venue": "AGS Cinemas: Villivakkam",
-      "time": "01:20 PM",
+      "time": "07:45 PM",
       "date": "20260803",
-      "time_code": "1320",
+      "time_code": "1945",
       "cat": "PEARL",
       "price": "60.00",
       "status": "0"
     },
-    "ACTN|44728|20260803|DIAMOND": {
-      "venue": "AGS Cinemas: T. Nagar",
-      "time": "03:55 PM",
+    "AGSM|55054|20260803|DIAMOND": {
+      "venue": "AGS Cinemas: Maduravoyal",
+      "time": "06:45 PM",
       "date": "20260803",
-      "time_code": "1555",
+      "time_code": "1845",
       "cat": "DIAMOND",
       "price": "210.00",
       "status": "3"
     },
-    "ACTN|44728|20260803|PEARL": {
-      "venue": "AGS Cinemas: T. Nagar",
-      "time": "03:55 PM",
+    "AGSM|55054|20260803|PEARL": {
+      "venue": "AGS Cinemas: Maduravoyal",
+      "time": "06:45 PM",
       "date": "20260803",
-      "time_code": "1555",
+      "time_code": "1845",
+      "cat": "PEARL",
+      "price": "60.00",
+      "status": "0"
+    },
+    "ACON|46293|20260803|DIAMOND": {
+      "venue": "AGS Cinemas OMR: Navlur",
+      "time": "03:30 PM",
+      "date": "20260803",
+      "time_code": "1530",
+      "cat": "DIAMOND",
+      "price": "170.00",
+      "status": "3"
+    },
+    "ACON|46293|20260803|PEARL": {
+      "venue": "AGS Cinemas OMR: Navlur",
+      "time": "03:30 PM",
+      "date": "20260803",
+      "time_code": "1530",
+      "cat": "PEARL",
+      "price": "60.00",
+      "status": "0"
+    },
+    "ACTN|44623|20260803|DIAMOND": {
+      "venue": "AGS Cinemas: T. Nagar",
+      "time": "10:50 PM",
+      "date": "20260803",
+      "time_code": "2250",
+      "cat": "DIAMOND",
+      "price": "210.00",
+      "status": "3"
+    },
+    "ACTN|44623|20260803|PEARL": {
+      "venue": "AGS Cinemas: T. Nagar",
+      "time": "10:50 PM",
+      "date": "20260803",
+      "time_code": "2250",
       "cat": "PEARL",
       "price": "60.00",
       "status": "0"
