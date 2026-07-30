@@ -1,5 +1,14 @@
 {
   "shows": {
+    "MAYJ|235627|20260802|FIRST CLASS": {
+      "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+      "time": "12:40 PM",
+      "date": "20260802",
+      "time_code": "1240",
+      "cat": "FIRST CLASS",
+      "price": "211.00",
+      "status": "3"
+    },
     "ACVM|54654|20260802|DIAMOND": {
       "venue": "AGS Cinemas: Villivakkam",
       "time": "07:45 PM",
