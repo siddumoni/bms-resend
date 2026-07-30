@@ -245,10 +245,6 @@ def parse_shows(data):
                 vcode = addl.get("venueCode", "")
 
                 for st in card.get("showtimes", []):
-                    print("\n========== RAW SHOW ==========")
-                    print(json.dumps(st, indent=2))
-                    print("==============================")
-                    break
                     sa = st.get("additionalData", {})
                     date_code = str(
                         sa.get("showDateCode", "")
