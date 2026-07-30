@@ -18,10 +18,7 @@ Runs as a **manually-triggered GitHub Actions workflow** (see note in [Automatio
 - [State File](#state-file)
 - [What Triggers a Notification](#what-triggers-a-notification)
 - [Sample Email Template](#sample-email-template)
-- [Project Structure](#project-structure)
-- [Troubleshooting](#troubleshooting)
 - [License](#license)
-
 ---
 
 ## How It Works
@@ -249,68 +246,6 @@ BMS Alert: Dhurandhar - The Revenge - 2 change(s)
 │                    Notifier                   │
 └──────────────────────────────────────────────┘
 ```
-
-The real output is a responsive HTML email (max-width 600px, mobile-friendly via a media query), built with inline styles for email-client compatibility. Showtimes are grouped by date (newest/soonest first), then by venue, with each time rendered as a rounded "chip" and the screen format appended when available (e.g. `07:40 PM · IMAX 2D`).
-
-**Plain-text fallback (sent in the same email as the `text` part):**
-
-```
-BMS Alert: Dhurandhar - The Revenge - 2 change(s)
-
-Checked at: 2026-07-30 19:05:00
-
-Changes Detected:
-  - New date opened: Sun, 02 Aug 2026
-  - New showtime: PVR: Palazzo, The Nexus Vijaya Mall — 07:40 PM (Sun, 02 Aug 2026)
-  - Back in stock: INOX: Chennai Citi Centre — 09:15 PM (Sun, 02 Aug 2026) → AVAILABLE
-
-Current Showtimes:
-
-Sun, 02 Aug 2026
-  PVR: Palazzo, The Nexus Vijaya Mall
-    - 09:00 AM
-    - 12:30 PM
-    - 04:05 PM [IMAX 2D]
-    - 07:40 PM
-  INOX: Chennai Citi Centre
-    - 09:15 PM [Tamil 2D]
-
-This is an automated alert from BMS Ticket Notifier.
-```
-
-> If you want to customize the look, the HTML template lives inside `send_email()` in `main.py` (the `html = f"""..."""` block) — it's plain inline-styled HTML, no external template engine or CSS file involved.
-
----
-
-## Project Structure
-
-```
-bms-resend/
-├── .github/
-│   └── workflows/
-│       └── bms-checker.yml   # Manual-trigger workflow, commits state back
-├── main.py                   # All logic: fetch → parse → filter → diff → email
-├── bms_state.json            # Persisted last-seen state (auto-updated)
-├── pyproject.toml            # requires-python >=3.14, deps: requests
-├── uv.lock                   # Locked dependency versions
-├── .python-version           # 3.14
-├── LICENSE                   # MIT
-└── README.md
-```
-
----
-
-## Troubleshooting
-
-| Symptom | Likely cause / fix |
-|---|---|
-| `❌ Invalid BMS_URL. Could not extract event/region.` | URL doesn't contain an `ET########` event code or a `movies/<city>/...` segment — double check you copied the full "buy tickets" URL. |
-| `HTTP 403` / `HTTP 429` repeatedly | BookMyShow is rate-limiting/blocking the request. The script retries with backoff (3 attempts), but persistent blocks usually mean the `User-Agent`/headers need refreshing or you're hitting it too frequently. |
-| `⚠️ Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.` | One of those two env vars/secrets is empty — the script otherwise runs fine and prints results to the console. |
-| No email even though tickets changed | Remember: only *new date/new showtime/sold-out→available* count as changes. Price or minor availability-tier shifts (e.g. `AVAILABLE → ALMOST FULL`) are intentionally not alerted on. |
-| Workflow never runs on its own | By design — see [Automation](#automation--important-correction). Add a `schedule:` trigger if you want periodic runs. |
-| State keeps "resetting" | Make sure the workflow has **Read and write permissions** under repo Settings → Actions → General, so it can commit `bms_state.json` back after each run. |
-
 ---
 
 ## License
