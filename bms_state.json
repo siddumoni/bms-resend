@@ -184,6 +184,406 @@
       "price": "300.00",
       "status": "3"
     },
+    "KGCM|119138|20260802|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "0"
+    },
+    "KGCM|119138|20260802|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "2"
+    },
+    "KGCM|119138|20260802|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "0"
+    },
+    "KGCM|119058|20260802|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "12:25 PM",
+      "date": "20260802",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "1"
+    },
+    "KGCM|119058|20260802|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "12:25 PM",
+      "date": "20260802",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "1"
+    },
+    "KGCM|119058|20260802|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "12:25 PM",
+      "date": "20260802",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "1"
+    },
+    "KGCM|119058|20260802|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "12:25 PM",
+      "date": "20260802",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "1"
+    },
+    "KGCM|119058|20260802|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "12:25 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119058|20260802|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "12:25 PM",
+      "date": "20260802",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119059|20260802|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "03:50 PM",
+      "date": "20260802",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "0"
+    },
+    "KGCM|119059|20260802|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "03:50 PM",
+      "date": "20260802",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "1"
+    },
+    "KGCM|119059|20260802|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "03:50 PM",
+      "date": "20260802",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "1"
+    },
+    "KGCM|119059|20260802|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "03:50 PM",
+      "date": "20260802",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "2"
+    },
+    "KGCM|119059|20260802|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "03:50 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119059|20260802|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "03:50 PM",
+      "date": "20260802",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119166|20260802|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "04:00 PM",
+      "date": "20260802",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "0"
+    },
+    "KGCM|119166|20260802|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "04:00 PM",
+      "date": "20260802",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119166|20260802|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "04:00 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119060|20260802|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "2"
+    },
+    "KGCM|119060|20260802|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "2"
+    },
+    "KGCM|119060|20260802|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119060|20260802|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119060|20260802|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119060|20260802|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "07:20 PM",
+      "date": "20260802",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119061|20260802|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "2"
+    },
+    "KGCM|119061|20260802|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119061|20260802|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119061|20260802|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119061|20260802|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119061|20260802|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47670|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47670|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "09:30 AM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47666|20260802|GOLD": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "12:00 PM",
+      "date": "20260802",
+      "cat": "GOLD",
+      "price": "183.80",
+      "status": "0"
+    },
+    "SRMJ|47666|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "12:00 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47666|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "12:00 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47671|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "01:10 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47671|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "01:10 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47667|20260802|GOLD": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "03:40 PM",
+      "date": "20260802",
+      "cat": "GOLD",
+      "price": "183.80",
+      "status": "0"
+    },
+    "SRMJ|47667|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "03:40 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47667|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "03:40 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47672|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "06:30 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47672|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "06:30 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47668|20260802|GOLD": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "07:15 PM",
+      "date": "20260802",
+      "cat": "GOLD",
+      "price": "183.80",
+      "status": "0"
+    },
+    "SRMJ|47668|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "07:15 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47668|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "07:15 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47673|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "10:30 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47673|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "10:30 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
+    "SRMJ|47669|20260802|GOLD": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "GOLD",
+      "price": "183.80",
+      "status": "0"
+    },
+    "SRMJ|47669|20260802|EXECUTIVE": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "EXECUTIVE",
+      "price": "183.80",
+      "status": "3"
+    },
+    "SRMJ|47669|20260802|SPECIAL": {
+      "venue": "Miraj Cinemas: SRK Mall, Coimbatore",
+      "time": "10:50 PM",
+      "date": "20260802",
+      "cat": "SPECIAL",
+      "price": "54.35",
+      "status": "0"
+    },
     "PFSC|16244|20260802|PRIME PLUS": {
       "venue": "PVR: Alveal Fun Savvy Mall, Coimbatore",
       "time": "11:00 AM",
@@ -502,6 +902,222 @@
       "date": "20260802",
       "cat": "BUDGET",
       "price": "54.35",
+      "status": "3"
+    },
+    "KGCM|119079|20260803|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:30 AM",
+      "date": "20260803",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "2"
+    },
+    "KGCM|119079|20260803|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:30 AM",
+      "date": "20260803",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119079|20260803|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:30 AM",
+      "date": "20260803",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119079|20260803|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:30 AM",
+      "date": "20260803",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119079|20260803|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:30 AM",
+      "date": "20260803",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "2"
+    },
+    "KGCM|119079|20260803|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:30 AM",
+      "date": "20260803",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119080|20260803|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "02:00 PM",
+      "date": "20260803",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "2"
+    },
+    "KGCM|119080|20260803|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "02:00 PM",
+      "date": "20260803",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119080|20260803|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "02:00 PM",
+      "date": "20260803",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119080|20260803|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "02:00 PM",
+      "date": "20260803",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119080|20260803|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "02:00 PM",
+      "date": "20260803",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119080|20260803|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "02:00 PM",
+      "date": "20260803",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119176|20260803|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "04:10 PM",
+      "date": "20260803",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "0"
+    },
+    "KGCM|119176|20260803|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "04:10 PM",
+      "date": "20260803",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119176|20260803|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "04:10 PM",
+      "date": "20260803",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "2"
+    },
+    "KGCM|119081|20260803|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "06:45 PM",
+      "date": "20260803",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "2"
+    },
+    "KGCM|119081|20260803|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "06:45 PM",
+      "date": "20260803",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119081|20260803|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "06:45 PM",
+      "date": "20260803",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119081|20260803|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "06:45 PM",
+      "date": "20260803",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119081|20260803|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "06:45 PM",
+      "date": "20260803",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "2"
+    },
+    "KGCM|119081|20260803|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "06:45 PM",
+      "date": "20260803",
+      "cat": "COMFORT XL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119082|20260803|LOUNGE+UPGRADE": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260803",
+      "cat": "LOUNGE+UPGRADE",
+      "price": "383.80",
+      "status": "2"
+    },
+    "KGCM|119082|20260803|XLSLIDER": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260803",
+      "cat": "XLSLIDER",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119082|20260803|PREMIUM": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260803",
+      "cat": "PREMIUM",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119082|20260803|PREMIUMXL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260803",
+      "cat": "PREMIUMXL",
+      "price": "183.80",
+      "status": "3"
+    },
+    "KGCM|119082|20260803|BUDGET": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260803",
+      "cat": "BUDGET",
+      "price": "54.35",
+      "status": "1"
+    },
+    "KGCM|119082|20260803|COMFORT XL": {
+      "venue": "KG Cinemas: Coimbatore",
+      "time": "10:15 PM",
+      "date": "20260803",
+      "cat": "COMFORT XL",
+      "price": "183.80",
       "status": "3"
     }
   },
