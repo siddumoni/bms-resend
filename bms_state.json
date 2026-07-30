@@ -1,11 +1,93 @@
 {
-  "shows": {},
+  "shows": {
+    "MAYJ|235627|20260802|FIRST CLASS": {
+      "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+      "time": "12:40 PM",
+      "date": "20260802",
+      "time_code": "1240",
+      "cat": "FIRST CLASS",
+      "price": "211.00",
+      "status": "3"
+    },
+    "ACVM|54654|20260802|DIAMOND": {
+      "venue": "AGS Cinemas: Villivakkam",
+      "time": "07:45 PM",
+      "date": "20260802",
+      "time_code": "1945",
+      "cat": "DIAMOND",
+      "price": "210.00",
+      "status": "3"
+    },
+    "ACVM|54654|20260802|PEARL": {
+      "venue": "AGS Cinemas: Villivakkam",
+      "time": "07:45 PM",
+      "date": "20260802",
+      "time_code": "1945",
+      "cat": "PEARL",
+      "price": "60.00",
+      "status": "0"
+    },
+    "AGSM|54934|20260802|DIAMOND": {
+      "venue": "AGS Cinemas: Maduravoyal",
+      "time": "07:45 PM",
+      "date": "20260802",
+      "time_code": "1945",
+      "cat": "DIAMOND",
+      "price": "210.00",
+      "status": "3"
+    },
+    "AGSM|54934|20260802|PEARL": {
+      "venue": "AGS Cinemas: Maduravoyal",
+      "time": "07:45 PM",
+      "date": "20260802",
+      "time_code": "1945",
+      "cat": "PEARL",
+      "price": "60.00",
+      "status": "0"
+    },
+    "ACON|46260|20260802|DIAMOND": {
+      "venue": "AGS Cinemas OMR: Navlur",
+      "time": "03:30 PM",
+      "date": "20260802",
+      "time_code": "1530",
+      "cat": "DIAMOND",
+      "price": "170.00",
+      "status": "3"
+    },
+    "ACON|46260|20260802|PEARL": {
+      "venue": "AGS Cinemas OMR: Navlur",
+      "time": "03:30 PM",
+      "date": "20260802",
+      "time_code": "1530",
+      "cat": "PEARL",
+      "price": "60.00",
+      "status": "0"
+    },
+    "ACTN|44604|20260802|DIAMOND": {
+      "venue": "AGS Cinemas: T. Nagar",
+      "time": "11:15 PM",
+      "date": "20260802",
+      "time_code": "2315",
+      "cat": "DIAMOND",
+      "price": "210.00",
+      "status": "3"
+    },
+    "ACTN|44604|20260802|PEARL": {
+      "venue": "AGS Cinemas: T. Nagar",
+      "time": "11:15 PM",
+      "date": "20260802",
+      "time_code": "2315",
+      "cat": "PEARL",
+      "price": "60.00",
+      "status": "0"
+    }
+  },
   "dates": {
     "20260730": "AVAILABLE",
     "20260731": "AVAILABLE",
     "20260801": "AVAILABLE",
-    "20260802": "AVAILABLE",
-    "20260803": "BOOKABLE",
+    "20260802": "BOOKABLE",
+    "20260803": "AVAILABLE",
     "20260804": "AVAILABLE",
     "20260805": "AVAILABLE",
     "20260806": "AVAILABLE"
