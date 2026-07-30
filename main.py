@@ -27,6 +27,7 @@ CONFIG = {
     "dates": os.getenv("BMS_DATES", ""),          # comma-separated YYYYMMDD, empty = from URL
     "theatre": os.getenv("BMS_THEATRE", ""),       # substring filter, empty = all
     "time_period": os.getenv("BMS_TIME", ""),      # e.g. "evening,night", empty = all
+    "format": os.getenv("BMS_FORMAT", ""),         # e.g. "IMAX 2D,Tamil 2D", empty = all
 }
 
 RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
@@ -73,7 +74,7 @@ REGION_MAP = {
 }
 
 
-# ─────────────────────────────────────���────────────────────────────────
+# ──────────────────────────────────────────────────────────────────────
 # DATA
 # ──────────────────────────────────────────────────────────────────────
 @dataclass
@@ -267,7 +268,7 @@ def parse_shows(data):
 # ──────────────────────────────────────────────────────────────────────
 # FILTERING
 # ──────────────────────────────────────────────────────────────────────
-def filter_shows(shows, theatre_filter, time_periods, date_codes):
+def filter_shows(shows, theatre_filter, time_periods, date_codes, format_filter=""):
     result = []
     kws = [k.strip().lower() for k in theatre_filter.split(",")
            if k.strip()] if theatre_filter else []
@@ -275,6 +276,8 @@ def filter_shows(shows, theatre_filter, time_periods, date_codes):
                if p.strip()] if time_periods else []
     dates_set = set(d.strip() for d in date_codes.split(",")
                     if d.strip()) if date_codes else set()
+    fmt_kws = [f.strip().lower() for f in format_filter.split(",")
+               if f.strip()] if format_filter else []
 
     for s in shows:
         # Theatre filter
@@ -286,6 +289,12 @@ def filter_shows(shows, theatre_filter, time_periods, date_codes):
         # Date filter
         if dates_set and s.date_code and s.date_code not in dates_set:
             continue
+
+        # Screen/format filter (e.g. "IMAX 2D", "Tamil 2D")
+        if fmt_kws:
+            fmt_lower = s.screen_attr.lower()
+            if not any(k in fmt_lower for k in fmt_kws):
+                continue
 
         # Time period filter
         if periods:
@@ -333,6 +342,7 @@ def build_state(shows, dates):
                 "venue": s.venue_name,
                 "time": s.time,
                 "date": s.date_code,
+                "time_code": s.time_code,
                 "cat": c.name,
                 "price": c.price,
                 "status": c.status,
@@ -346,6 +356,9 @@ def build_state(shows, dates):
 
 
 def detect_changes(old_state, new_state):
+    """Returns a list of change dicts (kind/date_code/time_code/venue/time/...),
+    deduped per showtime and sorted chronologically. No category/price info —
+    that's display-level (email) detail, not a change fact."""
     changes = []
 
     # New dates opening
@@ -355,39 +368,98 @@ def detect_changes(old_state, new_state):
         old_status = old_dates.get(dc)
         if (old_status == "NOT_OPEN"
                 and status in ("BOOKABLE", "AVAILABLE")):
-            changes.append(f"📅 NEW DATE OPENED: {dc}")
+            changes.append({
+                "kind": "date", "date_code": dc, "time_code": "0000",
+                "venue": "", "time": "",
+            })
 
     old_shows = old_state.get("shows", {})
     new_shows = new_state.get("shows", {})
 
-    # New showtimes
+    # New showtimes (dedupe — multiple categories on one show collapse to one line)
+    seen_new = set()
     for key in set(new_shows) - set(old_shows):
         s = new_shows[key]
-        changes.append(
-            f"🆕 NEW: {s['venue']} {s['time']} [{s['date']}] "
-            f"— {s['cat']} ₹{s['price']}"
-        )
+        dedupe_key = (s["venue"], s["date"], s.get("time_code", ""))
+        if dedupe_key in seen_new:
+            continue
+        seen_new.add(dedupe_key)
+        changes.append({
+            "kind": "new", "date_code": s["date"],
+            "time_code": s.get("time_code", ""),
+            "venue": s["venue"], "time": s["time"],
+        })
 
-    # Sold out → available
+    # Sold out → available (dedupe — multiple categories collapse to one line)
+    seen_back = set()
     for key, new_s in new_shows.items():
         old_s = old_shows.get(key)
         if old_s and old_s["status"] == "0" and new_s["status"] != "0":
+            dedupe_key = (new_s["venue"], new_s["date"], new_s.get("time_code", ""))
+            if dedupe_key in seen_back:
+                continue
+            seen_back.add(dedupe_key)
             lbl, ico = AVAIL_STATUS_MAP.get(
                 new_s["status"], ("UNKNOWN", "⚪")
             )
-            changes.append(
-                f"{ico} BACK: {new_s['venue']} {new_s['time']} "
-                f"[{new_s['date']}] — {new_s['cat']} → {lbl}"
-            )
+            changes.append({
+                "kind": "back", "date_code": new_s["date"],
+                "time_code": new_s.get("time_code", ""),
+                "venue": new_s["venue"], "time": new_s["time"],
+                "status_label": lbl, "status_icon": ico,
+            })
 
+    changes.sort(
+        key=lambda c: (c["date_code"] or "99999999", _time_sort_val(c["time_code"]))
+    )
     return changes
 
 
 # ──────────────────────────────────────────────────────────────────────
 # EMAIL NOTIFICATION (Resend)
 # ──────────────────────────────────────────────────────────────────────
-def _cat_status_label(status):
-    return AVAIL_STATUS_MAP.get(status, ("UNKNOWN", ""))[0]
+def _time_sort_val(time_code):
+    try:
+        return int(time_code)
+    except (TypeError, ValueError):
+        return 0
+
+
+def format_date_clean(date_code):
+    """YYYYMMDD -> 'Thu, 30 Jul 2026'. Falls back gracefully if unparsable."""
+    try:
+        return datetime.strptime(date_code, "%Y%m%d").strftime("%a, %d %b %Y")
+    except (TypeError, ValueError):
+        return date_code or "N/A"
+
+
+def format_change_line(c):
+    """Plain-text rendering of a change dict (used for console + email text part)."""
+    date_label = format_date_clean(c["date_code"]) if c["date_code"] else ""
+    if c["kind"] == "date":
+        return f"New date opened: {date_label}"
+    if c["kind"] == "new":
+        return f"New showtime: {c['venue']} — {c['time']} ({date_label})"
+    if c["kind"] == "back":
+        return (f"Back in stock: {c['venue']} — {c['time']} ({date_label}) "
+                f"→ {c.get('status_label', '')}")
+    return str(c)
+
+
+def _change_row_html(c):
+    """HTML rendering of a change dict for the email template."""
+    date_label = escape(format_date_clean(c["date_code"])) if c["date_code"] else ""
+    if c["kind"] == "date":
+        return f'📅 <b>New date opened:</b> {date_label}'
+    if c["kind"] == "new":
+        return (f'🆕 <b>New showtime:</b> {escape(c["venue"])} — {escape(c["time"])} '
+                 f'<span style="color:#888;">({date_label})</span>')
+    if c["kind"] == "back":
+        return (f'{c.get("status_icon", "⚪")} <b>Back in stock:</b> '
+                 f'{escape(c["venue"])} — {escape(c["time"])} '
+                 f'<span style="color:#888;">({date_label})</span> '
+                 f'→ {escape(c.get("status_label", ""))}')
+    return escape(str(c))
 
 
 def send_email(subject, changes, shows, movie_info):
@@ -402,99 +474,147 @@ def send_email(subject, changes, shows, movie_info):
     now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
     movie_name = movie_info.get("name", "Movie")
 
-    # Build changes HTML
+    # Sort chronologically: earliest date first, then earliest time first
+    sorted_changes = sorted(
+        changes,
+        key=lambda c: (c["date_code"] or "99999999", _time_sort_val(c["time_code"]))
+    )
+    sorted_shows = sorted(
+        shows,
+        key=lambda s: (s.date_code or "99999999", _time_sort_val(s.time_code), s.venue_name)
+    )
+
+    # Build changes HTML (chronological, clean dates, no category/price)
     changes_html = ""
-    if changes:
+    if sorted_changes:
         rows = "".join(
-            f'<li style="padding:3px 0;font-size:14px;">{escape(c)}</li>'
-            for c in changes
+            f'<tr><td style="padding:10px 14px;border-bottom:1px solid #eee;'
+            f'font-size:14px;color:#222;">{_change_row_html(c)}</td></tr>'
+            for c in sorted_changes
         )
         changes_html = f"""
-        <h3 style="margin:0 0 8px 0;font-size:15px;font-weight:bold;color:#333;">
-            Changes Detected
-        </h3>
-        <ul style="margin:0 0 20px 0;padding-left:20px;line-height:1.6;color:#333;">
-            {rows}
-        </ul>"""
+        <tr><td style="padding:0 20px;">
+            <h3 style="margin:20px 0 10px 0;font-size:15px;font-weight:700;color:#111;">
+                🔔 Changes Detected
+            </h3>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                   style="width:100%;border-collapse:collapse;background:#fafafa;
+                          border-radius:8px;overflow:hidden;">
+                {rows}
+            </table>
+        </td></tr>"""
 
-    # Build shows section grouped by venue
-    venue_groups = {}
-    for s in shows:
-        venue_groups.setdefault(s.venue_name, []).append(s)
+    # Build showtimes section: grouped by date (chronological), then venue —
+    # times only, no category/price clutter
+    date_groups, date_order = {}, []
+    for s in sorted_shows:
+        if s.date_code not in date_groups:
+            date_groups[s.date_code] = {}
+            date_order.append(s.date_code)
+        date_groups[s.date_code].setdefault(s.venue_name, []).append(s)
 
     shows_html = ""
-    for vname, vshows in venue_groups.items():
-        show_rows = ""
-        for s in vshows:
-            cats = " | ".join(
-                f"{escape(c.name)} Rs.{escape(c.price)} ({_cat_status_label(c.status)})"
-                for c in s.categories
+    for dc in date_order:
+        venue_blocks = ""
+        for vname, vshows in date_groups[dc].items():
+            time_chips = "".join(
+                f'<span style="display:inline-block;margin:4px 6px 0 0;padding:6px 12px;'
+                f'background:#eef2ff;color:#3949ab;border-radius:16px;font-size:13px;'
+                f'font-weight:600;white-space:nowrap;">'
+                f'{escape(s.time)}'
+                f'{f" · {escape(s.screen_attr)}" if s.screen_attr else ""}'
+                f'</span>'
+                for s in vshows
             )
-            fmt = f" [{escape(s.screen_attr)}]" if s.screen_attr else ""
-            show_rows += (
-                f'<tr>'
-                f'<td style="padding:5px 8px;border-bottom:1px solid #ddd;'
-                f'font-size:13px;vertical-align:top;">'
-                f'{escape(s.time)}{fmt}</td>'
-                f'<td style="padding:5px 8px;border-bottom:1px solid #ddd;'
-                f'font-size:13px;vertical-align:top;">'
-                f'{cats}</td>'
-                f'</tr>'
-            )
+            venue_blocks += f"""
+            <div style="margin:0 0 14px 0;">
+                <div style="font-size:14px;font-weight:700;color:#222;margin:0 0 6px 0;">
+                    📍 {escape(vname)}
+                </div>
+                <div>{time_chips}</div>
+            </div>"""
 
         shows_html += f"""
-        <p style="margin:14px 0 4px 0;font-size:14px;font-weight:bold;color:#333;">
-            {escape(vname)}
-        </p>
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
-            <tr style="background:#f5f5f5;">
-                <th style="padding:5px 8px;text-align:left;border-bottom:1px solid #ddd;
-                           font-weight:bold;">Time</th>
-                <th style="padding:5px 8px;text-align:left;border-bottom:1px solid #ddd;
-                           font-weight:bold;">Categories</th>
-            </tr>
-            {show_rows}
-        </table>"""
+        <tr><td style="padding:0 20px;">
+            <div style="margin:20px 0 10px 0;padding:6px 14px;background:#111;color:#fff;
+                        border-radius:6px;font-size:13px;font-weight:700;display:inline-block;">
+                🗓️ {escape(format_date_clean(dc))}
+            </div>
+            {venue_blocks}
+        </td></tr>"""
+
+    if not shows_html:
+        shows_html = ('<tr><td style="padding:0 20px 10px 20px;">'
+                      '<p style="font-size:14px;color:#777;">'
+                      'No showtimes currently match your filters.</p></td></tr>')
 
     html = f"""<!doctype html>
 <html>
-<head><meta charset="utf-8"></head>
-<body style="margin:0;padding:24px;font-family:Arial,Helvetica,sans-serif;
-             font-size:14px;color:#333;background:#fff;">
-    <h2 style="margin:0 0 4px 0;font-size:18px;color:#111;">
-        BMS Alert: {escape(movie_name)}
-    </h2>
-    <p style="margin:0 0 20px 0;font-size:13px;color:#666;">
-        {escape(now_str)}
-    </p>
-    <hr style="border:none;border-top:1px solid #ddd;margin:0 0 20px 0;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @media only screen and (max-width:480px) {{
+    .bms-container {{ width:100% !important; }}
+    .bms-banner {{ font-size:20px !important; padding:20px 16px !important; }}
+  }}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#f2f2f5;
+             font-family:-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+       style="background:#f2f2f5;padding:20px 0;">
+<tr><td align="center">
+<table role="presentation" class="bms-container" width="600" cellpadding="0" cellspacing="0"
+       style="width:600px;max-width:100%;background:#ffffff;border-radius:10px;
+              overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+    <tr><td class="bms-banner"
+            style="background:linear-gradient(135deg,#e50914,#ff5f6d);color:#ffffff;
+                   padding:26px 24px;text-align:center;">
+        <div style="font-size:12px;font-weight:600;letter-spacing:1px;opacity:0.9;
+                    text-transform:uppercase;margin:0 0 6px 0;">🎬 BMS Ticket Alert</div>
+        <div style="font-size:24px;font-weight:800;line-height:1.25;">
+            {escape(movie_name)}
+        </div>
+    </td></tr>
+    <tr><td style="padding:14px 20px 0 20px;">
+        <p style="margin:0;font-size:12px;color:#999;text-align:right;">
+            Checked at {escape(now_str)}
+        </p>
+    </td></tr>
     {changes_html}
-    <h3 style="margin:0 0 8px 0;font-size:15px;font-weight:bold;color:#333;">
-        Current Showtimes
-    </h3>
+    <tr><td style="padding:0 20px;">
+        <h3 style="margin:22px 0 10px 0;font-size:15px;font-weight:700;color:#111;">
+            🎟️ Current Showtimes
+        </h3>
+    </td></tr>
     {shows_html}
-    <p style="margin:24px 0 0 0;font-size:12px;color:#999;">
-        This is an automated alert from BMS Ticket Notifier.
-    </p>
+    <tr><td style="padding:24px 20px;">
+        <hr style="border:none;border-top:1px solid #eee;margin:0 0 14px 0;">
+        <p style="margin:0;font-size:11px;color:#aaa;text-align:center;">
+            Automated alert from BMS Ticket Notifier
+        </p>
+    </td></tr>
+</table>
+</td></tr>
+</table>
 </body>
 </html>"""
 
-    # Build plain-text version with full show details
+    # Build plain-text version (chronological, clean dates, no category/price)
     plain_lines = [subject, "", f"Checked at: {now_str}", ""]
-    if changes:
+    if sorted_changes:
         plain_lines.append("Changes Detected:")
-        plain_lines.extend(f"  - {c}" for c in changes)
+        plain_lines.extend(f"  - {format_change_line(c)}" for c in sorted_changes)
         plain_lines.append("")
     plain_lines.append("Current Showtimes:")
-    for vname, vshows in venue_groups.items():
-        plain_lines.append(f"\n{vname}")
-        for s in vshows:
-            cats = " | ".join(
-                f"{c.name} Rs.{c.price} ({_cat_status_label(c.status)})"
-                for c in s.categories
-            )
-            fmt = f" [{s.screen_attr}]" if s.screen_attr else ""
-            plain_lines.append(f"  {s.time}{fmt} - {cats}")
+    for dc in date_order:
+        plain_lines.append(f"\n{format_date_clean(dc)}")
+        for vname, vshows in date_groups[dc].items():
+            plain_lines.append(f"  {vname}")
+            for s in vshows:
+                fmt = f" [{s.screen_attr}]" if s.screen_attr else ""
+                plain_lines.append(f"    - {s.time}{fmt}")
     plain_lines.extend(["", "This is an automated alert from BMS Ticket Notifier."])
     plain = "\n".join(plain_lines)
 
@@ -585,6 +705,7 @@ def main():
         CONFIG["theatre"],
         CONFIG["time_period"],
         CONFIG["dates"],
+        CONFIG["format"],
     )
     print(f"  📊 {len(filtered)} showtime(s) after filters")
 
@@ -601,7 +722,7 @@ def main():
     if changes:
         print(f"\n  ⚡ {len(changes)} change(s) detected:")
         for c in changes:
-            print(f"     {c}")
+            print(f"     {format_change_line(c)}")
         send_email(
             f"BMS Alert: {movie_info['name']} - {len(changes)} change(s)",
             changes, filtered, movie_info,
