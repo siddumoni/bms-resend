@@ -34,6 +34,7 @@ jobs:
           BMS_DATES: ${{ vars.BMS_DATES }}
           BMS_THEATRE: ${{ vars.BMS_THEATRE }}
           BMS_TIME: ${{ vars.BMS_TIME }}
+          BMS_FORMAT: ${{ vars.BMS_FORMAT }}
         run: uv run main.py
 
       - name: Commit updated state
