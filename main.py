@@ -712,6 +712,14 @@ def main():
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
 
+    print(f"BMS_FORMAT='{CONFIG['format']}'")
+
+    print("\n===== ALL SHOWS RECEIVED FROM BMS =====")
+    for s in all_shows:
+      print(
+        f"{s.venue_name} | {s.time} | screen_attr='{s.screen_attr}'"
+      )
+    print("=======================================\n")
     # Apply filters
     filtered = filter_shows(
         all_shows,
