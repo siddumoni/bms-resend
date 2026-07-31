@@ -93,8 +93,8 @@
       }
     },
     "dates": {
-      "20260801": "AVAILABLE",
-      "20260802": "BOOKABLE",
+      "20260801": "BOOKABLE",
+      "20260802": "AVAILABLE",
       "20260803": "NOT_OPEN",
       "20260804": "NOT_OPEN",
       "20260805": "NOT_OPEN",
@@ -160,13 +160,13 @@
       }
     },
     "dates": {
-      "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
       "20260802": "AVAILABLE",
       "20260803": "BOOKABLE",
       "20260804": "AVAILABLE",
       "20260805": "AVAILABLE",
-      "20260806": "AVAILABLE"
+      "20260806": "AVAILABLE",
+      "20260807": "NOT_OPEN"
     }
   },
   "ET00502600": {
@@ -484,7 +484,7 @@
         "time_code": "1920",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "2"
+        "status": "1"
       },
       "ACTN|44617|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -677,13 +677,13 @@
       }
     },
     "dates": {
-      "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
       "20260802": "AVAILABLE",
       "20260803": "BOOKABLE",
       "20260804": "AVAILABLE",
       "20260805": "AVAILABLE",
-      "20260806": "AVAILABLE"
+      "20260806": "AVAILABLE",
+      "20260807": "NOT_OPEN"
     }
   }
 }
