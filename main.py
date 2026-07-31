@@ -38,6 +38,76 @@ RESEND_FROM_EMAIL = os.getenv("RESEND_FROM_EMAIL", "aviiciii@resend.dev")
 STATE_FILE = "bms_state.json"
 
 # ──────────────────────────────────────────────────────────────────────
+# MULTI-MOVIE WATCHES
+# ──────────────────────────────────────────────────────────────────────
+# Set BMS_WATCHES to a JSON array to track several movies in one run.
+# Each item may set: url (required), dates, theatre, time, format, name.
+# Any field left off a watch falls back to the single-movie BMS_* env
+# vars above, so a partially-specified watch behaves like the original
+# single-movie config for whatever it doesn't override.
+#
+# Example:
+#   BMS_WATCHES='[
+#     {"name": "Dhurandhar", "url": "https://in.bookmyshow.com/movies/chennai/dhurandhar-the-revenge/buytickets/ET00478890", "theatre": "PVR"},
+#     {"name": "Avatar 3", "url": "https://in.bookmyshow.com/movies/mumbai/avatar-3/buytickets/ET00500000", "time": "evening,night"}
+#   ]'
+#
+# If BMS_WATCHES is not set (or fails to parse), behavior is 100%
+# identical to the original script: one watch built from
+# BMS_URL / BMS_DATES / BMS_THEATRE / BMS_TIME / BMS_FORMAT, and state
+# is read/written exactly as before.
+BMS_WATCHES_RAW = os.getenv("BMS_WATCHES", "").strip()
+
+
+def get_watches():
+    """Returns (watches, legacy_mode).
+
+    watches: list of dicts with keys name/url/dates/theatre/time_period/format.
+    legacy_mode: True when BMS_WATCHES isn't set/valid, meaning we're running
+    the original single-movie flow and must keep using the original flat
+    state file layout untouched.
+    """
+    legacy_watch = {
+        "name": "",
+        "url": CONFIG["url"],
+        "dates": CONFIG["dates"],
+        "theatre": CONFIG["theatre"],
+        "time_period": CONFIG["time_period"],
+        "format": CONFIG["format"],
+    }
+
+    if not BMS_WATCHES_RAW:
+        return [legacy_watch], True
+
+    try:
+        parsed = json.loads(BMS_WATCHES_RAW)
+        if not isinstance(parsed, list) or not parsed:
+            raise ValueError("BMS_WATCHES must be a non-empty JSON array")
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"  ⚠️  Could not parse BMS_WATCHES ({e}) — "
+              f"falling back to single BMS_URL watch.")
+        return [legacy_watch], True
+
+    watches = []
+    for i, w in enumerate(parsed):
+        if not isinstance(w, dict) or not w.get("url"):
+            print(f"  ⚠️  Skipping BMS_WATCHES[{i}] — missing required 'url' field.")
+            continue
+        watches.append({
+            "name": (w.get("name") or "").strip(),
+            "url": w["url"],
+            "dates": w.get("dates", CONFIG["dates"]),
+            "theatre": w.get("theatre", CONFIG["theatre"]),
+            "time_period": w.get("time", CONFIG["time_period"]),
+            "format": w.get("format", CONFIG["format"]),
+        })
+
+    if not watches:
+        return [legacy_watch], True
+    return watches, False
+
+
+# ──────────────────────────────────────────────────────────────────────
 # CONSTANTS
 # ──────────────────────────────────────────────────────────────────────
 AVAIL_STATUS_MAP = {
@@ -330,17 +400,44 @@ def filter_shows(shows, theatre_filter, time_periods, date_codes, format_filter=
 # ──────────────────────────────────────────────────────────────────────
 # STATE (for change detection between runs)
 # ──────────────────────────────────────────────────────────────────────
-def load_state():
+def load_store():
+    """Loads the full on-disk state store.
+
+    New format (multi-movie): {"<movie_key>": {"shows": {...}, "dates": {...}}, ...}
+    Old format (original single-movie): {"shows": {...}, "dates": {...}}
+
+    An old-format file is transparently migrated in-memory to
+    {"_default": <old state>} so an existing bms_state.json keeps working
+    with no false "everything is new" alert on first run.
+    """
     try:
         with open(STATE_FILE) as f:
-            return json.load(f)
+            data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
+    if "shows" in data or "dates" in data:
+        return {"_default": data}
+    return data
 
-def save_state(state):
+
+def save_store(store):
     with open(STATE_FILE, "w") as f:
-        json.dump(state, f, indent=2)
+        json.dump(store, f, indent=2)
+
+
+def load_state(store, key):
+    """Per-movie equivalent of the original load_state() — pulls this
+    movie's slice out of the shared store. Behavior for the single-movie
+    (legacy) case is unchanged: key is "_default", same as the migrated
+    old-format file."""
+    return store.get(key, {})
+
+
+def save_state(store, key, state):
+    """Per-movie equivalent of the original save_state() — updates this
+    movie's slice in-memory; save_store() persists everything to disk."""
+    store[key] = state
 
 
 def build_state(shows, dates):
@@ -654,28 +751,35 @@ def send_email(subject, changes, shows, movie_info):
 
 
 # ──────────────────────────────────────────────────────────────────────
-# MAIN
+# PER-MOVIE PIPELINE  (this is the original single-movie main() body,
+# unchanged, just parameterized on `watch` instead of the global CONFIG,
+# and reading/writing its slice of the shared `store` instead of a
+# dedicated file)
 # ──────────────────────────────────────────────────────────────────────
-def main():
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f"[{now_str}] BMS Ticket Checker — CI mode")
+def process_watch(watch, store, legacy_mode):
+    label = watch["name"] or watch["url"]
+    print(f"\n--- Checking: {label} ---")
 
     # Parse config
-    parsed = parse_bms_url(CONFIG["url"])
+    parsed = parse_bms_url(watch["url"])
     event_code = parsed["event_code"]
     region_slug = parsed["region_slug"]
     url_date = parsed.get("date_code", "")
 
     if not event_code or not region_slug:
-        print("  ❌ Invalid BMS_URL. Could not extract event/region.")
-        sys.exit(1)
+        print("  ❌ Invalid URL. Could not extract event/region.")
+        return
+
+    # "_default" preserves exact continuity with a pre-existing
+    # bms_state.json when BMS_WATCHES isn't set (legacy single-movie mode).
+    state_key = "_default" if legacy_mode else event_code
 
     region_code, region_slug_r, lat, lon, geohash = resolve_region(
         region_slug
     )
 
     # Determine dates to check
-    raw_dates = CONFIG["dates"].strip()
+    raw_dates = watch["dates"].strip()
     if raw_dates:
         date_list = [d.strip() for d in raw_dates.split(",") if d.strip()]
     elif url_date:
@@ -708,11 +812,11 @@ def main():
 
     if not all_shows:
         print("  ❌ No showtimes found.")
-        sys.exit(0)
+        return
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
 
-    print(f"BMS_FORMAT='{CONFIG['format']}'")
+    print(f"BMS_FORMAT='{watch['format']}'")
 
     print("\n===== ALL SHOWS RECEIVED FROM BMS =====")
     for s in all_shows:
@@ -723,22 +827,22 @@ def main():
     # Apply filters
     filtered = filter_shows(
         all_shows,
-        CONFIG["theatre"],
-        CONFIG["time_period"],
-        CONFIG["dates"],
-        CONFIG["format"],
+        watch["theatre"],
+        watch["time_period"],
+        watch["dates"],
+        watch["format"],
     )
     print(f"  📊 {len(filtered)} showtime(s) after filters")
 
     # Build state & detect changes
     new_state = build_state(filtered, all_dates)
-    old_state = load_state()
+    old_state = load_state(store, state_key)
 
     changes = []
     if old_state:
         changes = detect_changes(old_state, new_state)
 
-    save_state(new_state)
+    save_state(store, state_key, new_state)
 
     if changes:
         print(f"\n  ⚡ {len(changes)} change(s) detected:")
@@ -761,7 +865,38 @@ def main():
         fmt = f"|{s.screen_attr}" if s.screen_attr else ""
         print(f"    {s.venue_name} — {s.time}{fmt} [{s.date_code}] — {cats}")
 
-    print("\n  Done.")
+
+# ──────────────────────────────────────────────────────────────────────
+# MAIN
+# ──────────────────────────────────────────────────────────────────────
+def main():
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{now_str}] BMS Ticket Checker — CI mode")
+
+    watches, legacy_mode = get_watches()
+    print(f"  📋 Tracking {len(watches)} movie(s)"
+          f"{' (legacy single-movie mode)' if legacy_mode else ''}")
+
+    store = load_store()
+    any_errors = False
+
+    for idx, watch in enumerate(watches, start=1):
+        if idx > 1:
+            time.sleep(2)  # space out requests between movies
+        try:
+            process_watch(watch, store, legacy_mode)
+        except Exception as e:
+            any_errors = True
+            label = watch["name"] or watch["url"]
+            print(f"  ❌ Unexpected error checking '{label}': {e}")
+
+    save_store(store)
+
+    print(f"\n  Done. {len(watches)} movie(s) checked.")
+    if any_errors and len(watches) == 1:
+        # Preserve the original single-movie script's exit-code behavior
+        # (non-zero exit on failure) when there's only one watch to check.
+        sys.exit(1)
 
 
 if __name__ == "__main__":
