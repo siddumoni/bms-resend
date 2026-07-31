@@ -552,6 +552,29 @@ def format_date_clean(date_code):
         return date_code or "N/A"
 
 
+def _buytickets_url(event_code, region_slug, date_code):
+    """BMS 'buytickets' page for a given movie/region/date, e.g.
+    https://in.bookmyshow.com/movies/chennai/buytickets/ET00478890/20260802
+    Used to make the 🗓️ date header in the email clickable. Returns ""
+    if we don't have enough info to build a valid link (so callers can
+    fall back to a plain, non-linked label)."""
+    if not event_code or not region_slug or not date_code:
+        return ""
+    return (f"https://in.bookmyshow.com/movies/{region_slug}"
+            f"/buytickets/{event_code}/{date_code}")
+
+
+def _date_link_html(date_code, event_code, region_slug, label_html):
+    """Wrap an (already-escaped) date label in a link to that date's
+    buytickets page, when we have enough info to build one. Falls back
+    to the plain label otherwise — purely cosmetic, no behavior change."""
+    url = _buytickets_url(event_code, region_slug, date_code)
+    if not url:
+        return label_html
+    return (f'<a href="{escape(url)}" target="_blank" '
+            f'style="color:inherit;text-decoration:underline;">{label_html}</a>')
+
+
 def format_change_line(c):
     """Plain-text rendering of a change dict (used for console + email text part)."""
     date_label = format_date_clean(c["date_code"]) if c["date_code"] else ""
@@ -609,7 +632,7 @@ def _change_row_html(c):
     return escape(str(c))
 
 
-def send_email(subject, changes, shows, movie_info):
+def send_email(subject, changes, shows, movie_info, event_code="", region_slug=""):
     api_key = RESEND_API_KEY.strip()
     to = RESEND_TO_EMAIL.strip()
     frm = RESEND_FROM_EMAIL.strip() or "onboarding@resend.dev"
@@ -673,11 +696,14 @@ def send_email(subject, changes, shows, movie_info):
                 <div>{time_chips}</div>
             </div>"""
 
+        date_label_html = _date_link_html(
+            dc, event_code, region_slug, escape(format_date_clean(dc))
+        )
         shows_html += f"""
         <tr><td style="padding:0 20px;">
             <div style="margin:20px 0 10px 0;padding:6px 14px;background:#111;color:#fff;
                         border-radius:6px;font-size:13px;font-weight:700;display:inline-block;">
-                🗓️ {escape(format_date_clean(dc))}
+                🗓️ {date_label_html}
             </div>
             {venue_blocks}
         </td></tr>"""
@@ -818,6 +844,8 @@ def send_combined_email(movie_results):
 
     for r in movie_results:
         movie_name = r.get("name") or (r.get("movie_info") or {}).get("name", "Unknown")
+        r_event_code = r.get("event_code", "")
+        r_region_slug = r.get("region_slug", "")
         sections_html += f"""
         <tr><td style="padding:0 20px;">
             <div style="margin:24px 0 6px 0;padding:10px 14px;background:#111;color:#fff;
@@ -901,11 +929,14 @@ def send_combined_email(movie_results):
                         </div>
                         <div>{time_chips}</div>
                     </div>"""
+                date_label_html = _date_link_html(
+                    dc, r_event_code, r_region_slug, escape(format_date_clean(dc))
+                )
                 sections_html += f"""
                 <tr><td style="padding:0 20px;">
                     <div style="margin:14px 0 8px 0;padding:5px 12px;background:#f0f0f0;color:#333;
                                 border-radius:6px;font-size:12px;font-weight:700;display:inline-block;">
-                        🗓️ {escape(format_date_clean(dc))}
+                        🗓️ {date_label_html}
                     </div>
                     {venue_blocks}
                 </td></tr>"""
@@ -1109,6 +1140,7 @@ def process_watch(watch, store, legacy_mode):
             send_email(
                 f"BMS Alert: {movie_info['name']} - {len(changes)} change(s)",
                 changes, filtered, movie_info,
+                event_code=event_code, region_slug=region_slug_r,
             )
     else:
         print("  ✅ No changes since last check.")
@@ -1124,7 +1156,8 @@ def process_watch(watch, store, legacy_mode):
         print(f"    {s.venue_name} — {s.time}{fmt} [{s.date_code}] — {cats}")
 
     return {"name": label, "movie_info": movie_info, "filtered": filtered,
-            "changes": changes, "error": None}
+            "changes": changes, "error": None,
+            "event_code": event_code, "region_slug": region_slug_r}
 
 
 # ──────────────────────────────────────────────────────────────────────
