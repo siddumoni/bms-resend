@@ -219,7 +219,7 @@
         "time_code": "2300",
         "cat": "PRIME",
         "price": "210.98",
-        "status": "2"
+        "status": "1"
       },
       "PCAN|42528|20260802|CLASSIC": {
         "venue": "PVR: VR Chennai, Anna Nagar",
@@ -864,8 +864,8 @@
     "dates": {
       "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
-      "20260802": "BOOKABLE",
-      "20260803": "AVAILABLE",
+      "20260802": "AVAILABLE",
+      "20260803": "BOOKABLE",
       "20260804": "AVAILABLE",
       "20260805": "AVAILABLE",
       "20260806": "AVAILABLE"
