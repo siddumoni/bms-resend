@@ -13,6 +13,7 @@ import json
 import time
 from html import escape
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from dataclasses import dataclass, field
 from urllib.parse import urlparse
 import requests
@@ -542,7 +543,15 @@ def _time_sort_val(time_code):
         return int(time_code)
     except (TypeError, ValueError):
         return 0
+        
+IST = ZoneInfo("Asia/Kolkata")
 
+
+def _now_ist_str():
+    """Current time formatted in IST, e.g. '31 Jul 2026, 09:42 PM IST' —
+    used for the 'Checked at' line so it's correct regardless of the
+    server/CI-runner's own local timezone (GitHub Actions runners run UTC)."""
+    return datetime.now(IST).strftime("%d %b %Y, %I:%M %p IST")
 
 def format_date_clean(date_code):
     """YYYYMMDD -> 'Thu, 30 Jul 2026'. Falls back gracefully if unparsable."""
@@ -641,7 +650,7 @@ def send_email(subject, changes, shows, movie_info, event_code="", region_slug="
         print("  ⚠️  Skipping email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
         return
 
-    now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
+    now_str = _now_ist_str()
     movie_name = movie_info.get("name", "Movie")
 
     # Sort chronologically: earliest date first, then earliest time first
@@ -835,7 +844,7 @@ def send_combined_email(movie_results):
         print("  ⚠️  Skipping combined email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
         return
 
-    now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
+    now_str = _now_ist_str()
     total_changes = sum(len(r.get("changes") or []) for r in movie_results)
     subject = f"BMS Alert: {len(movie_results)} movie(s) — {total_changes} change(s) total"
 
