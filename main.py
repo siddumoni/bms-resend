@@ -1139,7 +1139,7 @@ def main():
     # email covering every watched movie, regardless of whether anything
     # changed (legacy single-movie mode already sent its own email inside
     # process_watch(), exactly as the original script did).
-    if not legacy_mode and results:
+    if not legacy_mode and results and sum(len(r.get("changes") or []) for r in results) > 0:
         send_combined_email(results)
 
     print(f"\n  Done. {len(watches)} movie(s) checked.")
