@@ -139,6 +139,24 @@
         "cat": "PEARL",
         "price": "60.00",
         "status": "0"
+      },
+      "ACON|46387|20260803|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACON|46387|20260803|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
       }
     },
     "dates": {
@@ -655,7 +673,7 @@
         "time_code": "1830",
         "cat": "CLASSIC",
         "price": "96.74",
-        "status": "2"
+        "status": "1"
       }
     },
     "dates": {
