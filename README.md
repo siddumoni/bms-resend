@@ -14,6 +14,7 @@ Runs as a **manually-triggered GitHub Actions workflow** (see note in [Automatio
 - [Automation — important correction](#automation--important-correction)
 - [Local Usage](#local-usage)
 - [Configuration Reference](#configuration-reference)
+- [Multi-Movie Watches (`BMS_WATCHES`)](#multi-movie-watches-bms_watches)
 - [Supported Cities](#supported-cities)
 - [State File](#state-file)
 - [What Triggers a Notification](#what-triggers-a-notification)
@@ -25,17 +26,21 @@ Runs as a **manually-triggered GitHub Actions workflow** (see note in [Automatio
 
 The whole flow lives in `main.py` and runs once per invocation (it's a script, not a long-running service):
 
-1. **Parse the BMS URL** — extracts the event code (`ET########`) and the region/city slug (e.g. `chennai`) from the `BMS_URL` you provide.
-2. **Resolve the region** — maps the city slug to BookMyShow's internal region code, geo-coordinates, and geohash (needed by their API). A small built-in table covers major Indian cities; unknown cities get a best-effort fallback.
-3. **Call the BookMyShow API** (`showtimes-by-event/primary-dynamic`) for each date you're tracking, with automatic retry + backoff on `403`/`429` responses (up to 3 attempts).
-4. **Parse the response** into structured data: movie name/language, available dates, and every showtime (venue, time, screen format, seat categories with price + availability status).
-5. **Apply your filters** — theatre name, date, time-of-day period, and screen/format (see [Configuration Reference](#configuration-reference)).
-6. **Compare against the last saved state** (`bms_state.json`) to detect:
+1. **Determine what to watch** — either a single movie (`BMS_URL` + friends), or multiple movies at once via `BMS_WATCHES` (see [Multi-Movie Watches](#multi-movie-watches-bms_watches)).
+2. **Parse each BMS URL** — extracts the event code (`ET########`) and the region/city slug (e.g. `chennai`) from the watch's URL.
+3. **Resolve the region** — maps the city slug to BookMyShow's internal region code, geo-coordinates, and geohash (needed by their API). A small built-in table covers major Indian cities; unknown cities get a best-effort fallback.
+4. **Call the BookMyShow API** (`showtimes-by-event/primary-dynamic`) for each date you're tracking, with automatic retry + backoff on `403`/`429` responses (up to 3 attempts).
+5. **Parse the response** into structured data: movie name/language, available dates, and every showtime (venue, time, screen format, seat categories with price + availability status).
+6. **Apply your filters** — theatre name, date, time-of-day period, and screen/format (see [Configuration Reference](#configuration-reference)).
+7. **Compare against the last saved state** (`bms_state.json`) to detect:
    - a date newly opening for booking,
    - a brand-new showtime appearing,
    - a previously sold-out showtime becoming available again.
-7. **Save the new state** back to `bms_state.json` (overwriting the old one).
-8. **If anything changed**, build an HTML + plain-text email and send it via the Resend API. If nothing changed, no email is sent.
+8. **Save the new state** back to `bms_state.json` (overwriting the old one).
+9. **If anything changed**, build an HTML + plain-text email and send it via the Resend API. If nothing changed, no email is sent.
+   - The email's "Checked at" timestamp is always rendered in **IST** (`Asia/Kolkata`), regardless of the timezone the script actually runs in — this matters because GitHub Actions runners default to UTC.
+   - Each 🗓️ date header in the email is a clickable link straight to that date's BookMyShow "buy tickets" page (built from the event code, region slug, and date), so you can jump directly to booking instead of just seeing the date as plain text.
+   - In single-movie mode, one email is sent per run (if there are changes). In multi-movie (`BMS_WATCHES`) mode, one **combined digest email** is sent per run covering every watched movie (see [Multi-Movie Watches](#multi-movie-watches-bms_watches)).
 
 No changes → no email. This keeps your inbox quiet until something is actually worth acting on.
 
@@ -70,11 +75,12 @@ Go to **Settings → Secrets and variables → Actions → Variables** and add:
 
 | Variable | Required | Description | Example |
 |---|---|---|---|
-| `BMS_URL` | ✅ | Full BookMyShow "buy tickets" page URL for the movie | `https://in.bookmyshow.com/movies/chennai/dhurandhar-the-revenge/buytickets/ET00478890` |
+| `BMS_URL` | ✅ (unless using `BMS_WATCHES`) | Full BookMyShow "buy tickets" page URL for the movie | `https://in.bookmyshow.com/movies/chennai/dhurandhar-the-revenge/buytickets/ET00478890` |
 | `BMS_DATES` | optional | Comma-separated dates (`YYYYMMDD`) to check. Empty = auto-detect the single date from the URL if present. | `20260318,20260319` |
 | `BMS_THEATRE` | optional | Comma-separated substrings to filter venue names. Empty = all theatres. | `PVR,INOX` |
 | `BMS_TIME` | optional | Comma-separated time-of-day periods to filter. Empty = all times. | `evening,night` |
 | `BMS_FORMAT` | optional | Comma-separated substrings to filter screen/format attributes (e.g. IMAX, language). Empty = all formats. | `IMAX 2D,Tamil 2D` |
+| `BMS_WATCHES` | optional | JSON array to track **multiple movies** in one run — overrides `BMS_URL` and friends when set. See [Multi-Movie Watches](#multi-movie-watches-bms_watches). | see below |
 
 **Time periods available:** `morning` (06:00–12:00), `afternoon` (12:00–16:00), `evening` (16:00–19:00), `night` (19:00–24:00)
 
@@ -144,9 +150,44 @@ All configuration is environment-variable driven (with hardcoded fallbacks in `m
 | `BMS_THEATRE` | Venue-name substring filter | `""` (all theatres) |
 | `BMS_TIME` | Time-of-day period filter | `""` (all times) |
 | `BMS_FORMAT` | Screen/format substring filter | `""` (all formats) |
+| `BMS_WATCHES` | JSON array of multiple movie watches (see below) | `""` (unset → single-movie/legacy mode) |
 | `RESEND_API_KEY` | Resend API key | `""` |
 | `RESEND_TO_EMAIL` | Recipient email | `""` |
 | `RESEND_FROM_EMAIL` | Sender email | `aviiciii@resend.dev` |
+
+---
+
+## Multi-Movie Watches (`BMS_WATCHES`)
+
+By default (no `BMS_WATCHES` set), the script tracks a single movie built from `BMS_URL` / `BMS_DATES` / `BMS_THEATRE` / `BMS_TIME` / `BMS_FORMAT` — this is called **legacy mode**, and behaves exactly like the original single-movie script.
+
+To track **several movies (or the same movie across multiple venues/showtimes) in one run**, set `BMS_WATCHES` to a JSON array instead:
+
+```bash
+export BMS_WATCHES='[
+  {"name": "Dhurandhar", "url": "https://in.bookmyshow.com/movies/chennai/dhurandhar-the-revenge/buytickets/ET00478890", "theatre": "PVR"},
+  {"name": "Avatar 3", "url": "https://in.bookmyshow.com/movies/mumbai/avatar-3/buytickets/ET00500000", "time": "evening,night"}
+]'
+```
+
+**Per-watch fields:**
+
+| Field | Required | Falls back to | Notes |
+|---|---|---|---|
+| `url` | ✅ | — | Watch is skipped (with a warning) if missing |
+| `name` | optional | `""` | Used as a friendly label in the email/logs; `url` is used if empty |
+| `dates` | optional | `BMS_DATES` | `YYYYMMDD` comma-separated |
+| `theatre` | optional | `BMS_THEATRE` | Substring filter |
+| `time` | optional | `BMS_TIME` | Time-of-day period filter |
+| `format` | optional | `BMS_FORMAT` | Screen/format substring filter |
+
+Any field you leave off a watch quietly inherits the corresponding single-movie `BMS_*` env var, so a partially-specified watch behaves like the original single-movie config for whatever it doesn't override.
+
+**Fallback behavior:** if `BMS_WATCHES` is unset, empty, not valid JSON, or parses to something that isn't a non-empty array, the script prints a warning and falls back to legacy single-movie mode using `BMS_URL` — nothing breaks.
+
+**How it changes the rest of the run:**
+- **State file layout** — in multi-watch mode, `bms_state.json` becomes a dict keyed by each movie's event code (`{"ET00478890": {...}, "ET00500000": {...}}`) instead of the flat single-movie layout. An existing legacy-format state file is transparently migrated in-memory (under an internal `_default` key) the first time you switch to `BMS_WATCHES`, so you won't get a false "everything is new" alert.
+- **Email behavior** — instead of one email per movie, the script sends **one combined digest email** per run (via `send_combined_email`) listing changes across all watched movies together, plus the full current showtimes for each. If a particular watch's URL fails to fetch, that failure is reported inline for that movie without blocking the others.
 
 ---
 
@@ -187,6 +228,8 @@ For any other city slug, it falls back to a best-effort guess (uppercased slug a
 - `status` values: `0` = SOLD OUT, `1` = ALMOST FULL, `2` = FILLING FAST, `3` = AVAILABLE.
 - `dates` maps each date code to `BOOKABLE`, `NOT_OPEN`, or `AVAILABLE`.
 
+This is the **legacy single-movie layout** (used when `BMS_WATCHES` is not set). When `BMS_WATCHES` **is** set, the file instead nests one such block per movie, keyed by event code — see [Multi-Movie Watches](#multi-movie-watches-bms_watches).
+
 This file is committed back to the repo by the workflow after every run, so state survives between GitHub Actions runs (not just within a single job).
 
 ---
@@ -221,8 +264,8 @@ BMS Alert: Dhurandhar - The Revenge - 2 change(s)
 │   🎬 BMS TICKET ALERT                         │  ← red/orange gradient banner
 │   Dhurandhar - The Revenge                    │
 ├──────────────────────────────────────────────┤
-│                        Checked at 30 Jul 2026,│
-│                                    07:05 PM   │
+│                  Checked at 30 Jul 2026,      │
+│                          07:05 PM IST         │
 ├──────────────────────────────────────────────┤
 │ 🔔 Changes Detected                           │
 │  ─────────────────────────────────────────── │
@@ -234,7 +277,8 @@ BMS Alert: Dhurandhar - The Revenge - 2 change(s)
 ├──────────────────────────────────────────────┤
 │ 🎟️ Current Showtimes                          │
 │                                                │
-│  🗓️ Sun, 02 Aug 2026                          │
+│  🗓️ Sun, 02 Aug 2026  ← clickable, links to   │
+│                          the buytickets page   │
 │  📍 PVR: Palazzo, The Nexus Vijaya Mall       │
 │     [09:00 AM] [12:30 PM] [04:05 PM · IMAX 2D]│
 │     [07:40 PM]                                │
@@ -246,6 +290,9 @@ BMS Alert: Dhurandhar - The Revenge - 2 change(s)
 │                    Notifier                   │
 └──────────────────────────────────────────────┘
 ```
+
+Note: in **multi-movie (`BMS_WATCHES`) mode**, this same structure repeats per movie inside a single combined digest email, with one subject line summarizing the total change count across all watched movies (e.g. `BMS Alert: 2 movie(s) — 3 change(s) total`).
+
 ---
 
 ## License
