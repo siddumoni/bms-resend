@@ -117,6 +117,17 @@ AVAIL_STATUS_MAP = {
     "3": ("AVAILABLE",   "🟢"),
 }
 
+# (background, text-color) chip styling per availStatus code — used to
+# color-code showtime chips in the email by seat-booking status, mirroring
+# the BMS site's own red/yellow/orange/green convention.
+AVAIL_COLOR_MAP = {
+    "0": ("#f5f5f5", "#9e9e9e"),  # Sold out — grey, muted
+    "1": ("#fff8e1", "#f9a825"),  # Almost full — amber
+    "2": ("#fff3e0", "#ef6c00"),  # Filling fast — orange
+    "3": ("#e8f5e9", "#2e7d32"),  # Available — green
+}
+_DEFAULT_CHIP_STYLE = ("#eef2ff", "#3949ab")  # neutral indigo fallback
+
 DATE_STYLE_MAP = {
     "date-selected": "BOOKABLE",
     "date-disabled": "NOT_OPEN",
@@ -554,6 +565,34 @@ def format_change_line(c):
     return str(c)
 
 
+def _show_chip_style(show):
+    """Pick the (background, text-color) pair for a showtime chip based on
+    the best (highest) seat-availability status across its price categories
+    — a show is still bookable as long as ANY one category is open, so we
+    highlight it by its most-available category, not its worst one.
+    Falls back to the neutral indigo style when status can't be determined."""
+    best = None
+    for cat in show.categories:
+        try:
+            n = int(cat.status)
+        except (TypeError, ValueError):
+            continue
+        if best is None or n > best:
+            best = n
+    return AVAIL_COLOR_MAP.get(str(best), _DEFAULT_CHIP_STYLE)
+
+
+def _time_chip_html(s):
+    """HTML for a single showtime chip, colored per _show_chip_style()."""
+    bg, color = _show_chip_style(s)
+    return (f'<span style="display:inline-block;margin:4px 6px 0 0;padding:6px 12px;'
+            f'background:{bg};color:{color};border-radius:16px;font-size:13px;'
+            f'font-weight:600;white-space:nowrap;">'
+            f'{escape(s.time)}'
+            f'{f" · {escape(s.screen_attr)}" if s.screen_attr else ""}'
+            f'</span>')
+
+
 def _change_row_html(c):
     """HTML rendering of a change dict for the email template."""
     date_label = escape(format_date_clean(c["date_code"])) if c["date_code"] else ""
@@ -625,15 +664,7 @@ def send_email(subject, changes, shows, movie_info):
     for dc in date_order:
         venue_blocks = ""
         for vname, vshows in date_groups[dc].items():
-            time_chips = "".join(
-                f'<span style="display:inline-block;margin:4px 6px 0 0;padding:6px 12px;'
-                f'background:#eef2ff;color:#3949ab;border-radius:16px;font-size:13px;'
-                f'font-weight:600;white-space:nowrap;">'
-                f'{escape(s.time)}'
-                f'{f" · {escape(s.screen_attr)}" if s.screen_attr else ""}'
-                f'</span>'
-                for s in vshows
-            )
+            time_chips = "".join(_time_chip_html(s) for s in vshows)
             venue_blocks += f"""
             <div style="margin:0 0 14px 0;">
                 <div style="font-size:14px;font-weight:700;color:#222;margin:0 0 6px 0;">
@@ -862,15 +893,7 @@ def send_combined_email(movie_results):
             for dc in date_order:
                 venue_blocks = ""
                 for vname, vshows in date_groups[dc].items():
-                    time_chips = "".join(
-                        f'<span style="display:inline-block;margin:4px 6px 0 0;padding:6px 12px;'
-                        f'background:#eef2ff;color:#3949ab;border-radius:16px;font-size:13px;'
-                        f'font-weight:600;white-space:nowrap;">'
-                        f'{escape(s.time)}'
-                        f'{f" · {escape(s.screen_attr)}" if s.screen_attr else ""}'
-                        f'</span>'
-                        for s in vshows
-                    )
+                    time_chips = "".join(_time_chip_html(s) for s in vshows)
                     venue_blocks += f"""
                     <div style="margin:0 0 12px 0;">
                         <div style="font-size:13px;font-weight:700;color:#222;margin:0 0 6px 0;">
