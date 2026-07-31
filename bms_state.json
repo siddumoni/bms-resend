@@ -104,6 +104,24 @@
   },
   "ET00447840": {
     "shows": {
+      "ACON|46387|20260803|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACON|46387|20260803|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
       "ACVM|54771|20260803|DIAMOND": {
         "venue": "AGS Cinemas: Villivakkam",
         "time": "01:20 PM",
@@ -136,24 +154,6 @@
         "time": "03:55 PM",
         "date": "20260803",
         "time_code": "1555",
-        "cat": "PEARL",
-        "price": "60.00",
-        "status": "0"
-      },
-      "ACON|46387|20260803|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
-        "cat": "DIAMOND",
-        "price": "210.00",
-        "status": "3"
-      },
-      "ACON|46387|20260803|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
         "cat": "PEARL",
         "price": "60.00",
         "status": "0"
