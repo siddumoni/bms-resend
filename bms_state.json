@@ -103,7 +103,215 @@
     }
   },
   "ET00447840": {
-    "shows": {},
+    "shows": {
+      "MAYJ|235757|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "09:00 AM",
+        "date": "20260802",
+        "time_code": "0900",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "2"
+      },
+      "MAYJ|235498|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "11:00 AM",
+        "date": "20260802",
+        "time_code": "1100",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "1"
+      },
+      "MAYJ|235704|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "11:30 AM",
+        "date": "20260802",
+        "time_code": "1130",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "1"
+      },
+      "MAYJ|235499|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "02:05 PM",
+        "date": "20260802",
+        "time_code": "1405",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "1"
+      },
+      "MAYJ|235705|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "02:30 PM",
+        "date": "20260802",
+        "time_code": "1430",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "1"
+      },
+      "MAYJ|235500|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "05:10 PM",
+        "date": "20260802",
+        "time_code": "1710",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "1"
+      },
+      "MAYJ|235706|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "05:30 PM",
+        "date": "20260802",
+        "time_code": "1730",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "1"
+      },
+      "MAYJ|235501|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "08:15 PM",
+        "date": "20260802",
+        "time_code": "2015",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "2"
+      },
+      "MAYJ|235707|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "08:30 PM",
+        "date": "20260802",
+        "time_code": "2030",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "2"
+      },
+      "MAYJ|235708|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "11:30 PM",
+        "date": "20260802",
+        "time_code": "2330",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "3"
+      },
+      "MAYJ|235502|20260802|FIRST CLASS": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "11:55 PM",
+        "date": "20260802",
+        "time_code": "2355",
+        "cat": "FIRST CLASS",
+        "price": "211.00",
+        "status": "3"
+      },
+      "ACON|46375|20260802|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "07:10 PM",
+        "date": "20260802",
+        "time_code": "1910",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "1"
+      },
+      "ACON|46375|20260802|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "07:10 PM",
+        "date": "20260802",
+        "time_code": "1910",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
+      "PVHR|40021|20260802|PRIME": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "09:00 AM",
+        "date": "20260802",
+        "time_code": "0900",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "1"
+      },
+      "PVHR|40021|20260802|CLASSIC": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "09:00 AM",
+        "date": "20260802",
+        "time_code": "0900",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHR|40027|20260802|PRIME": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "12:45 PM",
+        "date": "20260802",
+        "time_code": "1245",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "1"
+      },
+      "PVHR|40027|20260802|CLASSIC": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "12:45 PM",
+        "date": "20260802",
+        "time_code": "1245",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHR|40023|20260802|PRIME": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "04:00 PM",
+        "date": "20260802",
+        "time_code": "1600",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "1"
+      },
+      "PVHR|40023|20260802|CLASSIC": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "04:00 PM",
+        "date": "20260802",
+        "time_code": "1600",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHR|40029|20260802|PRIME": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "07:40 PM",
+        "date": "20260802",
+        "time_code": "1940",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "1"
+      },
+      "PVHR|40029|20260802|CLASSIC": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "07:40 PM",
+        "date": "20260802",
+        "time_code": "1940",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHR|40025|20260802|PRIME": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "10:50 PM",
+        "date": "20260802",
+        "time_code": "2250",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "2"
+      },
+      "PVHR|40025|20260802|CLASSIC": {
+        "venue": "PVR: Heritage RSL ECR, Chennai",
+        "time": "10:50 PM",
+        "date": "20260802",
+        "time_code": "2250",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      }
+    },
     "dates": {
       "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
