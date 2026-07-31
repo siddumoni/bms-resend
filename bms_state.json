@@ -1,10 +1,56 @@
 {
   "ET00480917": {
-    "shows": {},
+    "shows": {
+      "PVPZ|36072|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "09:00 AM",
+        "date": "20260802",
+        "time_code": "0900",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36073|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:30 PM",
+        "date": "20260802",
+        "time_code": "1230",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36074|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:05 PM",
+        "date": "20260802",
+        "time_code": "1605",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36075|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:40 PM",
+        "date": "20260802",
+        "time_code": "1940",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36076|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "11:15 PM",
+        "date": "20260802",
+        "time_code": "2315",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      }
+    },
     "dates": {
-      "20260731": "BOOKABLE",
+      "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
-      "20260802": "AVAILABLE",
+      "20260802": "BOOKABLE",
       "20260803": "NOT_OPEN",
       "20260804": "NOT_OPEN",
       "20260805": "NOT_OPEN",
@@ -12,7 +58,44 @@
     }
   },
   "ET00447840": {
-    "shows": {},
+    "shows": {
+      "ACTN|44728|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "03:55 PM",
+        "date": "20260803",
+        "time_code": "1555",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "2"
+      },
+      "ACTN|44728|20260803|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "03:55 PM",
+        "date": "20260803",
+        "time_code": "1555",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
+      "ACVM|54771|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACVM|54771|20260803|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      }
+    },
     "dates": {
       "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
