@@ -115,7 +115,62 @@
     }
   },
   "ET00502600": {
-    "shows": {},
+    "shows": {
+      "GKCP|3616|20260802|LOUNGE 1 +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "08:00 AM",
+        "date": "20260802",
+        "time_code": "0800",
+        "cat": "LOUNGE 1 +3D",
+        "price": "190.00",
+        "status": "0"
+      },
+      "GKCP|3616|20260802|SIGNATURE CLASS +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "08:00 AM",
+        "date": "20260802",
+        "time_code": "0800",
+        "cat": "SIGNATURE CLASS +3D",
+        "price": "190.00",
+        "status": "2"
+      },
+      "GKCP|3624|20260802|LOUNGE 1 +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "05:40 PM",
+        "date": "20260802",
+        "time_code": "1740",
+        "cat": "LOUNGE 1 +3D",
+        "price": "190.00",
+        "status": "0"
+      },
+      "GKCP|3624|20260802|SIGNATURE CLASS +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "05:40 PM",
+        "date": "20260802",
+        "time_code": "1740",
+        "cat": "SIGNATURE CLASS +3D",
+        "price": "190.00",
+        "status": "2"
+      },
+      "GKCP|3625|20260802|LOUNGE 1 +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "08:45 PM",
+        "date": "20260802",
+        "time_code": "2045",
+        "cat": "LOUNGE 1 +3D",
+        "price": "190.00",
+        "status": "1"
+      },
+      "GKCP|3625|20260802|SIGNATURE CLASS +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "08:45 PM",
+        "date": "20260802",
+        "time_code": "2045",
+        "cat": "SIGNATURE CLASS +3D",
+        "price": "190.00",
+        "status": "2"
+      }
+    },
     "dates": {
       "20260731": "AVAILABLE",
       "20260801": "AVAILABLE",
