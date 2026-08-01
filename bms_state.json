@@ -1116,6 +1116,24 @@
         "price": "96.74",
         "status": "3"
       },
+      "INTO|88474|20260803|CLUB": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "04:15 PM",
+        "date": "20260803",
+        "time_code": "1615",
+        "cat": "CLUB",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INTO|88474|20260803|EXECUTIVE": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "04:15 PM",
+        "date": "20260803",
+        "time_code": "1615",
+        "cat": "EXECUTIVE",
+        "price": "96.74",
+        "status": "3"
+      },
       "INTO|88483|20260803|CLUB": {
         "venue": "INOX: The Marina Mall, OMR",
         "time": "07:05 PM",
@@ -1166,6 +1184,24 @@
         "time": "10:20 PM",
         "date": "20260803",
         "time_code": "2220",
+        "cat": "EXECUTIVE",
+        "price": "96.74",
+        "status": "3"
+      },
+      "INTO|88475|20260803|CLUB": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "11:30 PM",
+        "date": "20260803",
+        "time_code": "2330",
+        "cat": "CLUB",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INTO|88475|20260803|EXECUTIVE": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "11:30 PM",
+        "date": "20260803",
+        "time_code": "2330",
         "cat": "EXECUTIVE",
         "price": "96.74",
         "status": "3"
@@ -1392,7 +1428,7 @@
     },
     "ET00447840": {
       "20260803": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       }
     },
