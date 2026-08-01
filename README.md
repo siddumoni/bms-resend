@@ -18,7 +18,9 @@ Runs as a **manually-triggered GitHub Actions workflow** (see note in [Automatio
 - [Supported Cities](#supported-cities)
 - [State File](#state-file)
 - [What Triggers a Notification](#what-triggers-a-notification)
+- [Fetch-Failure Alerts](#fetch-failure-alerts)
 - [Sample Email Template](#sample-email-template)
+- [Sample Fetch-Failure Email](#sample-fetch-failure-email)
 - [License](#license)
 ---
 
@@ -36,11 +38,12 @@ The whole flow lives in `main.py` and runs once per invocation (it's a script, n
    - a date newly opening for booking,
    - a brand-new showtime appearing,
    - a previously sold-out showtime becoming available again.
-8. **Save the new state** back to `bms_state.json` (overwriting the old one).
-9. **If anything changed**, build an HTML + plain-text email and send it via the Resend API. If nothing changed, no email is sent.
-   - The email's "Checked at" timestamp is always rendered in **IST** (`Asia/Kolkata`), regardless of the timezone the script actually runs in — this matters because GitHub Actions runners default to UTC.
-   - Each 🗓️ date header in the email is a clickable link straight to that date's BookMyShow "buy tickets" page (built from the event code, region slug, and date), so you can jump directly to booking instead of just seeing the date as plain text.
-   - In single-movie mode, one email is sent per run (if there are changes). In multi-movie (`BMS_WATCHES`) mode, one **combined digest email** is sent per run covering every watched movie (see [Multi-Movie Watches](#multi-movie-watches-bms_watches)).
+8. **Save the new state** back to `bms_state.json` — **merged per date**, not a blanket overwrite. If a particular date failed to fetch this run (see step 4's retries), that date's *previously saved* state is left untouched instead of being wiped. Only dates that were actually fetched successfully this run get their stored data replaced. This matters: without this, a transient BMS block on one date would erase what the script already knew about it, and the next successful fetch would look like a pile of "new" showtimes even though nothing on BMS had actually changed.
+9. **Track consecutive fetch failures per date.** If a date fails every retry for `BMS_FAIL_THRESHOLD` runs in a row (default 3), a one-time **fetch-failure alert email** is sent — separate from the ticket-alert email below. See [Fetch-Failure Alerts](#fetch-failure-alerts).
+10. **If anything changed**, build an HTML + plain-text email and send it via the Resend API. If nothing changed, no email is sent.
+    - The email's "Checked at" timestamp is always rendered in **IST** (`Asia/Kolkata`), regardless of the timezone the script actually runs in — this matters because GitHub Actions runners default to UTC.
+    - Each 🗓️ date header in the email is a clickable link straight to that date's BookMyShow "buy tickets" page (built from the event code, region slug, and date), so you can jump directly to booking instead of just seeing the date as plain text.
+    - In single-movie mode, one email is sent per run (if there are changes). In multi-movie (`BMS_WATCHES`) mode, one **combined digest email** is sent per run covering every watched movie (see [Multi-Movie Watches](#multi-movie-watches-bms_watches)).
 
 No changes → no email. This keeps your inbox quiet until something is actually worth acting on.
 
@@ -81,8 +84,15 @@ Go to **Settings → Secrets and variables → Actions → Variables** and add:
 | `BMS_TIME` | optional | Comma-separated time-of-day periods to filter. Empty = all times. | `evening,night` |
 | `BMS_FORMAT` | optional | Comma-separated substrings to filter screen/format attributes (e.g. IMAX, language). Empty = all formats. | `IMAX 2D,Tamil 2D` |
 | `BMS_WATCHES` | optional | JSON array to track **multiple movies** in one run — overrides `BMS_URL` and friends when set. See [Multi-Movie Watches](#multi-movie-watches-bms_watches). | see below |
+| `BMS_FAIL_THRESHOLD` | optional | Plain integer — how many consecutive failed fetches (for the same movie/date) trigger a [fetch-failure alert email](#fetch-failure-alerts). No quotes, no JSON — just the number. | `3` |
 
 **Time periods available:** `morning` (06:00–12:00), `afternoon` (12:00–16:00), `evening` (16:00–19:00), `night` (19:00–24:00)
+
+> ⚠️ **`BMS_FAIL_THRESHOLD` needs one extra step.** Unlike the other variables above, this one is *not* currently wired into `.github/workflows/bms-checker.yml`'s `env:` block, so setting the repo variable alone won't reach the script — GitHub Actions only forwards env vars it's explicitly told to. If you want a non-default value, add this line to the `env:` block under the "Run checker" step:
+> ```yaml
+>     BMS_FAIL_THRESHOLD: ${{ vars.BMS_FAIL_THRESHOLD }}
+> ```
+> If you skip this, the script just falls back to the default of `3` — nothing breaks either way.
 
 ### 4. Trigger the workflow
 
@@ -151,6 +161,7 @@ All configuration is environment-variable driven (with hardcoded fallbacks in `m
 | `BMS_TIME` | Time-of-day period filter | `""` (all times) |
 | `BMS_FORMAT` | Screen/format substring filter | `""` (all formats) |
 | `BMS_WATCHES` | JSON array of multiple movie watches (see below) | `""` (unset → single-movie/legacy mode) |
+| `BMS_FAIL_THRESHOLD` | Consecutive failed fetches (same movie/date) before a fetch-failure alert email fires | `3` |
 | `RESEND_API_KEY` | Resend API key | `""` |
 | `RESEND_TO_EMAIL` | Recipient email | `""` |
 | `RESEND_FROM_EMAIL` | Sender email | `aviiciii@resend.dev` |
@@ -230,6 +241,22 @@ For any other city slug, it falls back to a best-effort guess (uppercased slug a
 
 This is the **legacy single-movie layout** (used when `BMS_WATCHES` is not set). When `BMS_WATCHES` **is** set, the file instead nests one such block per movie, keyed by event code — see [Multi-Movie Watches](#multi-movie-watches-bms_watches).
 
+**Per-date merge on save:** when the state is written back, only the dates that were *successfully* fetched that run get their entries replaced. Any date that failed every retry keeps its last-known entries as-is, rather than being wiped — this is what stops a transient BMS block from making a later successful fetch look like a wave of brand-new showtimes.
+
+**`_fail_tracker` key:** the file also carries a reserved top-level `_fail_tracker` block, tracking consecutive fetch failures per movie/date so the script knows when to send a [fetch-failure alert](#fetch-failure-alerts):
+
+```json
+{
+  "_fail_tracker": {
+    "ET00480917": {
+      "20260802": { "count": 2, "alerted": false }
+    }
+  }
+}
+```
+
+`count` resets to `0` the moment a fetch for that date succeeds; `alerted` is set once the threshold is crossed, so you get exactly one email per outage rather than one every run until it recovers. This key can't collide with movie state, since movie keys are always event codes (`ET########`) or `_default` in legacy mode.
+
 This file is committed back to the repo by the workflow after every run, so state survives between GitHub Actions runs (not just within a single job).
 
 ---
@@ -245,6 +272,22 @@ An email is sent only when the diff between old and new state finds one of these
 | 🟢 **Back in stock** | A show's status was `0` (SOLD OUT) and is now anything else |
 
 Note: general price changes or "available → almost full" type shifts are **not** treated as notification-worthy changes — only sold-out-recovery, new showtimes, and date openings are. This keeps alerts meaningful instead of noisy.
+
+---
+
+## Fetch-Failure Alerts
+
+Separate from the ticket-alert emails above, the script also watches its own reliability: if BMS blocks every retry for a given movie/date (HTTP `403`/`429`, 3 attempts, all failing), that's tracked as one "failed check." Routine, occasional blocks are expected and already absorbed by the retry logic in `fetch_bms()` — no alert fires for those.
+
+An alert only fires once a movie/date combination fails **`BMS_FAIL_THRESHOLD` runs in a row** (default `3`, i.e. ~45 minutes on a 15-minute schedule). At that point:
+
+- **One** fetch-failure email is sent, listing every movie/date that just crossed the threshold this run.
+- It does **not** repeat every subsequent run while still down — you're not re-alerted for the same outage.
+- Once that date fetches successfully again, its failure counter resets. If it later fails `BMS_FAIL_THRESHOLD` times again, you'll get a fresh alert.
+
+This email is visually and structurally distinct from the ticket-alert email — different (amber/warning) color scheme, different subject prefix (`⚠️ BMS Fetch Alert: ...`), different copy — so the two are never confused at a glance. See [Sample Fetch-Failure Email](#sample-fetch-failure-email) below.
+
+Configure the threshold via `BMS_FAIL_THRESHOLD` (see [Configuration Reference](#configuration-reference)) — remember this needs an extra line in the workflow yaml if you want a non-default value; see the note in [Setup (GitHub Actions)](#setup-github-actions).
 
 ---
 
@@ -292,6 +335,49 @@ BMS Alert: Dhurandhar - The Revenge - 2 change(s)
 ```
 
 Note: in **multi-movie (`BMS_WATCHES`) mode**, this same structure repeats per movie inside a single combined digest email, with one subject line summarizing the total change count across all watched movies (e.g. `BMS Alert: 2 movie(s) — 3 change(s) total`).
+
+---
+
+## Sample Fetch-Failure Email
+
+This is the separate, amber-themed email sent when a movie/date crosses `BMS_FAIL_THRESHOLD` consecutive fetch failures (see [Fetch-Failure Alerts](#fetch-failure-alerts)). Note the different color scheme, subject prefix, and copy — deliberately distinct from the ticket-alert email above so the two can't be mistaken for each other.
+
+**Subject:**
+```
+⚠️ BMS Fetch Alert: 2 date(s) not loading (BMS blocking requests)
+```
+
+**HTML body (rendered structure):**
+
+```
+┌──────────────────────────────────────────────┐
+│  ⚠️ BMS TICKET CHECKER — SYSTEM ALERT         │  ← amber/black warning banner
+│  Not receiving data from BookMyShow           │     (not the red ticket-alert one)
+├──────────────────────────────────────────────┤
+│                  Checked at 01 Aug 2026,      │
+│                          10:18 AM IST         │
+├──────────────────────────────────────────────┤
+│ The following have failed every fetch         │
+│ attempt for 3+ consecutive runs — BMS is      │
+│ likely rate-limiting or blocking these        │
+│ requests. Treat "no changes" for these as     │
+│ "unknown," not "confirmed no change."         │
+├──────────────────────────────────────────────┤
+│  The Odyssey — Sun, 02 Aug 2026               │  ← clickable, links to
+│  Failed 3 consecutive check(s)                │     the buytickets page
+│  · event ET00480917                           │
+│                                                │
+│  Spider-Man: Brand New Day - English 3D       │
+│  — Mon, 03 Aug 2026                           │
+│  Failed 4 consecutive check(s)                │
+│  · event ET00502600                           │
+├──────────────────────────────────────────────┤
+│  This is a separate system-health alert —     │
+│  not a ticket-availability email. You won't   │
+│  be re-alerted for the same date until it     │
+│  recovers and fails again.                    │
+└──────────────────────────────────────────────┘
+```
 
 ---
 
