@@ -104,6 +104,78 @@
   },
   "ET00447840": {
     "shows": {
+      "PCAN|42584|20260803|PRIME": {
+        "venue": "PVR: VR Chennai, Anna Nagar",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PCAN|42584|20260803|CLASSIC": {
+        "venue": "PVR: VR Chennai, Anna Nagar",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHC|30660|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVHC|30660|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHC|30661|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVHC|30661|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHC|30662|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVHC|30662|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
       "ACON|46387|20260803|DIAMOND": {
         "venue": "AGS Cinemas OMR: Navlur",
         "time": "12:30 PM",
@@ -394,7 +466,7 @@
         "time_code": "1920",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "2"
+        "status": "1"
       },
       "ACTN|44617|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -674,6 +746,78 @@
         "cat": "CLASSIC",
         "price": "96.74",
         "status": "1"
+      },
+      "PVHC|30665|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "01:10 PM",
+        "date": "20260803",
+        "time_code": "1310",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVHC|30665|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "01:10 PM",
+        "date": "20260803",
+        "time_code": "1310",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVHC|30653|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "03:25 PM",
+        "date": "20260803",
+        "time_code": "1525",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVHC|30653|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "03:25 PM",
+        "date": "20260803",
+        "time_code": "1525",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVHC|30654|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "06:40 PM",
+        "date": "20260803",
+        "time_code": "1840",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVHC|30654|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "06:40 PM",
+        "date": "20260803",
+        "time_code": "1840",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVHC|30655|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "09:55 PM",
+        "date": "20260803",
+        "time_code": "2155",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVHC|30655|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "09:55 PM",
+        "date": "20260803",
+        "time_code": "2155",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
       }
     },
     "dates": {
@@ -705,7 +849,7 @@
     },
     "ET00502600": {
       "20260803": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       }
     }
