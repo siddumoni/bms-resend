@@ -1051,7 +1051,7 @@
         "time_code": "1905",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "2"
+        "status": "1"
       },
       "ACVM|54689|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: Villivakkam",
@@ -1079,6 +1079,186 @@
         "cat": "PEARL 3D",
         "price": "90.00",
         "status": "0"
+      },
+      "PVSR|26383|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "11:55 AM",
+        "date": "20260803",
+        "time_code": "1155",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26383|20260803|PREMIUM": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "11:55 AM",
+        "date": "20260803",
+        "time_code": "1155",
+        "cat": "PREMIUM",
+        "price": "235.00",
+        "status": "3"
+      },
+      "PVSR|26383|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "11:55 AM",
+        "date": "20260803",
+        "time_code": "1155",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVSR|26389|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "01:10 PM",
+        "date": "20260803",
+        "time_code": "1310",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26389|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "01:10 PM",
+        "date": "20260803",
+        "time_code": "1310",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVSR|26387|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "03:35 PM",
+        "date": "20260803",
+        "time_code": "1535",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVSR|26387|20260803|PREMIUM": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "03:35 PM",
+        "date": "20260803",
+        "time_code": "1535",
+        "cat": "PREMIUM",
+        "price": "240.00",
+        "status": "3"
+      },
+      "PVSR|26387|20260803|ECONOMY": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "03:35 PM",
+        "date": "20260803",
+        "time_code": "1535",
+        "cat": "ECONOMY",
+        "price": "230.00",
+        "status": "3"
+      },
+      "PVSR|26387|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "03:35 PM",
+        "date": "20260803",
+        "time_code": "1535",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVSR|26390|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "04:25 PM",
+        "date": "20260803",
+        "time_code": "1625",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26390|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "04:25 PM",
+        "date": "20260803",
+        "time_code": "1625",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVSR|26385|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "06:50 PM",
+        "date": "20260803",
+        "time_code": "1850",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26385|20260803|PREMIUM": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "06:50 PM",
+        "date": "20260803",
+        "time_code": "1850",
+        "cat": "PREMIUM",
+        "price": "235.00",
+        "status": "3"
+      },
+      "PVSR|26385|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "06:50 PM",
+        "date": "20260803",
+        "time_code": "1850",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVSR|26391|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:50 PM",
+        "date": "20260803",
+        "time_code": "1950",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26391|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:50 PM",
+        "date": "20260803",
+        "time_code": "1950",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVSR|26388|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVSR|26388|20260803|PREMIUM": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "PREMIUM",
+        "price": "240.00",
+        "status": "3"
+      },
+      "PVSR|26388|20260803|ECONOMY": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "ECONOMY",
+        "price": "230.00",
+        "status": "3"
+      },
+      "PVSR|26388|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
       },
       "INCH|79454|20260803|Club": {
         "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
@@ -1494,6 +1674,60 @@
         "price": "101.74",
         "status": "3"
       },
+      "PGRA|21493|20260803|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "04:30 PM",
+        "date": "20260803",
+        "time_code": "1630",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGRA|21493|20260803|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "04:30 PM",
+        "date": "20260803",
+        "time_code": "1630",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PGRA|21494|20260803|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "07:40 PM",
+        "date": "20260803",
+        "time_code": "1940",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGRA|21494|20260803|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "07:40 PM",
+        "date": "20260803",
+        "time_code": "1940",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PGRA|21495|20260803|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "10:50 PM",
+        "date": "20260803",
+        "time_code": "2250",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGRA|21495|20260803|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "10:50 PM",
+        "date": "20260803",
+        "time_code": "2250",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
       "PABC|20615|20260803|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
         "time": "01:20 PM",
@@ -1508,6 +1742,42 @@
         "time": "01:20 PM",
         "date": "20260803",
         "time_code": "1320",
+        "cat": "CLASSIC",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PABC|20617|20260803|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "07:40 PM",
+        "date": "20260803",
+        "time_code": "1940",
+        "cat": "PRIME",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PABC|20617|20260803|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "07:40 PM",
+        "date": "20260803",
+        "time_code": "1940",
+        "cat": "CLASSIC",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PABC|20618|20260803|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "10:50 PM",
+        "date": "20260803",
+        "time_code": "2250",
+        "cat": "PRIME",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PABC|20618|20260803|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "10:50 PM",
+        "date": "20260803",
+        "time_code": "2250",
         "cat": "CLASSIC",
         "price": "101.74",
         "status": "3"
