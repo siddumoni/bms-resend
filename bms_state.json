@@ -167,6 +167,24 @@
         "price": "61.74",
         "status": "3"
       },
+      "ACON|46387|20260803|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACON|46387|20260803|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
       "PVHR|40049|20260803|PRIME": {
         "venue": "PVR: Heritage RSL ECR, Chennai",
         "time": "12:45 PM",
@@ -239,24 +257,6 @@
         "price": "61.74",
         "status": "3"
       },
-      "ACON|46387|20260803|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
-        "cat": "DIAMOND",
-        "price": "210.00",
-        "status": "3"
-      },
-      "ACON|46387|20260803|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
-        "cat": "PEARL",
-        "price": "60.00",
-        "status": "0"
-      },
       "PVPZ|36146|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
         "time": "12:15 PM",
@@ -300,7 +300,7 @@
         "time_code": "2300",
         "cat": "ELITE",
         "price": "210.98",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36157|20260803|BUDGET": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -310,6 +310,24 @@
         "cat": "BUDGET",
         "price": "61.74",
         "status": "3"
+      },
+      "ACVM|54771|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "2"
+      },
+      "ACVM|54771|20260803|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
       },
       "PVHC|30660|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -364,24 +382,6 @@
         "cat": "CLASSIC",
         "price": "61.74",
         "status": "3"
-      },
-      "ACVM|54771|20260803|DIAMOND": {
-        "venue": "AGS Cinemas: Villivakkam",
-        "time": "01:20 PM",
-        "date": "20260803",
-        "time_code": "1320",
-        "cat": "DIAMOND",
-        "price": "210.00",
-        "status": "2"
-      },
-      "ACVM|54771|20260803|PEARL": {
-        "venue": "AGS Cinemas: Villivakkam",
-        "time": "01:20 PM",
-        "date": "20260803",
-        "time_code": "1320",
-        "cat": "PEARL",
-        "price": "60.00",
-        "status": "0"
       },
       "ACTN|44728|20260803|DIAMOND": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -1202,7 +1202,7 @@
   "_fail_tracker": {
     "ET00480917": {
       "20260802": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       },
       "20260803": {
