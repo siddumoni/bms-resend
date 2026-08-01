@@ -94,12 +94,12 @@
     },
     "dates": {
       "20260801": "BOOKABLE",
-      "20260802": "AVAILABLE",
-      "20260803": "NOT_OPEN",
       "20260804": "NOT_OPEN",
       "20260805": "NOT_OPEN",
       "20260806": "NOT_OPEN",
-      "20260807": "NOT_OPEN"
+      "20260807": "NOT_OPEN",
+      "20260802": "AVAILABLE",
+      "20260803": "NOT_OPEN"
     }
   },
   "ET00447840": {
@@ -162,11 +162,11 @@
     "dates": {
       "20260801": "AVAILABLE",
       "20260802": "AVAILABLE",
-      "20260803": "BOOKABLE",
       "20260804": "AVAILABLE",
       "20260805": "AVAILABLE",
       "20260806": "AVAILABLE",
-      "20260807": "NOT_OPEN"
+      "20260807": "NOT_OPEN",
+      "20260803": "BOOKABLE"
     }
   },
   "ET00502600": {
@@ -412,7 +412,7 @@
         "time_code": "1150",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "2"
+        "status": "3"
       },
       "ACTN|44719|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -448,7 +448,7 @@
         "time_code": "1530",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "2"
+        "status": "3"
       },
       "ACTN|44692|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -484,7 +484,7 @@
         "time_code": "1920",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "1"
+        "status": "2"
       },
       "ACTN|44617|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -502,7 +502,7 @@
         "time_code": "2210",
         "cat": "DIAMOND 3D",
         "price": "240.00",
-        "status": "2"
+        "status": "3"
       },
       "ACTN|44618|20260803|PEARL 3D": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -679,11 +679,35 @@
     "dates": {
       "20260801": "AVAILABLE",
       "20260802": "AVAILABLE",
-      "20260803": "BOOKABLE",
       "20260804": "AVAILABLE",
       "20260805": "AVAILABLE",
       "20260806": "AVAILABLE",
-      "20260807": "NOT_OPEN"
+      "20260807": "NOT_OPEN",
+      "20260803": "BOOKABLE"
+    }
+  },
+  "_fail_tracker": {
+    "ET00480917": {
+      "20260802": {
+        "count": 0,
+        "alerted": false
+      },
+      "20260803": {
+        "count": 0,
+        "alerted": false
+      }
+    },
+    "ET00447840": {
+      "20260803": {
+        "count": 0,
+        "alerted": false
+      }
+    },
+    "ET00502600": {
+      "20260803": {
+        "count": 0,
+        "alerted": false
+      }
     }
   }
 }
