@@ -248,6 +248,24 @@
         "price": "61.74",
         "status": "3"
       },
+      "PVPZ|36157|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "11:00 PM",
+        "date": "20260803",
+        "time_code": "2300",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVPZ|36157|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "11:00 PM",
+        "date": "20260803",
+        "time_code": "2300",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
       "PVHC|30660|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
         "time": "12:40 PM",
