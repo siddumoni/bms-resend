@@ -607,6 +607,24 @@
         "cat": "CLASSIC",
         "price": "66.74",
         "status": "0"
+      },
+      "PVSR|26404|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:25 PM",
+        "date": "20260803",
+        "time_code": "1925",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVSR|26404|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:25 PM",
+        "date": "20260803",
+        "time_code": "1925",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
       }
     },
     "dates": {
@@ -1242,6 +1260,24 @@
         "price": "96.74",
         "status": "3"
       },
+      "PVSR|26397|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "12:35 PM",
+        "date": "20260803",
+        "time_code": "1235",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26397|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "12:35 PM",
+        "date": "20260803",
+        "time_code": "1235",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
       "PVSR|26389|20260803|ELITE": {
         "venue": "PVR: Sathyam, Royapettah",
         "time": "01:10 PM",
@@ -1296,6 +1332,24 @@
         "price": "101.74",
         "status": "3"
       },
+      "PVSR|26398|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "03:55 PM",
+        "date": "20260803",
+        "time_code": "1555",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26398|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "03:55 PM",
+        "date": "20260803",
+        "time_code": "1555",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
       "PVSR|26390|20260803|ELITE": {
         "venue": "PVR: Sathyam, Royapettah",
         "time": "04:25 PM",
@@ -1341,6 +1395,24 @@
         "price": "96.74",
         "status": "3"
       },
+      "PVSR|26400|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:05 PM",
+        "date": "20260803",
+        "time_code": "1905",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26400|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:05 PM",
+        "date": "20260803",
+        "time_code": "1905",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
       "PVSR|26391|20260803|ELITE": {
         "venue": "PVR: Sathyam, Royapettah",
         "time": "07:50 PM",
@@ -1355,6 +1427,24 @@
         "time": "07:50 PM",
         "date": "20260803",
         "time_code": "1950",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PVSR|26401|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "10:15 PM",
+        "date": "20260803",
+        "time_code": "2215",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVSR|26401|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "10:15 PM",
+        "date": "20260803",
+        "time_code": "2215",
         "cat": "BUDGET",
         "price": "96.74",
         "status": "3"
@@ -1510,7 +1600,7 @@
         "time_code": "1915",
         "cat": "CLUB",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "INTO|88430|20260803|EXECUTIVE": {
         "venue": "INOX: The Marina Mall, OMR",
@@ -1564,7 +1654,7 @@
         "time_code": "1255",
         "cat": "PRIME",
         "price": "260.98",
-        "status": "3"
+        "status": "2"
       },
       "PCAN|42602|20260803|CLASSIC": {
         "venue": "PVR: VR Chennai, Anna Nagar",
@@ -1600,7 +1690,7 @@
         "time_code": "1940",
         "cat": "PRIME",
         "price": "260.98",
-        "status": "3"
+        "status": "2"
       },
       "PCAN|42600|20260803|CLASSIC": {
         "venue": "PVR: VR Chennai, Anna Nagar",
@@ -1773,6 +1863,24 @@
         "price": "96.74",
         "status": "3"
       },
+      "PGRA|21505|20260803|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "12:35 PM",
+        "date": "20260803",
+        "time_code": "1235",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGRA|21505|20260803|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "12:35 PM",
+        "date": "20260803",
+        "time_code": "1235",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
       "PGRA|21493|20260803|PRIME": {
         "venue": "PVR: Grand Galada, Pallavaram",
         "time": "04:30 PM",
@@ -1931,7 +2039,7 @@
   "_fail_tracker": {
     "ET00480917": {
       "20260802": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       },
       "20260803": {
