@@ -1,51 +1,6 @@
 {
   "ET00480917": {
     "shows": {
-      "PVPZ|36072|20260802|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "09:00 AM",
-        "date": "20260802",
-        "time_code": "0900",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "1"
-      },
-      "PVPZ|36073|20260802|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "12:30 PM",
-        "date": "20260802",
-        "time_code": "1230",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "1"
-      },
-      "PVPZ|36074|20260802|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "04:05 PM",
-        "date": "20260802",
-        "time_code": "1605",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "1"
-      },
-      "PVPZ|36075|20260802|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "07:40 PM",
-        "date": "20260802",
-        "time_code": "1940",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "1"
-      },
-      "PVPZ|36076|20260802|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "11:15 PM",
-        "date": "20260802",
-        "time_code": "2315",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "1"
-      },
       "INPR|63890|20260802|ELITE": {
         "venue": "INOX: LUXE Phoenix Market City, Velachery",
         "time": "09:10 AM",
@@ -84,6 +39,51 @@
       },
       "INPR|63894|20260802|ELITE": {
         "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "11:15 PM",
+        "date": "20260802",
+        "time_code": "2315",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36072|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "09:00 AM",
+        "date": "20260802",
+        "time_code": "0900",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36073|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:30 PM",
+        "date": "20260802",
+        "time_code": "1230",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36074|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:05 PM",
+        "date": "20260802",
+        "time_code": "1605",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36075|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:40 PM",
+        "date": "20260802",
+        "time_code": "1940",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "1"
+      },
+      "PVPZ|36076|20260802|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
         "time": "11:15 PM",
         "date": "20260802",
         "time_code": "2315",
@@ -392,6 +392,60 @@
         "price": "61.74",
         "status": "3"
       },
+      "PSKL|22186|20260803|PRIME": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PSKL|22186|20260803|CLASSIC": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "CLASSIC",
+        "price": "66.74",
+        "status": "0"
+      },
+      "PSKL|22187|20260803|PRIME": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "10:20 PM",
+        "date": "20260803",
+        "time_code": "2220",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PSKL|22187|20260803|CLASSIC": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "10:20 PM",
+        "date": "20260803",
+        "time_code": "2220",
+        "cat": "CLASSIC",
+        "price": "66.74",
+        "status": "0"
+      },
+      "ACON|46387|20260803|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACON|46387|20260803|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
       "PVPZ|36146|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
         "time": "12:15 PM",
@@ -442,60 +496,6 @@
         "time": "11:00 PM",
         "date": "20260803",
         "time_code": "2300",
-        "cat": "BUDGET",
-        "price": "61.74",
-        "status": "3"
-      },
-      "ACON|46387|20260803|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
-        "cat": "DIAMOND",
-        "price": "210.00",
-        "status": "3"
-      },
-      "ACON|46387|20260803|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
-        "cat": "PEARL",
-        "price": "60.00",
-        "status": "0"
-      },
-      "PVES|32239|20260803|ELITE": {
-        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
-        "time": "04:20 PM",
-        "date": "20260803",
-        "time_code": "1620",
-        "cat": "ELITE",
-        "price": "210.98",
-        "status": "3"
-      },
-      "PVES|32239|20260803|BUDGET": {
-        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
-        "time": "04:20 PM",
-        "date": "20260803",
-        "time_code": "1620",
-        "cat": "BUDGET",
-        "price": "61.74",
-        "status": "3"
-      },
-      "PVES|32237|20260803|ELITE": {
-        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
-        "time": "10:35 PM",
-        "date": "20260803",
-        "time_code": "2235",
-        "cat": "ELITE",
-        "price": "210.98",
-        "status": "3"
-      },
-      "PVES|32237|20260803|BUDGET": {
-        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
-        "time": "10:35 PM",
-        "date": "20260803",
-        "time_code": "2235",
         "cat": "BUDGET",
         "price": "61.74",
         "status": "3"
@@ -680,56 +680,146 @@
         "price": "60.00",
         "status": "0"
       },
-      "PSKL|22186|20260803|PRIME": {
-        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
-        "time": "07:10 PM",
+      "PVES|32268|20260803|ELITE": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "11:40 AM",
         "date": "20260803",
-        "time_code": "1910",
-        "cat": "PRIME",
-        "price": "210.98",
-        "status": "3"
-      },
-      "PSKL|22186|20260803|CLASSIC": {
-        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
-        "time": "07:10 PM",
-        "date": "20260803",
-        "time_code": "1910",
-        "cat": "CLASSIC",
-        "price": "66.74",
-        "status": "0"
-      },
-      "PSKL|22187|20260803|PRIME": {
-        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
-        "time": "10:20 PM",
-        "date": "20260803",
-        "time_code": "2220",
-        "cat": "PRIME",
-        "price": "210.98",
-        "status": "3"
-      },
-      "PSKL|22187|20260803|CLASSIC": {
-        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
-        "time": "10:20 PM",
-        "date": "20260803",
-        "time_code": "2220",
-        "cat": "CLASSIC",
-        "price": "66.74",
-        "status": "0"
-      },
-      "PVSR|26404|20260803|ELITE": {
-        "venue": "PVR: Sathyam, Royapettah",
-        "time": "07:25 PM",
-        "date": "20260803",
-        "time_code": "1925",
+        "time_code": "1140",
         "cat": "ELITE",
         "price": "210.98",
         "status": "3"
       },
-      "PVSR|26404|20260803|BUDGET": {
-        "venue": "PVR: Sathyam, Royapettah",
-        "time": "07:25 PM",
+      "PVES|32268|20260803|BUDGET": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "11:40 AM",
         "date": "20260803",
-        "time_code": "1925",
+        "time_code": "1140",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVES|32269|20260803|ELITE": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "02:50 PM",
+        "date": "20260803",
+        "time_code": "1450",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVES|32269|20260803|BUDGET": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "02:50 PM",
+        "date": "20260803",
+        "time_code": "1450",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVES|32239|20260803|ELITE": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "04:20 PM",
+        "date": "20260803",
+        "time_code": "1620",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVES|32239|20260803|BUDGET": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "04:20 PM",
+        "date": "20260803",
+        "time_code": "1620",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVES|32237|20260803|ELITE": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVES|32237|20260803|BUDGET": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "INPR|64029|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "12:35 PM",
+        "date": "20260803",
+        "time_code": "1235",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "INPR|64029|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "12:35 PM",
+        "date": "20260803",
+        "time_code": "1235",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "INPR|64030|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "03:40 PM",
+        "date": "20260803",
+        "time_code": "1540",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "INPR|64030|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "03:40 PM",
+        "date": "20260803",
+        "time_code": "1540",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "INPR|64031|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "06:45 PM",
+        "date": "20260803",
+        "time_code": "1845",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "INPR|64031|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "06:45 PM",
+        "date": "20260803",
+        "time_code": "1845",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
+      "INPR|64032|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "09:50 PM",
+        "date": "20260803",
+        "time_code": "2150",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "INPR|64032|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "09:50 PM",
+        "date": "20260803",
+        "time_code": "2150",
         "cat": "BUDGET",
         "price": "61.74",
         "status": "3"
@@ -751,6 +841,24 @@
         "cat": "CLASSIC",
         "price": "61.74",
         "status": "0"
+      },
+      "PVSR|26404|20260803|ELITE": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:25 PM",
+        "date": "20260803",
+        "time_code": "1925",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVSR|26404|20260803|BUDGET": {
+        "venue": "PVR: Sathyam, Royapettah",
+        "time": "07:25 PM",
+        "date": "20260803",
+        "time_code": "1925",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
       }
     },
     "dates": {
@@ -1429,7 +1537,7 @@
         "time_code": "1535",
         "cat": "ELITE",
         "price": "250.98",
-        "status": "3"
+        "status": "2"
       },
       "PVSR|26387|20260803|PREMIUM": {
         "venue": "PVR: Sathyam, Royapettah",
@@ -2167,7 +2275,7 @@
         "time_code": "1305",
         "cat": "BUDGET",
         "price": "96.74",
-        "status": "2"
+        "status": "1"
       },
       "INPR|64011|20260803|ELITE": {
         "venue": "INOX: LUXE Phoenix Market City, Velachery",
