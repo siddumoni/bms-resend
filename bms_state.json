@@ -855,6 +855,96 @@
         "price": "96.74",
         "status": "3"
       },
+      "AGSM|55069|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "11:30 AM",
+        "date": "20260803",
+        "time_code": "1130",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|55069|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "11:30 AM",
+        "date": "20260803",
+        "time_code": "1130",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54966|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:00 PM",
+        "date": "20260803",
+        "time_code": "1200",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54966|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:00 PM",
+        "date": "20260803",
+        "time_code": "1200",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54967|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "03:10 PM",
+        "date": "20260803",
+        "time_code": "1510",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54967|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "03:10 PM",
+        "date": "20260803",
+        "time_code": "1510",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54968|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:20 PM",
+        "date": "20260803",
+        "time_code": "1820",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "1"
+      },
+      "AGSM|54968|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:20 PM",
+        "date": "20260803",
+        "time_code": "1820",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54969|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "09:30 PM",
+        "date": "20260803",
+        "time_code": "2130",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54969|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "09:30 PM",
+        "date": "20260803",
+        "time_code": "2130",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
       "ACTN|44719|20260803|DIAMOND 3D": {
         "venue": "AGS Cinemas: T. Nagar",
         "time": "11:50 AM",
@@ -977,96 +1067,6 @@
         "time": "10:45 PM",
         "date": "20260803",
         "time_code": "2245",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|55069|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "11:30 AM",
-        "date": "20260803",
-        "time_code": "1130",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|55069|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "11:30 AM",
-        "date": "20260803",
-        "time_code": "1130",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54966|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:00 PM",
-        "date": "20260803",
-        "time_code": "1200",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54966|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:00 PM",
-        "date": "20260803",
-        "time_code": "1200",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54967|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:10 PM",
-        "date": "20260803",
-        "time_code": "1510",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54967|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:10 PM",
-        "date": "20260803",
-        "time_code": "1510",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54968|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:20 PM",
-        "date": "20260803",
-        "time_code": "1820",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "1"
-      },
-      "AGSM|54968|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:20 PM",
-        "date": "20260803",
-        "time_code": "1820",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54969|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:30 PM",
-        "date": "20260803",
-        "time_code": "2130",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54969|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:30 PM",
-        "date": "20260803",
-        "time_code": "2130",
         "cat": "PEARL 3D",
         "price": "90.00",
         "status": "0"
@@ -1303,24 +1303,6 @@
         "time_code": "2240",
         "cat": "Executive",
         "price": "96.74",
-        "status": "3"
-      },
-      "GKCP|3636|20260803|LOUNGE 1 +3D": {
-        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
-        "time": "06:50 PM",
-        "date": "20260803",
-        "time_code": "1850",
-        "cat": "LOUNGE 1 +3D",
-        "price": "190.00",
-        "status": "3"
-      },
-      "GKCP|3636|20260803|SIGNATURE CLASS +3D": {
-        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
-        "time": "06:50 PM",
-        "date": "20260803",
-        "time_code": "1850",
-        "cat": "SIGNATURE CLASS +3D",
-        "price": "190.00",
         "status": "3"
       },
       "PVSR|26383|20260803|ELITE": {
@@ -1591,6 +1573,24 @@
         "time_code": "2300",
         "cat": "BUDGET",
         "price": "96.74",
+        "status": "3"
+      },
+      "GKCP|3636|20260803|LOUNGE 1 +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "06:50 PM",
+        "date": "20260803",
+        "time_code": "1850",
+        "cat": "LOUNGE 1 +3D",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3636|20260803|SIGNATURE CLASS +3D": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "06:50 PM",
+        "date": "20260803",
+        "time_code": "1850",
+        "cat": "SIGNATURE CLASS +3D",
+        "price": "190.00",
         "status": "3"
       },
       "INTO|88481|20260803|CLUB": {
@@ -1942,7 +1942,7 @@
         "time_code": "1840",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "1"
+        "status": "2"
       },
       "PVHC|30654|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -1978,7 +1978,7 @@
         "time_code": "2155",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "PVHC|30655|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -2024,6 +2024,78 @@
         "cat": "BUDGET",
         "price": "96.74",
         "status": "0"
+      },
+      "INPR|64010|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "01:05 PM",
+        "date": "20260803",
+        "time_code": "1305",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INPR|64010|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "01:05 PM",
+        "date": "20260803",
+        "time_code": "1305",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "INPR|64011|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "04:10 PM",
+        "date": "20260803",
+        "time_code": "1610",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INPR|64011|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "04:10 PM",
+        "date": "20260803",
+        "time_code": "1610",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "INPR|64012|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "07:15 PM",
+        "date": "20260803",
+        "time_code": "1915",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INPR|64012|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "07:15 PM",
+        "date": "20260803",
+        "time_code": "1915",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
+      },
+      "INPR|64013|20260803|ELITE": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "ELITE",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INPR|64013|20260803|BUDGET": {
+        "venue": "INOX: LUXE Phoenix Market City, Velachery",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "BUDGET",
+        "price": "96.74",
+        "status": "3"
       },
       "PGRA|21505|20260803|PRIME": {
         "venue": "PVR: Grand Galada, Pallavaram",
@@ -2096,6 +2168,60 @@
         "cat": "CLASSIC",
         "price": "96.74",
         "status": "0"
+      },
+      "PGMV|21063|20260803|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "03:30 PM",
+        "date": "20260803",
+        "time_code": "1530",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGMV|21063|20260803|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "03:30 PM",
+        "date": "20260803",
+        "time_code": "1530",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PGMV|21064|20260803|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "06:40 PM",
+        "date": "20260803",
+        "time_code": "1840",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGMV|21064|20260803|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "06:40 PM",
+        "date": "20260803",
+        "time_code": "1840",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
+      "PGMV|21065|20260803|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "10:00 PM",
+        "date": "20260803",
+        "time_code": "2200",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PGMV|21065|20260803|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "10:00 PM",
+        "date": "20260803",
+        "time_code": "2200",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
       },
       "PABC|20615|20260803|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
