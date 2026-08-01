@@ -184,7 +184,7 @@
     },
     "dates": {
       "20260801": "AVAILABLE",
-      "20260804": "NOT_OPEN",
+      "20260804": "AVAILABLE",
       "20260805": "NOT_OPEN",
       "20260806": "NOT_OPEN",
       "20260807": "NOT_OPEN",
@@ -2049,13 +2049,13 @@
     },
     "ET00447840": {
       "20260803": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       }
     },
     "ET00502600": {
       "20260803": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       }
     }
