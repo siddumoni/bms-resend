@@ -116,7 +116,7 @@
         "time_code": "1605",
         "cat": "ELITE",
         "price": "508.34",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36139|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -379,6 +379,24 @@
         "time": "10:25 PM",
         "date": "20260803",
         "time_code": "2225",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PABC|20610|20260803|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "03:55 PM",
+        "date": "20260803",
+        "time_code": "1555",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PABC|20610|20260803|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "03:55 PM",
+        "date": "20260803",
+        "time_code": "1555",
         "cat": "CLASSIC",
         "price": "61.74",
         "status": "3"
@@ -752,6 +770,24 @@
         "time": "10:10 PM",
         "date": "20260803",
         "time_code": "2210",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "ACTN|44742|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "10:45 PM",
+        "date": "20260803",
+        "time_code": "2245",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "3"
+      },
+      "ACTN|44742|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "10:45 PM",
+        "date": "20260803",
+        "time_code": "2245",
         "cat": "PEARL 3D",
         "price": "90.00",
         "status": "0"
