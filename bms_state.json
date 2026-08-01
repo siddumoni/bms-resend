@@ -125,7 +125,7 @@
         "time_code": "1940",
         "cat": "ELITE",
         "price": "508.34",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36140|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -184,6 +184,60 @@
         "cat": "PEARL",
         "price": "60.00",
         "status": "0"
+      },
+      "PVHC|30660|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVHC|30660|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHC|30661|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "2"
+      },
+      "PVHC|30661|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
+      },
+      "PVHC|30662|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVHC|30662|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "CLASSIC",
+        "price": "61.74",
+        "status": "3"
       },
       "PVHR|40049|20260803|PRIME": {
         "venue": "PVR: Heritage RSL ECR, Chennai",
@@ -257,6 +311,24 @@
         "price": "61.74",
         "status": "3"
       },
+      "ACVM|54771|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "2"
+      },
+      "ACVM|54771|20260803|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
       "PVPZ|36146|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
         "time": "12:15 PM",
@@ -311,78 +383,6 @@
         "price": "61.74",
         "status": "3"
       },
-      "ACVM|54771|20260803|DIAMOND": {
-        "venue": "AGS Cinemas: Villivakkam",
-        "time": "01:20 PM",
-        "date": "20260803",
-        "time_code": "1320",
-        "cat": "DIAMOND",
-        "price": "210.00",
-        "status": "2"
-      },
-      "ACVM|54771|20260803|PEARL": {
-        "venue": "AGS Cinemas: Villivakkam",
-        "time": "01:20 PM",
-        "date": "20260803",
-        "time_code": "1320",
-        "cat": "PEARL",
-        "price": "60.00",
-        "status": "0"
-      },
-      "PVHC|30660|20260803|PRIME": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "12:40 PM",
-        "date": "20260803",
-        "time_code": "1240",
-        "cat": "PRIME",
-        "price": "210.98",
-        "status": "3"
-      },
-      "PVHC|30660|20260803|CLASSIC": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "12:40 PM",
-        "date": "20260803",
-        "time_code": "1240",
-        "cat": "CLASSIC",
-        "price": "61.74",
-        "status": "3"
-      },
-      "PVHC|30661|20260803|PRIME": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "07:10 PM",
-        "date": "20260803",
-        "time_code": "1910",
-        "cat": "PRIME",
-        "price": "210.98",
-        "status": "2"
-      },
-      "PVHC|30661|20260803|CLASSIC": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "07:10 PM",
-        "date": "20260803",
-        "time_code": "1910",
-        "cat": "CLASSIC",
-        "price": "61.74",
-        "status": "3"
-      },
-      "PVHC|30662|20260803|PRIME": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "10:25 PM",
-        "date": "20260803",
-        "time_code": "2225",
-        "cat": "PRIME",
-        "price": "210.98",
-        "status": "3"
-      },
-      "PVHC|30662|20260803|CLASSIC": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "10:25 PM",
-        "date": "20260803",
-        "time_code": "2225",
-        "cat": "CLASSIC",
-        "price": "61.74",
-        "status": "3"
-      },
       "ACTN|44728|20260803|DIAMOND": {
         "venue": "AGS Cinemas: T. Nagar",
         "time": "03:55 PM",
@@ -397,6 +397,24 @@
         "time": "03:55 PM",
         "date": "20260803",
         "time_code": "1555",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
+      "ACTN|44738|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:15 PM",
+        "date": "20260803",
+        "time_code": "1915",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACTN|44738|20260803|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:15 PM",
+        "date": "20260803",
+        "time_code": "1915",
         "cat": "PEARL",
         "price": "60.00",
         "status": "0"
@@ -1044,6 +1062,42 @@
         "price": "96.74",
         "status": "1"
       },
+      "INTO|88481|20260803|CLUB": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "CLUB",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INTO|88481|20260803|EXECUTIVE": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "EXECUTIVE",
+        "price": "96.74",
+        "status": "3"
+      },
+      "INTO|88482|20260803|CLUB": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "03:50 PM",
+        "date": "20260803",
+        "time_code": "1550",
+        "cat": "CLUB",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INTO|88482|20260803|EXECUTIVE": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "03:50 PM",
+        "date": "20260803",
+        "time_code": "1550",
+        "cat": "EXECUTIVE",
+        "price": "96.74",
+        "status": "3"
+      },
       "INTO|88429|20260803|CLUB": {
         "venue": "INOX: The Marina Mall, OMR",
         "time": "04:00 PM",
@@ -1062,6 +1116,24 @@
         "price": "96.74",
         "status": "3"
       },
+      "INTO|88483|20260803|CLUB": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "07:05 PM",
+        "date": "20260803",
+        "time_code": "1905",
+        "cat": "CLUB",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INTO|88483|20260803|EXECUTIVE": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "07:05 PM",
+        "date": "20260803",
+        "time_code": "1905",
+        "cat": "EXECUTIVE",
+        "price": "96.74",
+        "status": "3"
+      },
       "INTO|88430|20260803|CLUB": {
         "venue": "INOX: The Marina Mall, OMR",
         "time": "07:15 PM",
@@ -1076,6 +1148,24 @@
         "time": "07:15 PM",
         "date": "20260803",
         "time_code": "1915",
+        "cat": "EXECUTIVE",
+        "price": "96.74",
+        "status": "3"
+      },
+      "INTO|88484|20260803|CLUB": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "10:20 PM",
+        "date": "20260803",
+        "time_code": "2220",
+        "cat": "CLUB",
+        "price": "245.98",
+        "status": "3"
+      },
+      "INTO|88484|20260803|EXECUTIVE": {
+        "venue": "INOX: The Marina Mall, OMR",
+        "time": "10:20 PM",
+        "date": "20260803",
+        "time_code": "2220",
         "cat": "EXECUTIVE",
         "price": "96.74",
         "status": "3"
@@ -1105,7 +1195,7 @@
         "time_code": "1525",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "2"
+        "status": "3"
       },
       "PVHC|30653|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
