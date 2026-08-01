@@ -93,13 +93,13 @@
       }
     },
     "dates": {
-      "20260801": "BOOKABLE",
+      "20260801": "AVAILABLE",
       "20260804": "NOT_OPEN",
       "20260805": "NOT_OPEN",
       "20260806": "NOT_OPEN",
       "20260807": "NOT_OPEN",
-      "20260802": "AVAILABLE",
-      "20260803": "NOT_OPEN"
+      "20260803": "NOT_OPEN",
+      "20260802": "BOOKABLE"
     }
   },
   "ET00447840": {
@@ -171,96 +171,6 @@
   },
   "ET00502600": {
     "shows": {
-      "AGSM|55069|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "11:30 AM",
-        "date": "20260803",
-        "time_code": "1130",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|55069|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "11:30 AM",
-        "date": "20260803",
-        "time_code": "1130",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54966|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:00 PM",
-        "date": "20260803",
-        "time_code": "1200",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54966|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:00 PM",
-        "date": "20260803",
-        "time_code": "1200",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54967|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:10 PM",
-        "date": "20260803",
-        "time_code": "1510",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54967|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:10 PM",
-        "date": "20260803",
-        "time_code": "1510",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54968|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:20 PM",
-        "date": "20260803",
-        "time_code": "1820",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54968|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:20 PM",
-        "date": "20260803",
-        "time_code": "1820",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
-      "AGSM|54969|20260803|DIAMOND 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:30 PM",
-        "date": "20260803",
-        "time_code": "2130",
-        "cat": "DIAMOND 3D",
-        "price": "240.00",
-        "status": "2"
-      },
-      "AGSM|54969|20260803|PEARL 3D": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:30 PM",
-        "date": "20260803",
-        "time_code": "2130",
-        "cat": "PEARL 3D",
-        "price": "90.00",
-        "status": "0"
-      },
       "PVHR|39934|20260803|PRIME": {
         "venue": "PVR: Heritage RSL ECR, Chennai",
         "time": "12:10 PM",
@@ -513,6 +423,96 @@
         "price": "90.00",
         "status": "0"
       },
+      "AGSM|55069|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "11:30 AM",
+        "date": "20260803",
+        "time_code": "1130",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|55069|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "11:30 AM",
+        "date": "20260803",
+        "time_code": "1130",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54966|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:00 PM",
+        "date": "20260803",
+        "time_code": "1200",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54966|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:00 PM",
+        "date": "20260803",
+        "time_code": "1200",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54967|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "03:10 PM",
+        "date": "20260803",
+        "time_code": "1510",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54967|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "03:10 PM",
+        "date": "20260803",
+        "time_code": "1510",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54968|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:20 PM",
+        "date": "20260803",
+        "time_code": "1820",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54968|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:20 PM",
+        "date": "20260803",
+        "time_code": "1820",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
+      "AGSM|54969|20260803|DIAMOND 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "09:30 PM",
+        "date": "20260803",
+        "time_code": "2130",
+        "cat": "DIAMOND 3D",
+        "price": "240.00",
+        "status": "2"
+      },
+      "AGSM|54969|20260803|PEARL 3D": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "09:30 PM",
+        "date": "20260803",
+        "time_code": "2130",
+        "cat": "PEARL 3D",
+        "price": "90.00",
+        "status": "0"
+      },
       "ACON|46288|20260803|DIAMOND 3D": {
         "venue": "AGS Cinemas OMR: Navlur",
         "time": "01:50 PM",
@@ -693,7 +693,7 @@
         "alerted": false
       },
       "20260803": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       }
     },
