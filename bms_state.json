@@ -264,7 +264,7 @@
         "time_code": "1215",
         "cat": "ELITE",
         "price": "210.98",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36146|20260803|BUDGET": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -282,7 +282,7 @@
         "time_code": "1835",
         "cat": "ELITE",
         "price": "210.98",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36147|20260803|BUDGET": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -1170,24 +1170,6 @@
         "price": "96.74",
         "status": "3"
       },
-      "PVHC|30632|20260803|PRIME": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "06:45 PM",
-        "date": "20260803",
-        "time_code": "1845",
-        "cat": "PRIME",
-        "price": "245.98",
-        "status": "3"
-      },
-      "PVHC|30632|20260803|CLASSIC": {
-        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
-        "time": "06:45 PM",
-        "date": "20260803",
-        "time_code": "1845",
-        "cat": "CLASSIC",
-        "price": "96.74",
-        "status": "3"
-      },
       "PVHC|30655|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
         "time": "09:55 PM",
@@ -1220,7 +1202,7 @@
   "_fail_tracker": {
     "ET00480917": {
       "20260802": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       },
       "20260803": {
@@ -1236,7 +1218,7 @@
     },
     "ET00502600": {
       "20260803": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       }
     }
