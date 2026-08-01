@@ -873,6 +873,78 @@
         "price": "96.74",
         "status": "1"
       },
+      "PVPZ|36167|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36167|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVPZ|36168|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:00 PM",
+        "date": "20260803",
+        "time_code": "1600",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36168|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:00 PM",
+        "date": "20260803",
+        "time_code": "1600",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVPZ|36169|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:20 PM",
+        "date": "20260803",
+        "time_code": "1920",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36169|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:20 PM",
+        "date": "20260803",
+        "time_code": "1920",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVPZ|36170|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36170|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
       "PVHC|30665|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
         "time": "01:10 PM",
@@ -959,7 +1031,7 @@
   "_fail_tracker": {
     "ET00480917": {
       "20260802": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       },
       "20260803": {
