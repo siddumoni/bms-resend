@@ -33,6 +33,7 @@ jobs:
           BMS_TIME: ${{ vars.BMS_TIME }}
           BMS_FORMAT: ${{ vars.BMS_FORMAT }}
           BMS_WATCHES: ${{ vars.BMS_WATCHES }}
+          BMS_FAIL_THRESHOLD: ${{ vars.BMS_FAIL_THRESHOLD }}
         run: uv run main.py
 
       - name: Commit updated state
