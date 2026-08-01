@@ -91,51 +91,6 @@
         "price": "508.34",
         "status": "1"
       },
-      "PVPZ|36136|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "09:00 AM",
-        "date": "20260803",
-        "time_code": "0900",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "2"
-      },
-      "PVPZ|36137|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "12:30 PM",
-        "date": "20260803",
-        "time_code": "1230",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "2"
-      },
-      "PVPZ|36138|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "04:05 PM",
-        "date": "20260803",
-        "time_code": "1605",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "2"
-      },
-      "PVPZ|36139|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "07:40 PM",
-        "date": "20260803",
-        "time_code": "1940",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "2"
-      },
-      "PVPZ|36140|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "11:15 PM",
-        "date": "20260803",
-        "time_code": "2315",
-        "cat": "ELITE",
-        "price": "508.34",
-        "status": "2"
-      },
       "INPR|63985|20260803|ELITE": {
         "venue": "INOX: LUXE Phoenix Market City, Velachery",
         "time": "09:10 AM",
@@ -180,6 +135,51 @@
         "cat": "ELITE",
         "price": "508.34",
         "status": "3"
+      },
+      "PVPZ|36136|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "09:00 AM",
+        "date": "20260803",
+        "time_code": "0900",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "2"
+      },
+      "PVPZ|36137|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:30 PM",
+        "date": "20260803",
+        "time_code": "1230",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "2"
+      },
+      "PVPZ|36138|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:05 PM",
+        "date": "20260803",
+        "time_code": "1605",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "2"
+      },
+      "PVPZ|36139|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:40 PM",
+        "date": "20260803",
+        "time_code": "1940",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "2"
+      },
+      "PVPZ|36140|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "11:15 PM",
+        "date": "20260803",
+        "time_code": "2315",
+        "cat": "ELITE",
+        "price": "508.34",
+        "status": "2"
       }
     },
     "dates": {
@@ -464,6 +464,24 @@
         "price": "60.00",
         "status": "0"
       },
+      "PVES|32237|20260803|ELITE": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "ELITE",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PVES|32237|20260803|BUDGET": {
+        "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
+        "time": "10:35 PM",
+        "date": "20260803",
+        "time_code": "2235",
+        "cat": "BUDGET",
+        "price": "61.74",
+        "status": "3"
+      },
       "PVHC|30660|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
         "time": "12:40 PM",
@@ -518,6 +536,42 @@
         "price": "61.74",
         "status": "3"
       },
+      "ACVM|54771|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "2"
+      },
+      "ACVM|54771|20260803|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "01:20 PM",
+        "date": "20260803",
+        "time_code": "1320",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
+      "ACVM|54791|20260803|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "11:05 PM",
+        "date": "20260803",
+        "time_code": "2305",
+        "cat": "DIAMOND",
+        "price": "210.00",
+        "status": "3"
+      },
+      "ACVM|54791|20260803|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "11:05 PM",
+        "date": "20260803",
+        "time_code": "2305",
+        "cat": "PEARL",
+        "price": "60.00",
+        "status": "0"
+      },
       "PABC|20610|20260803|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
         "time": "03:55 PM",
@@ -571,24 +625,6 @@
         "cat": "CLASSIC",
         "price": "61.74",
         "status": "3"
-      },
-      "ACVM|54771|20260803|DIAMOND": {
-        "venue": "AGS Cinemas: Villivakkam",
-        "time": "01:20 PM",
-        "date": "20260803",
-        "time_code": "1320",
-        "cat": "DIAMOND",
-        "price": "210.00",
-        "status": "2"
-      },
-      "ACVM|54771|20260803|PEARL": {
-        "venue": "AGS Cinemas: Villivakkam",
-        "time": "01:20 PM",
-        "date": "20260803",
-        "time_code": "1320",
-        "cat": "PEARL",
-        "price": "60.00",
-        "status": "0"
       },
       "ACTN|44728|20260803|DIAMOND": {
         "venue": "AGS Cinemas: T. Nagar",
@@ -1816,7 +1852,7 @@
         "time_code": "2200",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "PCAN|42630|20260803|CLASSIC": {
         "venue": "PVR: VR Chennai, Anna Nagar",
@@ -2032,7 +2068,7 @@
         "time_code": "1305",
         "cat": "ELITE",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "INPR|64010|20260803|BUDGET": {
         "venue": "INOX: LUXE Phoenix Market City, Velachery",
