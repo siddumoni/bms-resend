@@ -2633,8 +2633,8 @@
   "_fail_tracker": {
     "ET00480917": {
       "20260802": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       },
       "20260803": {
         "count": 0,
@@ -2643,13 +2643,13 @@
     },
     "ET00447840": {
       "20260803": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       }
     },
     "ET00502600": {
       "20260803": {
-        "count": 0,
+        "count": 1,
         "alerted": false
       }
     }
