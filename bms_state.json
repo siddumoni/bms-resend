@@ -107,7 +107,7 @@
         "time_code": "1230",
         "cat": "ELITE",
         "price": "508.34",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36138|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -1170,24 +1170,6 @@
         "price": "96.74",
         "status": "3"
       },
-      "PCAN|42499|20260803|PRIME": {
-        "venue": "PVR: VR Chennai, Anna Nagar",
-        "time": "06:30 PM",
-        "date": "20260803",
-        "time_code": "1830",
-        "cat": "PRIME",
-        "price": "245.98",
-        "status": "1"
-      },
-      "PCAN|42499|20260803|CLASSIC": {
-        "venue": "PVR: VR Chennai, Anna Nagar",
-        "time": "06:30 PM",
-        "date": "20260803",
-        "time_code": "1830",
-        "cat": "CLASSIC",
-        "price": "96.74",
-        "status": "1"
-      },
       "INTO|88481|20260803|CLUB": {
         "venue": "INOX: The Marina Mall, OMR",
         "time": "12:40 PM",
@@ -1332,6 +1314,96 @@
         "price": "96.74",
         "status": "3"
       },
+      "PCAN|42499|20260803|PRIME": {
+        "venue": "PVR: VR Chennai, Anna Nagar",
+        "time": "06:30 PM",
+        "date": "20260803",
+        "time_code": "1830",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "1"
+      },
+      "PCAN|42499|20260803|CLASSIC": {
+        "venue": "PVR: VR Chennai, Anna Nagar",
+        "time": "06:30 PM",
+        "date": "20260803",
+        "time_code": "1830",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "1"
+      },
+      "PVPZ|36167|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36167|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "12:40 PM",
+        "date": "20260803",
+        "time_code": "1240",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVPZ|36168|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:00 PM",
+        "date": "20260803",
+        "time_code": "1600",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36168|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:00 PM",
+        "date": "20260803",
+        "time_code": "1600",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVPZ|36169|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:20 PM",
+        "date": "20260803",
+        "time_code": "1920",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36169|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "07:20 PM",
+        "date": "20260803",
+        "time_code": "1920",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
+      "PVPZ|36170|20260803|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "ELITE",
+        "price": "250.98",
+        "status": "3"
+      },
+      "PVPZ|36170|20260803|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "10:25 PM",
+        "date": "20260803",
+        "time_code": "2225",
+        "cat": "BUDGET",
+        "price": "101.74",
+        "status": "3"
+      },
       "PVHC|30665|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
         "time": "01:10 PM",
@@ -1420,78 +1492,6 @@
         "time_code": "2155",
         "cat": "CLASSIC",
         "price": "96.74",
-        "status": "3"
-      },
-      "PVPZ|36167|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "12:40 PM",
-        "date": "20260803",
-        "time_code": "1240",
-        "cat": "ELITE",
-        "price": "250.98",
-        "status": "3"
-      },
-      "PVPZ|36167|20260803|BUDGET": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "12:40 PM",
-        "date": "20260803",
-        "time_code": "1240",
-        "cat": "BUDGET",
-        "price": "101.74",
-        "status": "3"
-      },
-      "PVPZ|36168|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "04:00 PM",
-        "date": "20260803",
-        "time_code": "1600",
-        "cat": "ELITE",
-        "price": "250.98",
-        "status": "3"
-      },
-      "PVPZ|36168|20260803|BUDGET": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "04:00 PM",
-        "date": "20260803",
-        "time_code": "1600",
-        "cat": "BUDGET",
-        "price": "101.74",
-        "status": "3"
-      },
-      "PVPZ|36169|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "07:20 PM",
-        "date": "20260803",
-        "time_code": "1920",
-        "cat": "ELITE",
-        "price": "250.98",
-        "status": "3"
-      },
-      "PVPZ|36169|20260803|BUDGET": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "07:20 PM",
-        "date": "20260803",
-        "time_code": "1920",
-        "cat": "BUDGET",
-        "price": "101.74",
-        "status": "3"
-      },
-      "PVPZ|36170|20260803|ELITE": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "10:25 PM",
-        "date": "20260803",
-        "time_code": "2225",
-        "cat": "ELITE",
-        "price": "250.98",
-        "status": "3"
-      },
-      "PVPZ|36170|20260803|BUDGET": {
-        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
-        "time": "10:25 PM",
-        "date": "20260803",
-        "time_code": "2225",
-        "cat": "BUDGET",
-        "price": "101.74",
         "status": "3"
       },
       "PABC|20615|20260803|PRIME": {
