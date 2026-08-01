@@ -98,7 +98,7 @@
         "time_code": "0900",
         "cat": "ELITE",
         "price": "508.34",
-        "status": "3"
+        "status": "2"
       },
       "PVPZ|36137|20260803|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -1744,7 +1744,7 @@
         "time_code": "1255",
         "cat": "PRIME",
         "price": "260.98",
-        "status": "1"
+        "status": "2"
       },
       "PCAN|42602|20260803|CLASSIC": {
         "venue": "PVR: VR Chennai, Anna Nagar",
@@ -1942,7 +1942,7 @@
         "time_code": "1840",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "2"
+        "status": "1"
       },
       "PVHC|30654|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -1996,7 +1996,7 @@
         "time_code": "1600",
         "cat": "ELITE",
         "price": "245.98",
-        "status": "3"
+        "status": "0"
       },
       "PVES|32254|20260803|BUDGET": {
         "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
@@ -2005,7 +2005,7 @@
         "time_code": "1600",
         "cat": "BUDGET",
         "price": "96.74",
-        "status": "3"
+        "status": "0"
       },
       "PVES|32248|20260803|ELITE": {
         "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
@@ -2068,7 +2068,7 @@
         "time_code": "1915",
         "cat": "ELITE",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "INPR|64012|20260803|BUDGET": {
         "venue": "INOX: LUXE Phoenix Market City, Velachery",
