@@ -355,6 +355,24 @@
         "cat": "PEARL",
         "price": "60.00",
         "status": "0"
+      },
+      "PSKL|22183|20260803|PRIME": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "03:20 PM",
+        "date": "20260803",
+        "time_code": "1520",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PSKL|22183|20260803|CLASSIC": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "03:20 PM",
+        "date": "20260803",
+        "time_code": "1520",
+        "cat": "CLASSIC",
+        "price": "66.74",
+        "status": "3"
       }
     },
     "dates": {
@@ -999,6 +1017,24 @@
         "price": "96.74",
         "status": "3"
       },
+      "PVHC|30632|20260803|PRIME": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "06:45 PM",
+        "date": "20260803",
+        "time_code": "1845",
+        "cat": "PRIME",
+        "price": "245.98",
+        "status": "3"
+      },
+      "PVHC|30632|20260803|CLASSIC": {
+        "venue": "PVR: Ampa Mall, Nelson Manickam Road",
+        "time": "06:45 PM",
+        "date": "20260803",
+        "time_code": "1845",
+        "cat": "CLASSIC",
+        "price": "96.74",
+        "status": "3"
+      },
       "PVHC|30655|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
         "time": "09:55 PM",
@@ -1047,7 +1083,7 @@
     },
     "ET00502600": {
       "20260803": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       }
     }
