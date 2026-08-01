@@ -693,8 +693,8 @@
         "alerted": false
       },
       "20260803": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       }
     },
     "ET00447840": {
