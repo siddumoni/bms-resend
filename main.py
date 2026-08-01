@@ -36,6 +36,13 @@ RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
 RESEND_TO_EMAIL = os.getenv("RESEND_TO_EMAIL", "")
 RESEND_FROM_EMAIL = os.getenv("RESEND_FROM_EMAIL", "aviiciii@resend.dev")
 
+# How many consecutive runs a single movie/date combination must fail to
+# fetch (e.g. BMS 403-blocking every retry) before we send a separate
+# "fetch failure" alert email. Kept high enough that routine, transient
+# 403s — which the retry logic inside fetch_bms() already absorbs — don't
+# trigger noise on every run; only a sustained blackout does.
+FAIL_ALERT_THRESHOLD = int(os.getenv("BMS_FAIL_THRESHOLD", "3") or "3")
+
 STATE_FILE = "bms_state.json"
 
 # ──────────────────────────────────────────────────────────────────────
@@ -444,6 +451,15 @@ def load_state(store, key):
     (legacy) case is unchanged: key is "_default", same as the migrated
     old-format file."""
     return store.get(key, {})
+
+
+def get_fail_tracker(store):
+    """Returns the shared fetch-failure tracker sub-dict, creating it if
+    needed. Structure: {state_key: {date_code: {"count": int, "alerted": bool}}}.
+    Lives under a reserved "_fail_tracker" key so it never collides with
+    per-movie state (movie keys are event codes like 'ET00478890', or
+    '_default' in legacy single-movie mode)."""
+    return store.setdefault("_fail_tracker", {})
 
 
 def save_state(store, key, state):
@@ -1042,6 +1058,159 @@ def send_combined_email(movie_results):
 
 
 # ──────────────────────────────────────────────────────────────────────
+# FETCH-FAILURE ALERT EMAIL (separate from the ticket-alert emails above)
+# ──────────────────────────────────────────────────────────────────────
+def send_failure_email(failures):
+    """Sends a system-health alert when one or more movie/date combinations
+    have failed to fetch from BMS for FAIL_ALERT_THRESHOLD+ consecutive
+    runs (i.e. every retry in fetch_bms() was exhausted, repeatedly).
+
+    Deliberately styled differently (amber/warning theme, different
+    subject prefix, different copy) from send_email()/send_combined_email()
+    so it's never mistaken for a ticket-availability alert at a glance.
+
+    failures: list of dicts with keys movie, date_code, event_code,
+              region_slug, consecutive_fails.
+    """
+    api_key = RESEND_API_KEY.strip()
+    to = RESEND_TO_EMAIL.strip()
+    frm = RESEND_FROM_EMAIL.strip() or "onboarding@resend.dev"
+
+    if not api_key or not to:
+        print("  ⚠️  Skipping fetch-failure email — RESEND_API_KEY or RESEND_TO_EMAIL not set.")
+        return
+
+    now_str = _now_ist_str()
+    subject = (f"⚠️ BMS Fetch Alert: {len(failures)} date(s) not loading "
+               f"(BMS blocking requests)")
+
+    sorted_failures = sorted(
+        failures, key=lambda f: (f["movie"], f["date_code"] or "99999999")
+    )
+
+    rows_html = ""
+    for f in sorted_failures:
+        date_label = (escape(format_date_clean(f["date_code"]))
+                      if f["date_code"] else "(default)")
+        link = _buytickets_url(
+            f.get("event_code", ""), f.get("region_slug", ""), f.get("date_code", "")
+        )
+        date_html = (
+            f'<a href="{escape(link)}" target="_blank" '
+            f'style="color:inherit;text-decoration:underline;">{date_label}</a>'
+            if link else date_label
+        )
+        rows_html += f"""
+        <tr><td style="padding:10px 14px;border-bottom:1px solid #f0d264;">
+            <div style="font-size:14px;color:#3a2f00;font-weight:700;">
+                {escape(f['movie'])} — {date_html}
+            </div>
+            <div style="font-size:12px;color:#8a6d00;margin-top:2px;">
+                Failed {f['consecutive_fails']} consecutive check(s)
+                &nbsp;·&nbsp; event {escape(f.get('event_code') or '?')}
+            </div>
+        </td></tr>"""
+
+    html = f"""<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0;padding:0;background:#f2f2f5;
+             font-family:-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+       style="background:#f2f2f5;padding:20px 0;">
+<tr><td align="center">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0"
+       style="width:600px;max-width:100%;background:#fffbea;border-radius:10px;
+              overflow:hidden;border:1px solid #f0d264;
+              box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+    <tr><td style="background:#3a2f00;color:#ffd54a;padding:24px;text-align:center;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:1px;
+                    text-transform:uppercase;opacity:0.85;">
+            ⚠️ BMS Ticket Checker — System Alert
+        </div>
+        <div style="font-size:20px;font-weight:800;margin-top:6px;">
+            Not receiving data from BookMyShow
+        </div>
+    </td></tr>
+    <tr><td style="padding:14px 24px 0 24px;">
+        <p style="margin:0;font-size:12px;color:#8a6d00;text-align:right;">
+            Checked at {escape(now_str)}
+        </p>
+    </td></tr>
+    <tr><td style="padding:16px 24px 4px 24px;">
+        <p style="margin:0;font-size:13px;color:#3a2f00;line-height:1.5;">
+            The following movie/date combination(s) have failed every fetch
+            attempt for <b>{FAIL_ALERT_THRESHOLD}+ consecutive runs</b> —
+            BMS is likely rate-limiting or blocking these requests
+            (HTTP 403/429). No ticket-availability data is available for
+            them until this recovers, so treat "no changes" for these as
+            "unknown," not "confirmed no change."
+        </p>
+    </td></tr>
+    <tr><td style="padding:8px 24px 22px 24px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+               style="width:100%;border-collapse:collapse;background:#fff8dc;
+                      border-radius:8px;overflow:hidden;">
+            {rows_html}
+        </table>
+    </td></tr>
+    <tr><td style="padding:0 24px 22px 24px;">
+        <hr style="border:none;border-top:1px solid #f0d264;margin:0 0 12px 0;">
+        <p style="margin:0;font-size:11px;color:#a68a2e;text-align:center;">
+            This is a separate system-health alert — not a ticket-availability email.
+            You won't be re-alerted for the same date until it recovers and fails again.
+        </p>
+    </td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>"""
+
+    plain_lines = [
+        subject, "", f"Checked at: {now_str}", "",
+        f"The following failed {FAIL_ALERT_THRESHOLD}+ checks in a row:",
+    ]
+    for f in sorted_failures:
+        date_label = format_date_clean(f["date_code"]) if f["date_code"] else "(default)"
+        plain_lines.append(
+            f"  - {f['movie']} — {date_label} "
+            f"(event {f.get('event_code') or '?'}, "
+            f"{f['consecutive_fails']} consecutive failures)"
+        )
+    plain_lines.extend([
+        "",
+        "This is a separate system-health alert from the BMS Ticket Notifier, "
+        "distinct from ticket-availability emails.",
+    ])
+    plain = "\n".join(plain_lines)
+
+    try:
+        resp = requests.post(
+            "https://api.resend.com/emails",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "from": frm, "to": [to],
+                "subject": subject,
+                "text": plain, "html": html,
+            },
+            timeout=15,
+        )
+        if resp.status_code in (200, 201):
+            print(f"  ⚠️  Fetch-failure alert email sent to {to}")
+        else:
+            print(f"  ❌ Resend {resp.status_code}: {resp.text}")
+    except requests.RequestException as e:
+        print(f"  ❌ Fetch-failure email failed: {e}")
+
+
+# ──────────────────────────────────────────────────────────────────────
 # PER-MOVIE PIPELINE  (this is the original single-movie main() body,
 # unchanged, just parameterized on `watch` instead of the global CONFIG,
 # and reading/writing its slice of the shared `store` instead of a
@@ -1060,7 +1229,8 @@ def process_watch(watch, store, legacy_mode):
     if not event_code or not region_slug:
         print("  ❌ Invalid URL. Could not extract event/region.")
         return {"name": label, "movie_info": None, "filtered": [], "changes": [],
-                "error": "Invalid URL — could not extract event/region."}
+                "error": "Invalid URL — could not extract event/region.",
+                "new_failures": []}
 
     # "_default" preserves exact continuity with a pre-existing
     # bms_state.json when BMS_WATCHES isn't set (legacy single-movie mode).
@@ -1085,6 +1255,7 @@ def process_watch(watch, store, legacy_mode):
     # Fetch data for each date
     all_shows = []
     all_dates = []
+    failed_dates = set()
     movie_info = {"name": "Unknown", "language": ""}
 
     for i, dc in enumerate(date_list):
@@ -1094,6 +1265,7 @@ def process_watch(watch, store, legacy_mode):
                          region_slug_r, lat, lon, geohash)
         if not data:
             print(f"  ⚠️  No data for date {dc or '(default)'}")
+            failed_dates.add(dc)
             continue
 
         if movie_info["name"] == "Unknown":
@@ -1102,10 +1274,32 @@ def process_watch(watch, store, legacy_mode):
         all_dates.extend(parse_dates(data))
         all_shows.extend(parse_shows(data))
 
+    # ---- Consecutive fetch-failure tracking (independent of the ticket-
+    # alert flow above). A date only fires a failure alert once it has
+    # failed FAIL_ALERT_THRESHOLD runs in a row; a single successful fetch
+    # resets its counter, so it can alert again later if it fails again. ----
+    tracker = get_fail_tracker(store).setdefault(state_key, {})
+    new_failures = []
+    for dc in date_list:
+        rec = tracker.setdefault(dc, {"count": 0, "alerted": False})
+        if dc in failed_dates:
+            rec["count"] += 1
+            if rec["count"] >= FAIL_ALERT_THRESHOLD and not rec["alerted"]:
+                rec["alerted"] = True
+                new_failures.append({
+                    "movie": label, "date_code": dc,
+                    "event_code": event_code, "region_slug": region_slug_r,
+                    "consecutive_fails": rec["count"],
+                })
+        else:
+            rec["count"] = 0
+            rec["alerted"] = False
+
     if not all_shows:
         print("  ❌ No showtimes found.")
         return {"name": label, "movie_info": movie_info, "filtered": [], "changes": [],
-                "error": "No showtimes found."}
+                "error": "No showtimes found.", "failed_dates": sorted(failed_dates),
+                "event_code": event_code, "new_failures": new_failures}
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
 
@@ -1128,8 +1322,28 @@ def process_watch(watch, store, legacy_mode):
     print(f"  📊 {len(filtered)} showtime(s) after filters")
 
     # Build state & detect changes
-    new_state = build_state(filtered, all_dates)
+    fresh_state = build_state(filtered, all_dates)
     old_state = load_state(store, state_key)
+
+    # Merge, rather than overwrite: only replace stored entries for dates we
+    # actually fetched successfully this run. Dates that hit a transient 403
+    # (see `failed_dates`) keep whatever state we already had for them, so a
+    # later successful fetch doesn't look like a pile of brand-new showtimes.
+    fetched_dates = {dc for dc in date_list if dc not in failed_dates}
+
+    merged_shows = {
+        k: v for k, v in old_state.get("shows", {}).items()
+        if v.get("date") not in fetched_dates
+    }
+    merged_shows.update(fresh_state["shows"])
+
+    merged_dates = {
+        k: v for k, v in old_state.get("dates", {}).items()
+        if k not in fetched_dates
+    }
+    merged_dates.update(fresh_state["dates"])
+
+    new_state = {"shows": merged_shows, "dates": merged_dates}
 
     changes = []
     if old_state:
@@ -1165,8 +1379,9 @@ def process_watch(watch, store, legacy_mode):
         print(f"    {s.venue_name} — {s.time}{fmt} [{s.date_code}] — {cats}")
 
     return {"name": label, "movie_info": movie_info, "filtered": filtered,
-            "changes": changes, "error": None,
-            "event_code": event_code, "region_slug": region_slug_r}
+            "changes": changes, "error": None, "failed_dates": sorted(failed_dates),
+            "event_code": event_code, "region_slug": region_slug_r,
+            "new_failures": new_failures}
 
 
 # ──────────────────────────────────────────────────────────────────────
@@ -1183,6 +1398,7 @@ def main():
     store = load_store()
     any_errors = False
     results = []
+    all_new_failures = []
 
     for idx, watch in enumerate(watches, start=1):
         if idx > 1:
@@ -1191,6 +1407,7 @@ def main():
             r = process_watch(watch, store, legacy_mode)
             if r:
                 results.append(r)
+                all_new_failures.extend(r.get("new_failures") or [])
         except Exception as e:
             any_errors = True
             label = watch["name"] or watch["url"]
@@ -1199,6 +1416,12 @@ def main():
                              "changes": [], "error": str(e)})
 
     save_store(store)
+
+    # Fetch-failure alert: fires independently of the ticket-alert emails
+    # below, whenever any movie/date combination just crossed
+    # FAIL_ALERT_THRESHOLD consecutive failed fetches this run.
+    if all_new_failures:
+        send_failure_email(all_new_failures)
 
     # Multi-movie mode (BMS_WATCHES set): always send ONE combined digest
     # email covering every watched movie, regardless of whether anything
