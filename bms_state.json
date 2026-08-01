@@ -354,7 +354,7 @@
         "time_code": "1910",
         "cat": "PRIME",
         "price": "210.98",
-        "status": "3"
+        "status": "2"
       },
       "PVHC|30661|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -400,6 +400,42 @@
         "cat": "PEARL",
         "price": "60.00",
         "status": "0"
+      },
+      "PSKL|22186|20260803|PRIME": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PSKL|22186|20260803|CLASSIC": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "CLASSIC",
+        "price": "66.74",
+        "status": "3"
+      },
+      "PSKL|22187|20260803|PRIME": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "10:20 PM",
+        "date": "20260803",
+        "time_code": "2220",
+        "cat": "PRIME",
+        "price": "210.98",
+        "status": "3"
+      },
+      "PSKL|22187|20260803|CLASSIC": {
+        "venue": "PVR: SKLS Galaxy Mall, Red Hills Chennai",
+        "time": "10:20 PM",
+        "date": "20260803",
+        "time_code": "2220",
+        "cat": "CLASSIC",
+        "price": "66.74",
+        "status": "3"
       }
     },
     "dates": {
@@ -943,7 +979,7 @@
         "time_code": "1620",
         "cat": "Club",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "INCH|79471|20260803|Executive": {
         "venue": "INOX: Chennai Citi Centre, Dr. RK Salai",
@@ -1069,7 +1105,7 @@
         "time_code": "1525",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "3"
+        "status": "2"
       },
       "PVHC|30653|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -1105,7 +1141,7 @@
         "time_code": "1845",
         "cat": "PRIME",
         "price": "245.98",
-        "status": "2"
+        "status": "1"
       },
       "PVHC|30632|20260803|CLASSIC": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -1114,7 +1150,7 @@
         "time_code": "1845",
         "cat": "CLASSIC",
         "price": "96.74",
-        "status": "3"
+        "status": "0"
       },
       "PVHC|30655|20260803|PRIME": {
         "venue": "PVR: Ampa Mall, Nelson Manickam Road",
@@ -1205,6 +1241,42 @@
         "cat": "BUDGET",
         "price": "101.74",
         "status": "3"
+      },
+      "FMCN|103784|20260803|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "SILVER",
+        "price": "245.98",
+        "status": "3"
+      },
+      "FMCN|103784|20260803|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:10 PM",
+        "date": "20260803",
+        "time_code": "1910",
+        "cat": "PREMIERE",
+        "price": "96.74",
+        "status": "3"
+      },
+      "FMCN|103785|20260803|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "10:15 PM",
+        "date": "20260803",
+        "time_code": "2215",
+        "cat": "SILVER",
+        "price": "245.98",
+        "status": "3"
+      },
+      "FMCN|103785|20260803|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "10:15 PM",
+        "date": "20260803",
+        "time_code": "2215",
+        "cat": "PREMIERE",
+        "price": "96.74",
+        "status": "3"
       }
     },
     "dates": {
@@ -1230,7 +1302,7 @@
     },
     "ET00447840": {
       "20260803": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       }
     },
