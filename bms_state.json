@@ -3170,6 +3170,132 @@
         "price": "54.35",
         "status": "1"
       },
+      "PABC|20941|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "09:00 AM",
+        "date": "20260816",
+        "time_code": "0900",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "2"
+      },
+      "PABC|20941|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "09:00 AM",
+        "date": "20260816",
+        "time_code": "0900",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PABC|20942|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "12:30 PM",
+        "date": "20260816",
+        "time_code": "1230",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "1"
+      },
+      "PABC|20942|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "12:30 PM",
+        "date": "20260816",
+        "time_code": "1230",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PABC|20929|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:10 PM",
+        "date": "20260816",
+        "time_code": "1610",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "1"
+      },
+      "PABC|20929|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:10 PM",
+        "date": "20260816",
+        "time_code": "1610",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PABC|20943|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:10 PM",
+        "date": "20260816",
+        "time_code": "1610",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "1"
+      },
+      "PABC|20943|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:10 PM",
+        "date": "20260816",
+        "time_code": "1610",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PABC|20953|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:25 PM",
+        "date": "20260816",
+        "time_code": "1625",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "1"
+      },
+      "PABC|20953|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:25 PM",
+        "date": "20260816",
+        "time_code": "1625",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PABC|20944|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "07:40 PM",
+        "date": "20260816",
+        "time_code": "1940",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "2"
+      },
+      "PABC|20944|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "07:40 PM",
+        "date": "20260816",
+        "time_code": "1940",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PABC|20945|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "11:10 PM",
+        "date": "20260816",
+        "time_code": "2310",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PABC|20945|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "11:10 PM",
+        "date": "20260816",
+        "time_code": "2310",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
       "PGRA|21812|20260816|PRIME": {
         "venue": "PVR: Grand Galada, Pallavaram",
         "time": "09:00 AM",
@@ -3307,132 +3433,6 @@
       },
       "PGRA|21816|20260816|CLASSIC": {
         "venue": "PVR: Grand Galada, Pallavaram",
-        "time": "11:10 PM",
-        "date": "20260816",
-        "time_code": "2310",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20941|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "09:00 AM",
-        "date": "20260816",
-        "time_code": "0900",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "2"
-      },
-      "PABC|20941|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "09:00 AM",
-        "date": "20260816",
-        "time_code": "0900",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20942|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "12:30 PM",
-        "date": "20260816",
-        "time_code": "1230",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "1"
-      },
-      "PABC|20942|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "12:30 PM",
-        "date": "20260816",
-        "time_code": "1230",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20929|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "04:10 PM",
-        "date": "20260816",
-        "time_code": "1610",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "1"
-      },
-      "PABC|20929|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "04:10 PM",
-        "date": "20260816",
-        "time_code": "1610",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20943|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "04:10 PM",
-        "date": "20260816",
-        "time_code": "1610",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "1"
-      },
-      "PABC|20943|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "04:10 PM",
-        "date": "20260816",
-        "time_code": "1610",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20953|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "04:25 PM",
-        "date": "20260816",
-        "time_code": "1625",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "1"
-      },
-      "PABC|20953|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "04:25 PM",
-        "date": "20260816",
-        "time_code": "1625",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20944|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "07:40 PM",
-        "date": "20260816",
-        "time_code": "1940",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "2"
-      },
-      "PABC|20944|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "07:40 PM",
-        "date": "20260816",
-        "time_code": "1940",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PABC|20945|20260816|PRIME": {
-        "venue": "PVR: Aerohub, Chennai",
-        "time": "11:10 PM",
-        "date": "20260816",
-        "time_code": "2310",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PABC|20945|20260816|CLASSIC": {
-        "venue": "PVR: Aerohub, Chennai",
         "time": "11:10 PM",
         "date": "20260816",
         "time_code": "2310",
