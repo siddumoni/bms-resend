@@ -3260,6 +3260,24 @@
         "price": "54.35",
         "status": "0"
       },
+      "PABC|20953|20260816|PRIME": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:25 PM",
+        "date": "20260816",
+        "time_code": "1625",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PABC|20953|20260816|CLASSIC": {
+        "venue": "PVR: Aerohub, Chennai",
+        "time": "04:25 PM",
+        "date": "20260816",
+        "time_code": "1625",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
       "PABC|20944|20260816|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
         "time": "07:40 PM",
@@ -3366,7 +3384,7 @@
         "time_code": "1455",
         "cat": "PREMIERE",
         "price": "54.35",
-        "status": "3"
+        "status": "1"
       },
       "FMCN|104095|20260816|SILVER": {
         "venue": "INOX National: Arcot Road",
