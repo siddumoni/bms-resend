@@ -3105,7 +3105,7 @@
         "time_code": "1455",
         "cat": "SILVER",
         "price": "183.80",
-        "status": "2"
+        "status": "3"
       },
       "FMCN|104137|20260816|PREMIERE": {
         "venue": "INOX National: Arcot Road",
@@ -3411,7 +3411,7 @@
         "time_code": "1935",
         "cat": "PRIME",
         "price": "183.80",
-        "status": "1"
+        "status": "2"
       },
       "PGRA|21815|20260816|CLASSIC": {
         "venue": "PVR: Grand Galada, Pallavaram",
