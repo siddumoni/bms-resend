@@ -3044,6 +3044,132 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|104098|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:05 AM",
+        "date": "20260816",
+        "time_code": "0905",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|104098|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:05 AM",
+        "date": "20260816",
+        "time_code": "0905",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|104093|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:20 AM",
+        "date": "20260816",
+        "time_code": "0920",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|104093|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:20 AM",
+        "date": "20260816",
+        "time_code": "0920",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|104099|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:35 PM",
+        "date": "20260816",
+        "time_code": "1235",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "2"
+      },
+      "FMCN|104099|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:35 PM",
+        "date": "20260816",
+        "time_code": "1235",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|104137|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "02:55 PM",
+        "date": "20260816",
+        "time_code": "1455",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|104137|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "02:55 PM",
+        "date": "20260816",
+        "time_code": "1455",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|104095|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:00 PM",
+        "date": "20260816",
+        "time_code": "1600",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "2"
+      },
+      "FMCN|104095|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:00 PM",
+        "date": "20260816",
+        "time_code": "1600",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|104101|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:25 PM",
+        "date": "20260816",
+        "time_code": "1925",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|104101|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:25 PM",
+        "date": "20260816",
+        "time_code": "1925",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "0"
+      },
+      "FMCN|104097|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "10:50 PM",
+        "date": "20260816",
+        "time_code": "2250",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|104097|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "10:50 PM",
+        "date": "20260816",
+        "time_code": "2250",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
       "PGRA|21812|20260816|PRIME": {
         "venue": "PVR: Grand Galada, Pallavaram",
         "time": "09:00 AM",
@@ -3069,7 +3195,7 @@
         "time_code": "0910",
         "cat": "PRIME",
         "price": "183.80",
-        "status": "2"
+        "status": "3"
       },
       "PGRA|21822|20260816|CLASSIC": {
         "venue": "PVR: Grand Galada, Pallavaram",
