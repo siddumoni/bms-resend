@@ -2677,7 +2677,7 @@
         "alerted": false
       },
       "20260816": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       }
     }
@@ -3123,7 +3123,7 @@
         "time_code": "1600",
         "cat": "SILVER",
         "price": "183.80",
-        "status": "2"
+        "status": "1"
       },
       "FMCN|104095|20260816|PREMIERE": {
         "venue": "INOX National: Arcot Road",
