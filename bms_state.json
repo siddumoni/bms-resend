@@ -3350,6 +3350,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|104137|20260816|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "02:55 PM",
+        "date": "20260816",
+        "time_code": "1455",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|104137|20260816|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "02:55 PM",
+        "date": "20260816",
+        "time_code": "1455",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|104095|20260816|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "04:00 PM",
