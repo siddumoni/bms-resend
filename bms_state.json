@@ -2677,8 +2677,8 @@
         "alerted": false
       },
       "20260816": {
-        "count": 2,
-        "alerted": true
+        "count": 0,
+        "alerted": false
       }
     }
   },
