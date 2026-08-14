@@ -3170,6 +3170,78 @@
         "price": "54.35",
         "status": "1"
       },
+      "GKCP|3759|20260816|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "01:00 PM",
+        "date": "20260816",
+        "time_code": "1300",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3759|20260816|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "01:00 PM",
+        "date": "20260816",
+        "time_code": "1300",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3760|20260816|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "04:30 PM",
+        "date": "20260816",
+        "time_code": "1630",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3760|20260816|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "04:30 PM",
+        "date": "20260816",
+        "time_code": "1630",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3761|20260816|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "07:45 PM",
+        "date": "20260816",
+        "time_code": "1945",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3761|20260816|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "07:45 PM",
+        "date": "20260816",
+        "time_code": "1945",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3762|20260816|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "10:59 PM",
+        "date": "20260816",
+        "time_code": "2259",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
+        "status": "3"
+      },
+      "GKCP|3762|20260816|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "10:59 PM",
+        "date": "20260816",
+        "time_code": "2259",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
+        "status": "3"
+      },
       "PABC|20941|20260816|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
         "time": "09:00 AM",
