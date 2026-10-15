@@ -2685,6 +2685,10 @@
       "20261021": {
         "count": 0,
         "alerted": false
+      },
+      "20261022": {
+        "count": 0,
+        "alerted": false
       }
     }
   },
@@ -4277,11 +4281,11 @@
       "20261018": "AVAILABLE",
       "20261019": "AVAILABLE",
       "20261020": "AVAILABLE",
-      "20261021": "BOOKABLE",
-      "20261022": "AVAILABLE",
+      "20261021": "AVAILABLE",
       "20261023": "AVAILABLE",
       "20261024": "AVAILABLE",
-      "20261025": "AVAILABLE"
+      "20261025": "AVAILABLE",
+      "20261022": "BOOKABLE"
     }
   }
 }
