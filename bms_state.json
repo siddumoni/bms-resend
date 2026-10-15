@@ -2680,6 +2680,12 @@
         "count": 0,
         "alerted": false
       }
+    },
+    "ET00518674": {
+      "20261021": {
+        "count": 0,
+        "alerted": false
+      }
     }
   },
   "ET00489815": {
@@ -3539,6 +3545,743 @@
       "20260820": "AVAILABLE",
       "20260815": "AVAILABLE",
       "20260816": "BOOKABLE"
+    }
+  },
+  "ET00518674": {
+    "shows": {
+      "CBMC|14581|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14581|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14596|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14596|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14595|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:20 AM",
+        "date": "20261021",
+        "time_code": "0920",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14595|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:20 AM",
+        "date": "20261021",
+        "time_code": "0920",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14608|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:30 AM",
+        "date": "20261021",
+        "time_code": "0930",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14608|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:30 AM",
+        "date": "20261021",
+        "time_code": "0930",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14567|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:40 AM",
+        "date": "20261021",
+        "time_code": "0940",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14567|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "09:40 AM",
+        "date": "20261021",
+        "time_code": "0940",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14582|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:25 PM",
+        "date": "20261021",
+        "time_code": "1225",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14582|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:25 PM",
+        "date": "20261021",
+        "time_code": "1225",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14558|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:35 PM",
+        "date": "20261021",
+        "time_code": "1235",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14558|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:35 PM",
+        "date": "20261021",
+        "time_code": "1235",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14548|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:45 PM",
+        "date": "20261021",
+        "time_code": "1245",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14548|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:45 PM",
+        "date": "20261021",
+        "time_code": "1245",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14609|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:55 PM",
+        "date": "20261021",
+        "time_code": "1255",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14609|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "12:55 PM",
+        "date": "20261021",
+        "time_code": "1255",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14568|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "01:05 PM",
+        "date": "20261021",
+        "time_code": "1305",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14568|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "01:05 PM",
+        "date": "20261021",
+        "time_code": "1305",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14583|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "03:50 PM",
+        "date": "20261021",
+        "time_code": "1550",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14583|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "03:50 PM",
+        "date": "20261021",
+        "time_code": "1550",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14559|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14559|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14549|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:10 PM",
+        "date": "20261021",
+        "time_code": "1610",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14549|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:10 PM",
+        "date": "20261021",
+        "time_code": "1610",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14610|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:20 PM",
+        "date": "20261021",
+        "time_code": "1620",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14610|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:20 PM",
+        "date": "20261021",
+        "time_code": "1620",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14569|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:30 PM",
+        "date": "20261021",
+        "time_code": "1630",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14569|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "04:30 PM",
+        "date": "20261021",
+        "time_code": "1630",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14584|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:15 PM",
+        "date": "20261021",
+        "time_code": "1915",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14584|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:15 PM",
+        "date": "20261021",
+        "time_code": "1915",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14560|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:25 PM",
+        "date": "20261021",
+        "time_code": "1925",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14560|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:25 PM",
+        "date": "20261021",
+        "time_code": "1925",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14550|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:35 PM",
+        "date": "20261021",
+        "time_code": "1935",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14550|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:35 PM",
+        "date": "20261021",
+        "time_code": "1935",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14611|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:45 PM",
+        "date": "20261021",
+        "time_code": "1945",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14611|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:45 PM",
+        "date": "20261021",
+        "time_code": "1945",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14570|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:55 PM",
+        "date": "20261021",
+        "time_code": "1955",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14570|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "07:55 PM",
+        "date": "20261021",
+        "time_code": "1955",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14585|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "10:40 PM",
+        "date": "20261021",
+        "time_code": "2240",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14585|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "10:40 PM",
+        "date": "20261021",
+        "time_code": "2240",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14561|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "10:50 PM",
+        "date": "20261021",
+        "time_code": "2250",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14561|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "10:50 PM",
+        "date": "20261021",
+        "time_code": "2250",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14551|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14551|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14612|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "11:10 PM",
+        "date": "20261021",
+        "time_code": "2310",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14612|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "11:10 PM",
+        "date": "20261021",
+        "time_code": "2310",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "CBMC|14571|20261021|NORMAL": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "11:20 PM",
+        "date": "20261021",
+        "time_code": "2320",
+        "cat": "NORMAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "CBMC|14571|20261021|EXECUTIVE": {
+        "venue": "Cinepolis: BSR Mall, OMR, Thoraipakkam",
+        "time": "11:20 PM",
+        "date": "20261021",
+        "time_code": "2320",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105821|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105821|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105836|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:30 AM",
+        "date": "20261021",
+        "time_code": "0930",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105836|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:30 AM",
+        "date": "20261021",
+        "time_code": "0930",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105822|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:20 PM",
+        "date": "20261021",
+        "time_code": "1220",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105822|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:20 PM",
+        "date": "20261021",
+        "time_code": "1220",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105837|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:50 PM",
+        "date": "20261021",
+        "time_code": "1250",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105837|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:50 PM",
+        "date": "20261021",
+        "time_code": "1250",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105823|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "03:50 PM",
+        "date": "20261021",
+        "time_code": "1550",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105823|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "03:50 PM",
+        "date": "20261021",
+        "time_code": "1550",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105838|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:20 PM",
+        "date": "20261021",
+        "time_code": "1620",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105838|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:20 PM",
+        "date": "20261021",
+        "time_code": "1620",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105824|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:25 PM",
+        "date": "20261021",
+        "time_code": "1925",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105824|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:25 PM",
+        "date": "20261021",
+        "time_code": "1925",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105839|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:55 PM",
+        "date": "20261021",
+        "time_code": "1955",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105839|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:55 PM",
+        "date": "20261021",
+        "time_code": "1955",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105825|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105825|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "FMCN|105840|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:30 PM",
+        "date": "20261021",
+        "time_code": "2330",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105840|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:30 PM",
+        "date": "20261021",
+        "time_code": "2330",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "1"
+      },
+      "PGRA|23492|20261021|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGRA|23492|20261021|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGRA|23493|20261021|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "12:30 PM",
+        "date": "20261021",
+        "time_code": "1230",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGRA|23493|20261021|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "12:30 PM",
+        "date": "20261021",
+        "time_code": "1230",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGRA|23494|20261021|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGRA|23494|20261021|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGRA|23495|20261021|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "07:30 PM",
+        "date": "20261021",
+        "time_code": "1930",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGRA|23495|20261021|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "07:30 PM",
+        "date": "20261021",
+        "time_code": "1930",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "2"
+      },
+      "PGRA|23496|20261021|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGRA|23496|20261021|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      }
+    },
+    "dates": {
+      "20261015": "AVAILABLE",
+      "20261016": "AVAILABLE",
+      "20261017": "AVAILABLE",
+      "20261018": "AVAILABLE",
+      "20261019": "AVAILABLE",
+      "20261020": "AVAILABLE",
+      "20261021": "BOOKABLE",
+      "20261022": "AVAILABLE",
+      "20261023": "AVAILABLE",
+      "20261024": "AVAILABLE",
+      "20261025": "AVAILABLE"
     }
   }
 }
