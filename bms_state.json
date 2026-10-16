@@ -1505,7 +1505,7 @@
         "time_code": "0900",
         "cat": "CLASSIC",
         "price": "54.35",
-        "status": "3"
+        "status": "0"
       },
       "PABC|22578|20261021|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
@@ -1541,7 +1541,7 @@
         "time_code": "1235",
         "cat": "CLASSIC",
         "price": "54.35",
-        "status": "3"
+        "status": "0"
       },
       "PABC|22579|20261021|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
@@ -1577,7 +1577,7 @@
         "time_code": "1605",
         "cat": "CLASSIC",
         "price": "54.35",
-        "status": "3"
+        "status": "0"
       },
       "PABC|22580|20261021|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
@@ -1613,7 +1613,7 @@
         "time_code": "1940",
         "cat": "CLASSIC",
         "price": "54.35",
-        "status": "3"
+        "status": "0"
       },
       "PABC|22581|20261021|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
@@ -1649,7 +1649,7 @@
         "time_code": "2315",
         "cat": "CLASSIC",
         "price": "54.35",
-        "status": "3"
+        "status": "0"
       },
       "PABC|22582|20261021|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
