@@ -805,6 +805,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105893|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105893|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105863|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "09:20 AM",
@@ -931,6 +949,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105895|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105895|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105865|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "04:10 PM",
@@ -1056,6 +1092,24 @@
         "cat": "PREMIERE",
         "price": "54.35",
         "status": "1"
+      },
+      "FMCN|105897|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:10 PM",
+        "date": "20261021",
+        "time_code": "2310",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105897|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:10 PM",
+        "date": "20261021",
+        "time_code": "2310",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
       },
       "FMCN|105867|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
