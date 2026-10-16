@@ -985,6 +985,24 @@
         "price": "54.35",
         "status": "3"
       },
+      "PGRA|23576|20261021|PRIME": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGRA|23576|20261021|CLASSIC": {
+        "venue": "PVR: Grand Galada, Pallavaram",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
       "PGRA|23493|20261021|PRIME": {
         "venue": "PVR: Grand Galada, Pallavaram",
         "time": "12:30 PM",
