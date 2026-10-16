@@ -911,7 +911,7 @@
         "time_code": "1245",
         "cat": "PREMIERE",
         "price": "54.35",
-        "status": "3"
+        "status": "1"
       },
       "FMCN|105837|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
@@ -1127,7 +1127,7 @@
         "time_code": "2320",
         "cat": "PREMIERE",
         "price": "54.35",
-        "status": "3"
+        "status": "0"
       },
       "FMCN|105840|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
