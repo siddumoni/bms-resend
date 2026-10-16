@@ -463,330 +463,6 @@
         "price": "183.80",
         "status": "3"
       },
-      "PGMV|23131|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:00 AM",
-        "date": "20261021",
-        "time_code": "0900",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23131|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:00 AM",
-        "date": "20261021",
-        "time_code": "0900",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23086|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:05 AM",
-        "date": "20261021",
-        "time_code": "0905",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23086|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:05 AM",
-        "date": "20261021",
-        "time_code": "0905",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23146|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:05 AM",
-        "date": "20261021",
-        "time_code": "0905",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23146|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:05 AM",
-        "date": "20261021",
-        "time_code": "0905",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23116|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:10 AM",
-        "date": "20261021",
-        "time_code": "0910",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23116|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:10 AM",
-        "date": "20261021",
-        "time_code": "0910",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23101|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:30 AM",
-        "date": "20261021",
-        "time_code": "0930",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23101|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "09:30 AM",
-        "date": "20261021",
-        "time_code": "0930",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23132|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "12:30 PM",
-        "date": "20261021",
-        "time_code": "1230",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23132|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "12:30 PM",
-        "date": "20261021",
-        "time_code": "1230",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23147|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "12:30 PM",
-        "date": "20261021",
-        "time_code": "1230",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23147|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "12:30 PM",
-        "date": "20261021",
-        "time_code": "1230",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23117|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "12:40 PM",
-        "date": "20261021",
-        "time_code": "1240",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23117|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "12:40 PM",
-        "date": "20261021",
-        "time_code": "1240",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23102|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "01:00 PM",
-        "date": "20261021",
-        "time_code": "1300",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23102|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "01:00 PM",
-        "date": "20261021",
-        "time_code": "1300",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23133|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "04:00 PM",
-        "date": "20261021",
-        "time_code": "1600",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23133|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "04:00 PM",
-        "date": "20261021",
-        "time_code": "1600",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23118|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "04:10 PM",
-        "date": "20261021",
-        "time_code": "1610",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23118|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "04:10 PM",
-        "date": "20261021",
-        "time_code": "1610",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23103|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "04:30 PM",
-        "date": "20261021",
-        "time_code": "1630",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23103|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "04:30 PM",
-        "date": "20261021",
-        "time_code": "1630",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23134|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "07:30 PM",
-        "date": "20261021",
-        "time_code": "1930",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23134|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "07:30 PM",
-        "date": "20261021",
-        "time_code": "1930",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23119|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "07:40 PM",
-        "date": "20261021",
-        "time_code": "1940",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23119|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "07:40 PM",
-        "date": "20261021",
-        "time_code": "1940",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23104|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "08:00 PM",
-        "date": "20261021",
-        "time_code": "2000",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23104|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "08:00 PM",
-        "date": "20261021",
-        "time_code": "2000",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "3"
-      },
-      "PGMV|23135|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "11:00 PM",
-        "date": "20261021",
-        "time_code": "2300",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23135|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "11:00 PM",
-        "date": "20261021",
-        "time_code": "2300",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
-      "PGMV|23120|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "11:10 PM",
-        "date": "20261021",
-        "time_code": "2310",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23120|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "11:10 PM",
-        "date": "20261021",
-        "time_code": "2310",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "1"
-      },
-      "PGMV|23105|20261021|PRIME": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "11:30 PM",
-        "date": "20261021",
-        "time_code": "2330",
-        "cat": "PRIME",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PGMV|23105|20261021|CLASSIC": {
-        "venue": "PVR: Grand Mall, Velachery",
-        "time": "11:30 PM",
-        "date": "20261021",
-        "time_code": "2330",
-        "cat": "CLASSIC",
-        "price": "54.35",
-        "status": "0"
-      },
       "FMCN|105821|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "09:00 AM",
@@ -1488,6 +1164,330 @@
         "cat": "CLASSIC",
         "price": "54.35",
         "status": "3"
+      },
+      "PGMV|23131|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23131|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:00 AM",
+        "date": "20261021",
+        "time_code": "0900",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23086|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:05 AM",
+        "date": "20261021",
+        "time_code": "0905",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23086|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:05 AM",
+        "date": "20261021",
+        "time_code": "0905",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23146|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:05 AM",
+        "date": "20261021",
+        "time_code": "0905",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23146|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:05 AM",
+        "date": "20261021",
+        "time_code": "0905",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23116|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23116|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:10 AM",
+        "date": "20261021",
+        "time_code": "0910",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23101|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:30 AM",
+        "date": "20261021",
+        "time_code": "0930",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23101|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "09:30 AM",
+        "date": "20261021",
+        "time_code": "0930",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23132|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "12:30 PM",
+        "date": "20261021",
+        "time_code": "1230",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23132|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "12:30 PM",
+        "date": "20261021",
+        "time_code": "1230",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23147|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "12:30 PM",
+        "date": "20261021",
+        "time_code": "1230",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23147|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "12:30 PM",
+        "date": "20261021",
+        "time_code": "1230",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23117|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "12:40 PM",
+        "date": "20261021",
+        "time_code": "1240",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23117|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "12:40 PM",
+        "date": "20261021",
+        "time_code": "1240",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23102|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "01:00 PM",
+        "date": "20261021",
+        "time_code": "1300",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23102|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "01:00 PM",
+        "date": "20261021",
+        "time_code": "1300",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23133|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23133|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "04:00 PM",
+        "date": "20261021",
+        "time_code": "1600",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23118|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "04:10 PM",
+        "date": "20261021",
+        "time_code": "1610",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23118|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "04:10 PM",
+        "date": "20261021",
+        "time_code": "1610",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23103|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "04:30 PM",
+        "date": "20261021",
+        "time_code": "1630",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23103|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "04:30 PM",
+        "date": "20261021",
+        "time_code": "1630",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23134|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "07:30 PM",
+        "date": "20261021",
+        "time_code": "1930",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23134|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "07:30 PM",
+        "date": "20261021",
+        "time_code": "1930",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23119|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "07:40 PM",
+        "date": "20261021",
+        "time_code": "1940",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23119|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "07:40 PM",
+        "date": "20261021",
+        "time_code": "1940",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23104|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "08:00 PM",
+        "date": "20261021",
+        "time_code": "2000",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23104|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "08:00 PM",
+        "date": "20261021",
+        "time_code": "2000",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "3"
+      },
+      "PGMV|23135|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23135|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "11:00 PM",
+        "date": "20261021",
+        "time_code": "2300",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
+      },
+      "PGMV|23120|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "11:10 PM",
+        "date": "20261021",
+        "time_code": "2310",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23120|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "11:10 PM",
+        "date": "20261021",
+        "time_code": "2310",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "1"
+      },
+      "PGMV|23105|20261021|PRIME": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "11:30 PM",
+        "date": "20261021",
+        "time_code": "2330",
+        "cat": "PRIME",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PGMV|23105|20261021|CLASSIC": {
+        "venue": "PVR: Grand Mall, Velachery",
+        "time": "11:30 PM",
+        "date": "20261021",
+        "time_code": "2330",
+        "cat": "CLASSIC",
+        "price": "54.35",
+        "status": "0"
       },
       "PABC|22578|20261021|PRIME": {
         "venue": "PVR: Aerohub, Chennai",
