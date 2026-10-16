@@ -805,6 +805,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105863|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:20 AM",
+        "date": "20261021",
+        "time_code": "0920",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105863|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:20 AM",
+        "date": "20261021",
+        "time_code": "0920",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105836|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "09:30 AM",
@@ -823,6 +841,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105878|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:40 AM",
+        "date": "20261021",
+        "time_code": "0940",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105878|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "09:40 AM",
+        "date": "20261021",
+        "time_code": "0940",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105822|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "12:20 PM",
@@ -840,6 +876,24 @@
         "cat": "PREMIERE",
         "price": "54.35",
         "status": "1"
+      },
+      "FMCN|105864|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:45 PM",
+        "date": "20261021",
+        "time_code": "1245",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105864|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "12:45 PM",
+        "date": "20261021",
+        "time_code": "1245",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
       },
       "FMCN|105837|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
@@ -877,6 +931,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105865|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:10 PM",
+        "date": "20261021",
+        "time_code": "1610",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105865|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "04:10 PM",
+        "date": "20261021",
+        "time_code": "1610",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105838|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "04:20 PM",
@@ -913,6 +985,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105866|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:45 PM",
+        "date": "20261021",
+        "time_code": "1945",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105866|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "07:45 PM",
+        "date": "20261021",
+        "time_code": "1945",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105839|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "07:55 PM",
@@ -930,6 +1020,24 @@
         "cat": "PREMIERE",
         "price": "54.35",
         "status": "0"
+      },
+      "FMCN|105881|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "08:00 PM",
+        "date": "20261021",
+        "time_code": "2000",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105881|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "08:00 PM",
+        "date": "20261021",
+        "time_code": "2000",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
       },
       "FMCN|105825|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
@@ -949,6 +1057,24 @@
         "price": "54.35",
         "status": "1"
       },
+      "FMCN|105867|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:20 PM",
+        "date": "20261021",
+        "time_code": "2320",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105867|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:20 PM",
+        "date": "20261021",
+        "time_code": "2320",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
+      },
       "FMCN|105840|20261021|SILVER": {
         "venue": "INOX National: Arcot Road",
         "time": "11:30 PM",
@@ -966,6 +1092,24 @@
         "cat": "PREMIERE",
         "price": "54.35",
         "status": "1"
+      },
+      "FMCN|105882|20261021|SILVER": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:40 PM",
+        "date": "20261021",
+        "time_code": "2340",
+        "cat": "SILVER",
+        "price": "183.80",
+        "status": "3"
+      },
+      "FMCN|105882|20261021|PREMIERE": {
+        "venue": "INOX National: Arcot Road",
+        "time": "11:40 PM",
+        "date": "20261021",
+        "time_code": "2340",
+        "cat": "PREMIERE",
+        "price": "54.35",
+        "status": "3"
       },
       "PGRA|23492|20261021|PRIME": {
         "venue": "PVR: Grand Galada, Pallavaram",
