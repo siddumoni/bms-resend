@@ -16,6 +16,10 @@
       "20261103": {
         "count": 0,
         "alerted": false
+      },
+      "20261102": {
+        "count": 0,
+        "alerted": false
       }
     },
     "ET00516631": {
@@ -4191,6 +4195,2085 @@
         "cat": "PREMIERE ROW",
         "price": "130.00",
         "status": "3"
+      },
+      "TVHP|26213|20261102|ELITE": {
+        "venue": "The Vijay Park Multiplex: Injambakkam ECR 4K Atmos",
+        "time": "10:00 AM",
+        "date": "20261102",
+        "time_code": "1000",
+        "cat": "ELITE",
+        "price": "183.00",
+        "status": "3"
+      },
+      "TVHP|26214|20261102|ELITE": {
+        "venue": "The Vijay Park Multiplex: Injambakkam ECR 4K Atmos",
+        "time": "01:20 PM",
+        "date": "20261102",
+        "time_code": "1320",
+        "cat": "ELITE",
+        "price": "183.00",
+        "status": "3"
+      },
+      "TVHP|26215|20261102|ELITE": {
+        "venue": "The Vijay Park Multiplex: Injambakkam ECR 4K Atmos",
+        "time": "04:40 PM",
+        "date": "20261102",
+        "time_code": "1640",
+        "cat": "ELITE",
+        "price": "183.00",
+        "status": "3"
+      },
+      "TVHP|26216|20261102|ELITE": {
+        "venue": "The Vijay Park Multiplex: Injambakkam ECR 4K Atmos",
+        "time": "08:00 PM",
+        "date": "20261102",
+        "time_code": "2000",
+        "cat": "ELITE",
+        "price": "183.00",
+        "status": "3"
+      },
+      "TVHP|26217|20261102|ELITE": {
+        "venue": "The Vijay Park Multiplex: Injambakkam ECR 4K Atmos",
+        "time": "11:20 PM",
+        "date": "20261102",
+        "time_code": "2320",
+        "cat": "ELITE",
+        "price": "183.00",
+        "status": "3"
+      },
+      "KVCS|9561|20261102|BOX A": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "BOX A",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9561|20261102|BOX B": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "BOX B",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9561|20261102|ELITE": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "ELITE",
+        "price": "129.80",
+        "status": "3"
+      },
+      "KVCS|9561|20261102|PREMIUM": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "PREMIUM",
+        "price": "60.00",
+        "status": "0"
+      },
+      "KVCS|9562|20261102|BOX A": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "BOX A",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9562|20261102|BOX B": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "BOX B",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9562|20261102|ELITE": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "ELITE",
+        "price": "129.80",
+        "status": "3"
+      },
+      "KVCS|9562|20261102|PREMIUM": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "PREMIUM",
+        "price": "60.00",
+        "status": "0"
+      },
+      "KVCS|9563|20261102|BOX A": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "BOX A",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9563|20261102|BOX B": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "BOX B",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9563|20261102|ELITE": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "ELITE",
+        "price": "129.80",
+        "status": "3"
+      },
+      "KVCS|9563|20261102|PREMIUM": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "PREMIUM",
+        "price": "60.00",
+        "status": "0"
+      },
+      "KVCS|9564|20261102|BOX A": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "10:40 PM",
+        "date": "20261102",
+        "time_code": "2240",
+        "cat": "BOX A",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9564|20261102|BOX B": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "10:40 PM",
+        "date": "20261102",
+        "time_code": "2240",
+        "cat": "BOX B",
+        "price": "180.00",
+        "status": "0"
+      },
+      "KVCS|9564|20261102|ELITE": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "10:40 PM",
+        "date": "20261102",
+        "time_code": "2240",
+        "cat": "ELITE",
+        "price": "129.80",
+        "status": "3"
+      },
+      "KVCS|9564|20261102|PREMIUM": {
+        "venue": "KC(KrishnaveniCinemas) RG3 LASER DOLBYATMOS TNAGAR",
+        "time": "10:40 PM",
+        "date": "20261102",
+        "time_code": "2240",
+        "cat": "PREMIUM",
+        "price": "60.00",
+        "status": "0"
+      },
+      "RSSC|124855|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "09:30 AM",
+        "date": "20261102",
+        "time_code": "0930",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124855|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "09:30 AM",
+        "date": "20261102",
+        "time_code": "0930",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124855|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "09:30 AM",
+        "date": "20261102",
+        "time_code": "0930",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124860|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:15 AM",
+        "date": "20261102",
+        "time_code": "1015",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124860|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:15 AM",
+        "date": "20261102",
+        "time_code": "1015",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124860|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:15 AM",
+        "date": "20261102",
+        "time_code": "1015",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124865|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "11:00 AM",
+        "date": "20261102",
+        "time_code": "1100",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124856|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "12:50 PM",
+        "date": "20261102",
+        "time_code": "1250",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124856|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "12:50 PM",
+        "date": "20261102",
+        "time_code": "1250",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124856|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "12:50 PM",
+        "date": "20261102",
+        "time_code": "1250",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124861|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "01:40 PM",
+        "date": "20261102",
+        "time_code": "1340",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124861|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "01:40 PM",
+        "date": "20261102",
+        "time_code": "1340",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124861|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "01:40 PM",
+        "date": "20261102",
+        "time_code": "1340",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124866|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124857|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "04:10 PM",
+        "date": "20261102",
+        "time_code": "1610",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124857|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "04:10 PM",
+        "date": "20261102",
+        "time_code": "1610",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124857|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "04:10 PM",
+        "date": "20261102",
+        "time_code": "1610",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124862|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "05:05 PM",
+        "date": "20261102",
+        "time_code": "1705",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124862|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "05:05 PM",
+        "date": "20261102",
+        "time_code": "1705",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124862|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "05:05 PM",
+        "date": "20261102",
+        "time_code": "1705",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124867|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124858|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124858|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124858|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124863|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "08:30 PM",
+        "date": "20261102",
+        "time_code": "2030",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124863|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "08:30 PM",
+        "date": "20261102",
+        "time_code": "2030",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124863|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "08:30 PM",
+        "date": "20261102",
+        "time_code": "2030",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124868|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:15 PM",
+        "date": "20261102",
+        "time_code": "2215",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124859|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:50 PM",
+        "date": "20261102",
+        "time_code": "2250",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124859|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:50 PM",
+        "date": "20261102",
+        "time_code": "2250",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124859|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "10:50 PM",
+        "date": "20261102",
+        "time_code": "2250",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "RSSC|124864|20261102|SuperStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "11:55 PM",
+        "date": "20261102",
+        "time_code": "2355",
+        "cat": "SuperStar",
+        "price": "190.00",
+        "status": "3"
+      },
+      "RSSC|124864|20261102|PLATINUM": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "11:55 PM",
+        "date": "20261102",
+        "time_code": "2355",
+        "cat": "PLATINUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "RSSC|124864|20261102|GoldStar": {
+        "venue": "Rohini Silver Screens: Koyambedu",
+        "time": "11:55 PM",
+        "date": "20261102",
+        "time_code": "2355",
+        "cat": "GoldStar",
+        "price": "160.00",
+        "status": "3"
+      },
+      "ACVM|57554|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "11:45 AM",
+        "date": "20261102",
+        "time_code": "1145",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57554|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "11:45 AM",
+        "date": "20261102",
+        "time_code": "1145",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57538|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57538|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57570|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "12:30 PM",
+        "date": "20261102",
+        "time_code": "1230",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57570|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "12:30 PM",
+        "date": "20261102",
+        "time_code": "1230",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57555|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "03:05 PM",
+        "date": "20261102",
+        "time_code": "1505",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57555|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "03:05 PM",
+        "date": "20261102",
+        "time_code": "1505",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57539|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "03:20 PM",
+        "date": "20261102",
+        "time_code": "1520",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57539|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "03:20 PM",
+        "date": "20261102",
+        "time_code": "1520",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57571|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "03:50 PM",
+        "date": "20261102",
+        "time_code": "1550",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57571|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "03:50 PM",
+        "date": "20261102",
+        "time_code": "1550",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57556|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "06:45 PM",
+        "date": "20261102",
+        "time_code": "1845",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57556|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "06:45 PM",
+        "date": "20261102",
+        "time_code": "1845",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57540|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57540|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57528|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "07:15 PM",
+        "date": "20261102",
+        "time_code": "1915",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57528|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "07:15 PM",
+        "date": "20261102",
+        "time_code": "1915",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57572|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57572|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57557|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:05 PM",
+        "date": "20261102",
+        "time_code": "2205",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57557|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:05 PM",
+        "date": "20261102",
+        "time_code": "2205",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57541|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:20 PM",
+        "date": "20261102",
+        "time_code": "2220",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57541|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:20 PM",
+        "date": "20261102",
+        "time_code": "2220",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57529|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:35 PM",
+        "date": "20261102",
+        "time_code": "2235",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57529|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:35 PM",
+        "date": "20261102",
+        "time_code": "2235",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACVM|57573|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:50 PM",
+        "date": "20261102",
+        "time_code": "2250",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACVM|57573|20261102|PEARL": {
+        "venue": "AGS Cinemas: Villivakkam",
+        "time": "10:50 PM",
+        "date": "20261102",
+        "time_code": "2250",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57817|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:15 PM",
+        "date": "20261102",
+        "time_code": "1215",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57817|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:15 PM",
+        "date": "20261102",
+        "time_code": "1215",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57807|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:45 PM",
+        "date": "20261102",
+        "time_code": "1245",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57807|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "12:45 PM",
+        "date": "20261102",
+        "time_code": "1245",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57813|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "01:15 PM",
+        "date": "20261102",
+        "time_code": "1315",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57813|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "01:15 PM",
+        "date": "20261102",
+        "time_code": "1315",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57818|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "03:35 PM",
+        "date": "20261102",
+        "time_code": "1535",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57818|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "03:35 PM",
+        "date": "20261102",
+        "time_code": "1535",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57808|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "04:05 PM",
+        "date": "20261102",
+        "time_code": "1605",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57808|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "04:05 PM",
+        "date": "20261102",
+        "time_code": "1605",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57814|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "04:35 PM",
+        "date": "20261102",
+        "time_code": "1635",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57814|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "04:35 PM",
+        "date": "20261102",
+        "time_code": "1635",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57811|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:35 PM",
+        "date": "20261102",
+        "time_code": "1835",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57811|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:35 PM",
+        "date": "20261102",
+        "time_code": "1835",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57819|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:55 PM",
+        "date": "20261102",
+        "time_code": "1855",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57819|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "06:55 PM",
+        "date": "20261102",
+        "time_code": "1855",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57809|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "07:25 PM",
+        "date": "20261102",
+        "time_code": "1925",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57809|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "07:25 PM",
+        "date": "20261102",
+        "time_code": "1925",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57815|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "07:55 PM",
+        "date": "20261102",
+        "time_code": "1955",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57815|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "07:55 PM",
+        "date": "20261102",
+        "time_code": "1955",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57820|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "10:15 PM",
+        "date": "20261102",
+        "time_code": "2215",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57820|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "10:15 PM",
+        "date": "20261102",
+        "time_code": "2215",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57810|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "10:45 PM",
+        "date": "20261102",
+        "time_code": "2245",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57810|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "10:45 PM",
+        "date": "20261102",
+        "time_code": "2245",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "AGSM|57816|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "11:15 PM",
+        "date": "20261102",
+        "time_code": "2315",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "AGSM|57816|20261102|PEARL": {
+        "venue": "AGS Cinemas: Maduravoyal",
+        "time": "11:15 PM",
+        "date": "20261102",
+        "time_code": "2315",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48373|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48373|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48377|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48377|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "12:00 PM",
+        "date": "20261102",
+        "time_code": "1200",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48374|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "03:00 PM",
+        "date": "20261102",
+        "time_code": "1500",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48374|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "03:00 PM",
+        "date": "20261102",
+        "time_code": "1500",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48378|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48378|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48375|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48375|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48379|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48379|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48376|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48376|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACON|48380|20261102|DIAMOND": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "10:30 PM",
+        "date": "20261102",
+        "time_code": "2230",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACON|48380|20261102|PEARL": {
+        "venue": "AGS Cinemas OMR: Navlur",
+        "time": "10:30 PM",
+        "date": "20261102",
+        "time_code": "2230",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46975|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "12:15 PM",
+        "date": "20261102",
+        "time_code": "1215",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46975|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "12:15 PM",
+        "date": "20261102",
+        "time_code": "1215",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46971|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "12:50 PM",
+        "date": "20261102",
+        "time_code": "1250",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46971|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "12:50 PM",
+        "date": "20261102",
+        "time_code": "1250",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46967|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "01:15 PM",
+        "date": "20261102",
+        "time_code": "1315",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46967|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "01:15 PM",
+        "date": "20261102",
+        "time_code": "1315",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46976|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46976|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "03:30 PM",
+        "date": "20261102",
+        "time_code": "1530",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46972|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "04:15 PM",
+        "date": "20261102",
+        "time_code": "1615",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46972|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "04:15 PM",
+        "date": "20261102",
+        "time_code": "1615",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46968|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "04:30 PM",
+        "date": "20261102",
+        "time_code": "1630",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46968|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "04:30 PM",
+        "date": "20261102",
+        "time_code": "1630",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46977|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46977|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:00 PM",
+        "date": "20261102",
+        "time_code": "1900",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46973|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46973|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:30 PM",
+        "date": "20261102",
+        "time_code": "1930",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46969|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:45 PM",
+        "date": "20261102",
+        "time_code": "1945",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46969|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "07:45 PM",
+        "date": "20261102",
+        "time_code": "1945",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46978|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "10:15 PM",
+        "date": "20261102",
+        "time_code": "2215",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46978|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "10:15 PM",
+        "date": "20261102",
+        "time_code": "2215",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46974|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "10:45 PM",
+        "date": "20261102",
+        "time_code": "2245",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46974|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "10:45 PM",
+        "date": "20261102",
+        "time_code": "2245",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "ACTN|46970|20261102|DIAMOND": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "11:00 PM",
+        "date": "20261102",
+        "time_code": "2300",
+        "cat": "DIAMOND",
+        "price": "183.00",
+        "status": "3"
+      },
+      "ACTN|46970|20261102|PEARL": {
+        "venue": "AGS Cinemas: T. Nagar",
+        "time": "11:00 PM",
+        "date": "20261102",
+        "time_code": "2300",
+        "cat": "PEARL",
+        "price": "54.00",
+        "status": "0"
+      },
+      "MCSK|16802|20261102|SPECIAL": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "12:20 PM",
+        "date": "20261102",
+        "time_code": "1220",
+        "cat": "SPECIAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "MCSK|16802|20261102|EXECUTIVE": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "12:20 PM",
+        "date": "20261102",
+        "time_code": "1220",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "MCSK|16803|20261102|SPECIAL": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "03:50 PM",
+        "date": "20261102",
+        "time_code": "1550",
+        "cat": "SPECIAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "MCSK|16803|20261102|EXECUTIVE": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "03:50 PM",
+        "date": "20261102",
+        "time_code": "1550",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "MCSK|16804|20261102|SPECIAL": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "07:20 PM",
+        "date": "20261102",
+        "time_code": "1920",
+        "cat": "SPECIAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "MCSK|16804|20261102|EXECUTIVE": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "07:20 PM",
+        "date": "20261102",
+        "time_code": "1920",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "MCSK|16805|20261102|SPECIAL": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "10:45 PM",
+        "date": "20261102",
+        "time_code": "2245",
+        "cat": "SPECIAL",
+        "price": "54.35",
+        "status": "0"
+      },
+      "MCSK|16805|20261102|EXECUTIVE": {
+        "venue": "Miraj Cinemas: Sekaran Mall, Perrumbakkam",
+        "time": "10:45 PM",
+        "date": "20261102",
+        "time_code": "2245",
+        "cat": "EXECUTIVE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "SBTR|12253|20261102|Elite": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "Elite",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12253|20261102|PLATINUM": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "PLATINUM",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12254|20261102|Elite": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "03:00 PM",
+        "date": "20261102",
+        "time_code": "1500",
+        "cat": "Elite",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12254|20261102|PLATINUM": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "03:00 PM",
+        "date": "20261102",
+        "time_code": "1500",
+        "cat": "PLATINUM",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12255|20261102|Elite": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "Elite",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12255|20261102|PLATINUM": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "PLATINUM",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12256|20261102|Elite": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "Elite",
+        "price": "130.00",
+        "status": "3"
+      },
+      "SBTR|12256|20261102|PLATINUM": {
+        "venue": "SB Cinemas (Sri Bhagavathi) 4K Atmos: Poonamallee",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "PLATINUM",
+        "price": "130.00",
+        "status": "3"
+      },
+      "GKGM|1609|20261102|ELITE": {
+        "venue": "Gayathiri Cinemas A/C Dolby Atmos: Maduranthakam",
+        "time": "11:15 AM",
+        "date": "20261102",
+        "time_code": "1115",
+        "cat": "ELITE",
+        "price": "100.00",
+        "status": "3"
+      },
+      "GKGM|1610|20261102|ELITE": {
+        "venue": "Gayathiri Cinemas A/C Dolby Atmos: Maduranthakam",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "ELITE",
+        "price": "100.00",
+        "status": "3"
+      },
+      "GKGM|1611|20261102|ELITE": {
+        "venue": "Gayathiri Cinemas A/C Dolby Atmos: Maduranthakam",
+        "time": "06:15 PM",
+        "date": "20261102",
+        "time_code": "1815",
+        "cat": "ELITE",
+        "price": "100.00",
+        "status": "3"
+      },
+      "GKGM|1612|20261102|ELITE": {
+        "venue": "Gayathiri Cinemas A/C Dolby Atmos: Maduranthakam",
+        "time": "09:30 PM",
+        "date": "20261102",
+        "time_code": "2130",
+        "cat": "ELITE",
+        "price": "100.00",
+        "status": "3"
+      },
+      "JTMV|13336|20261102|First Class": {
+        "venue": "VVM Cinemas 3D 2K AC Dts, Ponneri: Chennai",
+        "time": "11:15 AM",
+        "date": "20261102",
+        "time_code": "1115",
+        "cat": "First Class",
+        "price": "150.00",
+        "status": "3"
+      },
+      "JTMV|13337|20261102|First Class": {
+        "venue": "VVM Cinemas 3D 2K AC Dts, Ponneri: Chennai",
+        "time": "02:15 PM",
+        "date": "20261102",
+        "time_code": "1415",
+        "cat": "First Class",
+        "price": "150.00",
+        "status": "3"
+      },
+      "JTMV|13338|20261102|First Class": {
+        "venue": "VVM Cinemas 3D 2K AC Dts, Ponneri: Chennai",
+        "time": "06:15 PM",
+        "date": "20261102",
+        "time_code": "1815",
+        "cat": "First Class",
+        "price": "150.00",
+        "status": "3"
+      },
+      "JTMV|13339|20261102|First Class": {
+        "venue": "VVM Cinemas 3D 2K AC Dts, Ponneri: Chennai",
+        "time": "09:15 PM",
+        "date": "20261102",
+        "time_code": "2115",
+        "cat": "First Class",
+        "price": "150.00",
+        "status": "3"
+      },
+      "KMRM|13309|20261102|BALCONY": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "11:45 AM",
+        "date": "20261102",
+        "time_code": "1145",
+        "cat": "BALCONY",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13309|20261102|FIRST CLASS": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "11:45 AM",
+        "date": "20261102",
+        "time_code": "1145",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13310|20261102|BALCONY": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "BALCONY",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13310|20261102|FIRST CLASS": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13311|20261102|BALCONY": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "06:45 PM",
+        "date": "20261102",
+        "time_code": "1845",
+        "cat": "BALCONY",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13311|20261102|FIRST CLASS": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "06:45 PM",
+        "date": "20261102",
+        "time_code": "1845",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13312|20261102|BALCONY": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "BALCONY",
+        "price": "130.00",
+        "status": "3"
+      },
+      "KMRM|13312|20261102|FIRST CLASS": {
+        "venue": "Kumaran Theatre PROVA 4K DOLBY ATMOS: Madipakkam",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "AMTT|5145|20261102|PREMIUM": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "PREMIUM",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5145|20261102|PRIME": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "PRIME",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5146|20261102|PREMIUM": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "PREMIUM",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5146|20261102|PRIME": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "PRIME",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5147|20261102|PREMIUM": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "PREMIUM",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5147|20261102|PRIME": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "PRIME",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5148|20261102|PREMIUM": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "09:45 PM",
+        "date": "20261102",
+        "time_code": "2145",
+        "cat": "PREMIUM",
+        "price": "100.00",
+        "status": "3"
+      },
+      "AMTT|5148|20261102|PRIME": {
+        "venue": "Arul Muruga Theatre 4K: Thiruporur",
+        "time": "09:45 PM",
+        "date": "20261102",
+        "time_code": "2145",
+        "cat": "PRIME",
+        "price": "100.00",
+        "status": "3"
+      },
+      "LKOP|12656|20261102|FIRST CLASS": {
+        "venue": "Lathaa Cinemas A/C Atmos 2K 3D: Chengalpattu",
+        "time": "11:00 AM",
+        "date": "20261102",
+        "time_code": "1100",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "LKOP|12657|20261102|FIRST CLASS": {
+        "venue": "Lathaa Cinemas A/C Atmos 2K 3D: Chengalpattu",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "LKOP|12658|20261102|FIRST CLASS": {
+        "venue": "Lathaa Cinemas A/C Atmos 2K 3D: Chengalpattu",
+        "time": "06:15 PM",
+        "date": "20261102",
+        "time_code": "1815",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "LKOP|12659|20261102|FIRST CLASS": {
+        "venue": "Lathaa Cinemas A/C Atmos 2K 3D: Chengalpattu",
+        "time": "09:30 PM",
+        "date": "20261102",
+        "time_code": "2130",
+        "cat": "FIRST CLASS",
+        "price": "130.00",
+        "status": "3"
+      },
+      "MMKC|8590|20261102|FIRST CLASS": {
+        "venue": "Medavakkam Kumaran Cinemas RGB LASER Dolby Atmos",
+        "time": "11:15 AM",
+        "date": "20261102",
+        "time_code": "1115",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "MMKC|8591|20261102|FIRST CLASS": {
+        "venue": "Medavakkam Kumaran Cinemas RGB LASER Dolby Atmos",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "MMKC|8592|20261102|FIRST CLASS": {
+        "venue": "Medavakkam Kumaran Cinemas RGB LASER Dolby Atmos",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "MMKC|8593|20261102|FIRST CLASS": {
+        "venue": "Medavakkam Kumaran Cinemas RGB LASER Dolby Atmos",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "AVMT|1151|20261102|BOX 1": {
+        "venue": "AVM Cinemas: Uthukkottai",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "BOX 1",
+        "price": "150.00",
+        "status": "3"
+      },
+      "AVMT|1151|20261102|BOX 2": {
+        "venue": "AVM Cinemas: Uthukkottai",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "BOX 2",
+        "price": "150.00",
+        "status": "3"
+      },
+      "AVMT|1151|20261102|ELITE": {
+        "venue": "AVM Cinemas: Uthukkottai",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "ELITE",
+        "price": "130.00",
+        "status": "3"
+      },
+      "AVMT|1153|20261102|BOX 1": {
+        "venue": "AVM Cinemas: Uthukkottai",
+        "time": "09:45 PM",
+        "date": "20261102",
+        "time_code": "2145",
+        "cat": "BOX 1",
+        "price": "150.00",
+        "status": "3"
+      },
+      "AVMT|1153|20261102|BOX 2": {
+        "venue": "AVM Cinemas: Uthukkottai",
+        "time": "09:45 PM",
+        "date": "20261102",
+        "time_code": "2145",
+        "cat": "BOX 2",
+        "price": "150.00",
+        "status": "3"
+      },
+      "AVMT|1153|20261102|ELITE": {
+        "venue": "AVM Cinemas: Uthukkottai",
+        "time": "09:45 PM",
+        "date": "20261102",
+        "time_code": "2145",
+        "cat": "ELITE",
+        "price": "130.00",
+        "status": "3"
+      },
+      "ASGG|10469|20261102|Balcony Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "Balcony Class",
+        "price": "130.00",
+        "status": "3"
+      },
+      "ASGG|10469|20261102|First Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "11:30 AM",
+        "date": "20261102",
+        "time_code": "1130",
+        "cat": "First Class",
+        "price": "100.00",
+        "status": "3"
+      },
+      "ASGG|10455|20261102|Balcony Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "Balcony Class",
+        "price": "130.00",
+        "status": "3"
+      },
+      "ASGG|10455|20261102|First Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "02:30 PM",
+        "date": "20261102",
+        "time_code": "1430",
+        "cat": "First Class",
+        "price": "100.00",
+        "status": "3"
+      },
+      "ASGG|10462|20261102|Balcony Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "Balcony Class",
+        "price": "130.00",
+        "status": "3"
+      },
+      "ASGG|10462|20261102|First Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "First Class",
+        "price": "100.00",
+        "status": "3"
+      },
+      "ASGG|10476|20261102|Balcony Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "09:30 PM",
+        "date": "20261102",
+        "time_code": "2130",
+        "cat": "Balcony Class",
+        "price": "130.00",
+        "status": "3"
+      },
+      "ASGG|10476|20261102|First Class": {
+        "venue": "Alankar Theatre: Maduranthakam",
+        "time": "09:30 PM",
+        "date": "20261102",
+        "time_code": "2130",
+        "cat": "First Class",
+        "price": "100.00",
+        "status": "3"
+      },
+      "GRTC|10112|20261102|COUPLE": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "11:00 AM",
+        "date": "20261102",
+        "time_code": "1100",
+        "cat": "COUPLE",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10112|20261102|FAMILY CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "11:00 AM",
+        "date": "20261102",
+        "time_code": "1100",
+        "cat": "FAMILY CLASS",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10112|20261102|BALCONY": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "11:00 AM",
+        "date": "20261102",
+        "time_code": "1100",
+        "cat": "BALCONY",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10112|20261102|FIRST CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "11:00 AM",
+        "date": "20261102",
+        "time_code": "1100",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "GRTC|10113|20261102|COUPLE": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "COUPLE",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10113|20261102|FAMILY CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "FAMILY CLASS",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10113|20261102|BALCONY": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "BALCONY",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10113|20261102|FIRST CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "GRTC|10114|20261102|COUPLE": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "COUPLE",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10114|20261102|FAMILY CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "FAMILY CLASS",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10114|20261102|BALCONY": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "BALCONY",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10114|20261102|FIRST CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "06:30 PM",
+        "date": "20261102",
+        "time_code": "1830",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "GRTC|10115|20261102|COUPLE": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "COUPLE",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10115|20261102|FAMILY CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "FAMILY CLASS",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10115|20261102|BALCONY": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "BALCONY",
+        "price": "150.00",
+        "status": "3"
+      },
+      "GRTC|10115|20261102|FIRST CLASS": {
+        "venue": "GanapathyRam Theatre 4K Dolby 7.1: Chennai",
+        "time": "10:00 PM",
+        "date": "20261102",
+        "time_code": "2200",
+        "cat": "FIRST CLASS",
+        "price": "120.00",
+        "status": "3"
+      },
+      "HRSR|1287|20261102|PREMIERE ROW": {
+        "venue": "Sri Hari Theatre Dolby Atmos: Pattabiram",
+        "time": "11:15 AM",
+        "date": "20261102",
+        "time_code": "1115",
+        "cat": "PREMIERE ROW",
+        "price": "130.00",
+        "status": "3"
+      },
+      "HRSR|1288|20261102|PREMIERE ROW": {
+        "venue": "Sri Hari Theatre Dolby Atmos: Pattabiram",
+        "time": "02:45 PM",
+        "date": "20261102",
+        "time_code": "1445",
+        "cat": "PREMIERE ROW",
+        "price": "130.00",
+        "status": "3"
+      },
+      "HRSR|1289|20261102|PREMIERE ROW": {
+        "venue": "Sri Hari Theatre Dolby Atmos: Pattabiram",
+        "time": "06:45 PM",
+        "date": "20261102",
+        "time_code": "1845",
+        "cat": "PREMIERE ROW",
+        "price": "130.00",
+        "status": "3"
+      },
+      "HRSR|1290|20261102|PREMIERE ROW": {
+        "venue": "Sri Hari Theatre Dolby Atmos: Pattabiram",
+        "time": "10:15 PM",
+        "date": "20261102",
+        "time_code": "2215",
+        "cat": "PREMIERE ROW",
+        "price": "130.00",
+        "status": "3"
       }
     },
     "dates": {
@@ -4209,10 +6292,10 @@
       "20261030": "AVAILABLE",
       "20261031": "AVAILABLE",
       "20261101": "AVAILABLE",
-      "20261102": "AVAILABLE",
-      "20261103": "BOOKABLE",
+      "20261103": "AVAILABLE",
       "20261104": "AVAILABLE",
-      "20261105": "AVAILABLE"
+      "20261105": "AVAILABLE",
+      "20261102": "BOOKABLE"
     }
   },
   "ET00523997": {
