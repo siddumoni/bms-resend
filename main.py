@@ -225,6 +225,48 @@ API_URL = (
 )
 
 
+def runtime_diagnostics():
+    """Return non-secret GitHub Actions/runner metadata for comparing runs."""
+    keys = {
+        "github_run_id": "GITHUB_RUN_ID",
+        "github_run_attempt": "GITHUB_RUN_ATTEMPT",
+        "github_ref": "GITHUB_REF",
+        "github_sha": "GITHUB_SHA",
+        "runner_os": "RUNNER_OS",
+        "runner_arch": "RUNNER_ARCH",
+        "runner_name": "RUNNER_NAME",
+        "image_os": "ImageOS",
+        "image_version": "ImageVersion",
+    }
+    return {label: os.environ[key] for label, key in keys.items()
+            if os.environ.get(key)}
+
+
+def response_diagnostics(resp, elapsed_ms):
+    """Capture comparable request/response metadata without logging cookies or bodies."""
+    parsed = urlparse(resp.url)
+    request = getattr(resp, "request", None)
+    request_headers = getattr(request, "headers", {}) or {}
+    response_headers = resp.headers
+    return {
+        "method": getattr(request, "method", "GET"),
+        "endpoint": f"{parsed.scheme}://{parsed.netloc}{parsed.path}",
+        "elapsed_ms": elapsed_ms,
+        "request_header_names": sorted(request_headers.keys()),
+        "user_agent": request_headers.get("User-Agent", ""),
+        "accept_language": request_headers.get("Accept-Language", ""),
+        "cookie_header_sent": bool(request_headers.get("Cookie")),
+        "content_type": response_headers.get("content-type", ""),
+        "response_date": response_headers.get("date", ""),
+        "server": response_headers.get("server", ""),
+        "cf_ray": response_headers.get("cf-ray", ""),
+        "cf_mitigated": response_headers.get("cf-mitigated", ""),
+        "cf_cache_status": response_headers.get("cf-cache-status", ""),
+        "retry_after": response_headers.get("retry-after", ""),
+        "runtime": runtime_diagnostics(),
+    }
+
+
 def fetch_bms(event_code, date_code, region_code, region_slug,
               lat, lon, geohash, max_retries=3, failure_details=None):
     headers = {
@@ -262,12 +304,22 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
     }
     last_failure = {}
     for attempt in range(1, max_retries + 1):
+        request_started = time.monotonic()
         try:
             resp = requests.get(API_URL, headers=headers,
                                 params=params, timeout=15)
+            elapsed_ms = round((time.monotonic() - request_started) * 1000)
+            request_diag = response_diagnostics(resp, elapsed_ms)
             if resp.status_code == 200:
                 try:
-                    return resp.json()
+                    data = resp.json()
+                    print("  FETCH_RESPONSE: " + json.dumps({
+                        "event_code": event_code,
+                        "date_code": date_code or "(default)",
+                        "status_code": resp.status_code,
+                        **request_diag,
+                    }, ensure_ascii=False))
+                    return data
                 except ValueError as e:
                     last_failure = {
                         "kind": "invalid_json",
@@ -276,6 +328,10 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                         "reason": resp.reason,
                         "server": resp.headers.get("server", ""),
                         "cf_ray": resp.headers.get("cf-ray", ""),
+                        "cf_mitigated": resp.headers.get("cf-mitigated", ""),
+                        "cf_cache_status": resp.headers.get("cf-cache-status", ""),
+                        "retry_after": resp.headers.get("retry-after", ""),
+                        "response_diagnostics": request_diag,
                         "response_snippet": resp.text[:500],
                         "attempts": attempt,
                     }
@@ -288,6 +344,10 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                     "reason": resp.reason,
                     "server": resp.headers.get("server", ""),
                     "cf_ray": resp.headers.get("cf-ray", ""),
+                    "cf_mitigated": resp.headers.get("cf-mitigated", ""),
+                    "cf_cache_status": resp.headers.get("cf-cache-status", ""),
+                    "retry_after": resp.headers.get("retry-after", ""),
+                    "response_diagnostics": request_diag,
                     "response_snippet": resp.text[:500],
                     "attempts": attempt,
                 }
@@ -312,6 +372,13 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                 "kind": "request_exception",
                 "message": f"{type(e).__name__}: {e}",
                 "status_code": None, "reason": "", "server": "", "cf_ray": "",
+                "cf_mitigated": "", "cf_cache_status": "", "retry_after": "",
+                "response_diagnostics": {
+                    "method": "GET",
+                    "endpoint": API_URL,
+                    "elapsed_ms": round((time.monotonic() - request_started) * 1000),
+                    "runtime": runtime_diagnostics(),
+                },
                 "response_snippet": "", "attempts": attempt,
             }
             print(f"  Request failed (attempt {attempt}/{max_retries}): {type(e).__name__}: {e}")
@@ -324,6 +391,7 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
             "kind": "unknown",
             "message": "Request failed without a captured HTTP response or exception.",
             "status_code": None, "reason": "", "server": "", "cf_ray": "",
+            "cf_mitigated": "", "cf_cache_status": "", "retry_after": "",
             "response_snippet": "", "attempts": max_retries,
         }
     last_failure["event_code"] = event_code
@@ -1361,7 +1429,10 @@ def process_watch(watch, store, legacy_mode):
             rec["alerted"] = False
 
     if not all_shows:
-        print("  ❌ No showtimes found.")
+        if fetch_errors:
+            print("  ⚠️  Could not verify showtimes because one or more requests failed.")
+        else:
+            print("  ❌ No showtimes found in successful responses.")
         if fetch_errors:
             error_summary = "; ".join(
                 f"{e.get('date_code', '?')}: {e.get('message', 'unknown fetch error')}"
@@ -1510,6 +1581,17 @@ def write_github_summary(results):
                 f"- **Server:** {error.get('server') or 'Not provided'}",
                 f"- **Cloudflare Ray ID:** {error.get('cf_ray') or 'Not provided'}",
                 f"- **Attempts:** {error.get('attempts', 'unknown')}",
+                *(
+                    [
+                        f"- **Request:** {error['response_diagnostics'].get('method', 'GET')} {error['response_diagnostics'].get('endpoint', '(unknown endpoint)')}",
+                        f"- **Elapsed:** {error['response_diagnostics'].get('elapsed_ms', 'unknown')} ms",
+                        f"- **Content type:** {error['response_diagnostics'].get('content_type') or 'Not provided'}",
+                        f"- **Runner:** {error['response_diagnostics'].get('runtime', {}).get('runner_os', 'unknown')} / {error['response_diagnostics'].get('runtime', {}).get('runner_arch', 'unknown')}",
+                        f"- **GitHub run:** {error['response_diagnostics'].get('runtime', {}).get('github_run_id', 'unknown')} (attempt {error['response_diagnostics'].get('runtime', {}).get('github_run_attempt', 'unknown')})",
+                        f"- **User-Agent:** {error['response_diagnostics'].get('user_agent') or 'Not provided'}",
+                    ]
+                    if error.get("response_diagnostics") else []
+                ),
                 "",
                 "**Response body snippet (first 500 characters):**",
                 "",
