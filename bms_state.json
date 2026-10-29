@@ -791,12 +791,12 @@
     },
     "dates": {
       "20261029": "AVAILABLE",
-      "20261030": "BOOKABLE",
       "20261031": "AVAILABLE",
       "20261101": "AVAILABLE",
       "20261102": "AVAILABLE",
       "20261103": "AVAILABLE",
-      "20261104": "AVAILABLE"
+      "20261104": "AVAILABLE",
+      "20261030": "BOOKABLE"
     }
   }
 }
