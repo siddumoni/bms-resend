@@ -1477,7 +1477,7 @@ def write_github_summary(results):
         ]
         for movie, error in failures:
             snippet = (error.get("response_snippet") or "(No response body)")
-            snippet = snippet.replace("\\", "\\\\").replace("\n", "\n    ").replace("\r", "")
+            snippet = snippet.replace("\n", "\n    ").replace("\r", "")
             lines.extend([
                 f"### {movie} — {error.get('date_code', '(unknown date)')}",
                 "",
