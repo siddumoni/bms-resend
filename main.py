@@ -1496,9 +1496,10 @@ def process_watch(watch, store, legacy_mode):
 
     new_state = {"shows": merged_shows, "dates": merged_dates}
 
-    changes = []
-    if old_state:
-        changes = detect_changes(old_state, new_state)
+    # An empty per-movie state means this is the first successful baseline.
+    # Treat the discovered showtimes as new so a cleared state produces the
+    # expected initial alert instead of silently suppressing the email.
+    changes = detect_changes(old_state, new_state)
 
     save_state(store, state_key, new_state)
 
