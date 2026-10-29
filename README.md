@@ -93,6 +93,14 @@ Do not place API keys in `main.py`, the README, or other tracked files.
 
 Go to **Actions → BMS Ticket Checker → Run workflow**. The workflow currently supports manual dispatch only and commits the updated `bms_state.json` after the run.
 
+## HTTP 403 troubleshooting
+
+The checker logs a `FETCH_RESPONSE` record for successful responses and includes a `response_diagnostics` object in `FETCH_FAILURE` records. These capture the request endpoint/method, elapsed time, response content type/date, server, Cloudflare Ray ID and mitigation/cache headers when present, retry guidance (`Retry-After`), user-agent, whether a cookie header was sent, and non-secret GitHub runner/workflow metadata. The GitHub Actions step summary also includes key request details. Cookies are not logged, and failure logs retain only a short response snippet.
+
+When comparing a success with a 403, compare the **runner region** in the GitHub Actions provisioning log, request timing/metadata, and Cloudflare Ray ID. Different runner regions can mean different network egress paths, but this alone does not prove IP reputation caused a block. A 403 is treated as an access-denied response and stops the retry loop rather than repeatedly sending the same denied request. These diagnostics cannot identify Cloudflare's private blocking rule.
+
+This project does not attempt to impersonate browser TLS fingerprints or route around a site's access restrictions. If BMS continues to deny requests, use the diagnostic details to assess the failure and check the provider's permitted access options.
+
 ## Automation status
 
 **There is no `schedule:` trigger in the current workflow.** Checks happen only when the workflow is manually triggered (or when invoked separately through the GitHub API/CLI). The code can be run locally or from an external scheduler, but automatic GitHub Actions polling is not enabled in the repository as currently configured.
