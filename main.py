@@ -268,7 +268,8 @@ def response_diagnostics(resp, elapsed_ms):
 
 
 def fetch_bms(event_code, date_code, region_code, region_slug,
-              lat, lon, geohash, max_retries=3, failure_details=None):
+              lat, lon, geohash, max_retries=3, failure_details=None,
+              referer_url=None):
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -277,7 +278,11 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
         ),
         "Accept": "application/json, text/plain, */*",
         "Accept-Language": "en-US,en;q=0.9",
-        "Referer": (
+        # Keep the Referer aligned with the exact configured movie URL.
+        # This corrects the page-path mismatch without attempting to bypass
+        # provider access controls. Retain a conservative fallback for callers
+        # that do not provide the source URL.
+        "Referer": referer_url or (
             f"https://in.bookmyshow.com/movies/"
             f"{region_slug}/buytickets/{event_code}/"
         ),
@@ -1386,7 +1391,8 @@ def process_watch(watch, store, legacy_mode):
         failure_details = {}
         data = fetch_bms(event_code, dc, region_code,
                          region_slug_r, lat, lon, geohash,
-                         failure_details=failure_details)
+                         failure_details=failure_details,
+                         referer_url=watch["url"])
         if not data:
             print(f"  ⚠️  No data for date {dc or '(default)'}")
             failed_dates.add(dc)
