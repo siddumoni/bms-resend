@@ -82,8 +82,8 @@
     },
     "ET00515520": {
       "20261101": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       }
     }
   },
