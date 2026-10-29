@@ -5,6 +5,12 @@
         "count": 0,
         "alerted": false
       }
+    },
+    "ET00523997": {
+      "20261105": {
+        "count": 0,
+        "alerted": false
+      }
     }
   },
   "ET00518674": {
@@ -2098,6 +2104,379 @@
       "20261104": "AVAILABLE",
       "20261105": "AVAILABLE",
       "20261102": "BOOKABLE"
+    }
+  },
+  "ET00523997": {
+    "shows": {
+      "MAYJ|241611|20261105|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "10:00 AM",
+        "date": "20261105",
+        "time_code": "1000",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "MAYJ|241612|20261105|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "02:00 PM",
+        "date": "20261105",
+        "time_code": "1400",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "MAYJ|241613|20261105|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "06:00 PM",
+        "date": "20261105",
+        "time_code": "1800",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "MAYJ|241614|20261105|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "10:00 PM",
+        "date": "20261105",
+        "time_code": "2200",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "KSTK|51848|20261105|Super Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "09:00 AM",
+        "date": "20261105",
+        "time_code": "0900",
+        "cat": "Super Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51848|20261105|Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "09:00 AM",
+        "date": "20261105",
+        "time_code": "0900",
+        "cat": "Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51848|20261105|Elite +3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "09:00 AM",
+        "date": "20261105",
+        "time_code": "0900",
+        "cat": "Elite +3D",
+        "price": "160.00",
+        "status": "3"
+      },
+      "KSTK|51848|20261105|Economy+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "09:00 AM",
+        "date": "20261105",
+        "time_code": "0900",
+        "cat": "Economy+3D",
+        "price": "84.00",
+        "status": "3"
+      },
+      "KSTK|51849|20261105|Super Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "12:40 PM",
+        "date": "20261105",
+        "time_code": "1240",
+        "cat": "Super Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51849|20261105|Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "12:40 PM",
+        "date": "20261105",
+        "time_code": "1240",
+        "cat": "Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51849|20261105|Elite +3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "12:40 PM",
+        "date": "20261105",
+        "time_code": "1240",
+        "cat": "Elite +3D",
+        "price": "160.00",
+        "status": "3"
+      },
+      "KSTK|51849|20261105|Economy+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "12:40 PM",
+        "date": "20261105",
+        "time_code": "1240",
+        "cat": "Economy+3D",
+        "price": "84.00",
+        "status": "3"
+      },
+      "KSTK|51850|20261105|Super Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "04:20 PM",
+        "date": "20261105",
+        "time_code": "1620",
+        "cat": "Super Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51850|20261105|Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "04:20 PM",
+        "date": "20261105",
+        "time_code": "1620",
+        "cat": "Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51850|20261105|Elite +3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "04:20 PM",
+        "date": "20261105",
+        "time_code": "1620",
+        "cat": "Elite +3D",
+        "price": "160.00",
+        "status": "3"
+      },
+      "KSTK|51850|20261105|Economy+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "04:20 PM",
+        "date": "20261105",
+        "time_code": "1620",
+        "cat": "Economy+3D",
+        "price": "84.00",
+        "status": "3"
+      },
+      "KSTK|51851|20261105|Super Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "08:00 PM",
+        "date": "20261105",
+        "time_code": "2000",
+        "cat": "Super Premium+3D",
+        "price": "213.78",
+        "status": "2"
+      },
+      "KSTK|51851|20261105|Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "08:00 PM",
+        "date": "20261105",
+        "time_code": "2000",
+        "cat": "Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51851|20261105|Elite +3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "08:00 PM",
+        "date": "20261105",
+        "time_code": "2000",
+        "cat": "Elite +3D",
+        "price": "160.00",
+        "status": "3"
+      },
+      "KSTK|51851|20261105|Economy+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "08:00 PM",
+        "date": "20261105",
+        "time_code": "2000",
+        "cat": "Economy+3D",
+        "price": "84.00",
+        "status": "3"
+      },
+      "KSTK|51852|20261105|Super Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "11:40 PM",
+        "date": "20261105",
+        "time_code": "2340",
+        "cat": "Super Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51852|20261105|Premium+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "11:40 PM",
+        "date": "20261105",
+        "time_code": "2340",
+        "cat": "Premium+3D",
+        "price": "213.78",
+        "status": "3"
+      },
+      "KSTK|51852|20261105|Elite +3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "11:40 PM",
+        "date": "20261105",
+        "time_code": "2340",
+        "cat": "Elite +3D",
+        "price": "160.00",
+        "status": "3"
+      },
+      "KSTK|51852|20261105|Economy+3D": {
+        "venue": "Kasi Talkies Dolby Atmos: Ashok Nagar",
+        "time": "11:40 PM",
+        "date": "20261105",
+        "time_code": "2340",
+        "cat": "Economy+3D",
+        "price": "84.00",
+        "status": "3"
+      },
+      "VVTN|21330|20261105|ELITE": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "10:30 AM",
+        "date": "20261105",
+        "time_code": "1030",
+        "cat": "ELITE",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVTN|21330|20261105|PREMIUM": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "10:30 AM",
+        "date": "20261105",
+        "time_code": "1030",
+        "cat": "PREMIUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "VVTN|21331|20261105|ELITE": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "02:30 PM",
+        "date": "20261105",
+        "time_code": "1430",
+        "cat": "ELITE",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVTN|21331|20261105|PREMIUM": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "02:30 PM",
+        "date": "20261105",
+        "time_code": "1430",
+        "cat": "PREMIUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "VVTN|21332|20261105|ELITE": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "06:30 PM",
+        "date": "20261105",
+        "time_code": "1830",
+        "cat": "ELITE",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVTN|21332|20261105|PREMIUM": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "06:30 PM",
+        "date": "20261105",
+        "time_code": "1830",
+        "cat": "PREMIUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "VVTN|21333|20261105|ELITE": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "10:30 PM",
+        "date": "20261105",
+        "time_code": "2230",
+        "cat": "ELITE",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVTN|21333|20261105|PREMIUM": {
+        "venue": "VETRIVEL RGB DOLBY:NANGANALLUR (NEWLY RENOVATED)",
+        "time": "10:30 PM",
+        "date": "20261105",
+        "time_code": "2230",
+        "cat": "PREMIUM",
+        "price": "180.00",
+        "status": "3"
+      },
+      "VVGT|32715|20261105|ELITE 3D": {
+        "venue": "Vels Theatres: Chennai",
+        "time": "10:00 AM",
+        "date": "20261105",
+        "time_code": "1000",
+        "cat": "ELITE 3D",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVGT|32718|20261105|ELITE 3D": {
+        "venue": "Vels Theatres: Chennai",
+        "time": "01:45 PM",
+        "date": "20261105",
+        "time_code": "1345",
+        "cat": "ELITE 3D",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVGT|32719|20261105|ELITE 3D": {
+        "venue": "Vels Theatres: Chennai",
+        "time": "05:30 PM",
+        "date": "20261105",
+        "time_code": "1730",
+        "cat": "ELITE 3D",
+        "price": "220.00",
+        "status": "3"
+      },
+      "VVGT|32720|20261105|ELITE 3D": {
+        "venue": "Vels Theatres: Chennai",
+        "time": "09:15 PM",
+        "date": "20261105",
+        "time_code": "2115",
+        "cat": "ELITE 3D",
+        "price": "220.00",
+        "status": "3"
+      },
+      "SSCC|23757|20261105|Elite": {
+        "venue": "Sivasakthi Cinemas RGB 4K Laser: Padi",
+        "time": "11:30 AM",
+        "date": "20261105",
+        "time_code": "1130",
+        "cat": "Elite",
+        "price": "180.00",
+        "status": "3"
+      },
+      "SSCC|23758|20261105|Elite": {
+        "venue": "Sivasakthi Cinemas RGB 4K Laser: Padi",
+        "time": "03:15 PM",
+        "date": "20261105",
+        "time_code": "1515",
+        "cat": "Elite",
+        "price": "180.00",
+        "status": "3"
+      },
+      "SSCC|23759|20261105|Elite": {
+        "venue": "Sivasakthi Cinemas RGB 4K Laser: Padi",
+        "time": "07:00 PM",
+        "date": "20261105",
+        "time_code": "1900",
+        "cat": "Elite",
+        "price": "180.00",
+        "status": "3"
+      },
+      "SSCC|23760|20261105|Elite": {
+        "venue": "Sivasakthi Cinemas RGB 4K Laser: Padi",
+        "time": "10:45 PM",
+        "date": "20261105",
+        "time_code": "2245",
+        "cat": "Elite",
+        "price": "180.00",
+        "status": "3"
+      }
+    },
+    "dates": {
+      "20261105": "BOOKABLE",
+      "20261106": "AVAILABLE",
+      "20261107": "AVAILABLE",
+      "20261108": "AVAILABLE",
+      "20261109": "AVAILABLE",
+      "20261110": "NOT_OPEN",
+      "20261111": "NOT_OPEN"
     }
   }
 }
