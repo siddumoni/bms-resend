@@ -23,6 +23,20 @@
         "count": 2,
         "alerted": true
       }
+    },
+    "ET00523997": {
+      "20261106": {
+        "count": 0,
+        "alerted": false
+      },
+      "20261107": {
+        "count": 0,
+        "alerted": false
+      },
+      "20261108": {
+        "count": 0,
+        "alerted": false
+      }
     }
   },
   "ET00518674": {
@@ -2200,6 +2214,18 @@
       "20261024": "AVAILABLE",
       "20261025": "AVAILABLE",
       "20261021": "BOOKABLE"
+    }
+  },
+  "ET00523997": {
+    "shows": {},
+    "dates": {
+      "20261105": "AVAILABLE",
+      "20261106": "AVAILABLE",
+      "20261107": "AVAILABLE",
+      "20261108": "BOOKABLE",
+      "20261109": "AVAILABLE",
+      "20261110": "NOT_OPEN",
+      "20261111": "NOT_OPEN"
     }
   }
 }
