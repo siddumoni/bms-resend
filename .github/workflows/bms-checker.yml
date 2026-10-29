@@ -55,7 +55,10 @@ jobs:
           BMS_FORMAT: ${{ vars.BMS_FORMAT }}
           BMS_WATCHES: ${{ vars.BMS_WATCHES }}
           BMS_FAIL_THRESHOLD: ${{ vars.BMS_FAIL_THRESHOLD }}
-        run: uv run main.py
+        # Windows does not ship an IANA timezone database for zoneinfo.
+        # Add tzdata for this run so the cross-platform diagnostic can reach
+        # the actual BookMyShow request without changing the locked deps.
+        run: uv run --with tzdata main.py
 
       - name: Commit updated state
         if: always()
