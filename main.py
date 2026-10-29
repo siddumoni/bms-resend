@@ -226,7 +226,7 @@ API_URL = (
 
 
 def fetch_bms(event_code, date_code, region_code, region_slug,
-              lat, lon, geohash, max_retries=3):
+              lat, lon, geohash, max_retries=3, failure_details=None):
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -260,24 +260,68 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
         "memberId": "", "lsId": "", "subCode": "",
         "lat": lat, "lon": lon,
     }
+    last_failure = {}
     for attempt in range(1, max_retries + 1):
         try:
             resp = requests.get(API_URL, headers=headers,
                                 params=params, timeout=15)
             if resp.status_code == 200:
-                return resp.json()
-            print(f"  HTTP {resp.status_code} (attempt {attempt}/{max_retries})")
-            if resp.status_code in (403, 429) and attempt < max_retries:
-                wait = 3 * attempt
-                print(f"  Transient block — retrying in {wait}s...")
-                time.sleep(wait)
-                continue
-            print(f"  Response snippet: {resp.text[:300]!r}")
+                try:
+                    return resp.json()
+                except ValueError as e:
+                    last_failure = {
+                        "kind": "invalid_json",
+                        "message": f"HTTP 200 response was not valid JSON: {e}",
+                        "status_code": 200,
+                        "reason": resp.reason,
+                        "server": resp.headers.get("server", ""),
+                        "cf_ray": resp.headers.get("cf-ray", ""),
+                        "response_snippet": resp.text[:500],
+                        "attempts": attempt,
+                    }
+                    print(f"  Invalid JSON from BookMyShow (attempt {attempt}/{max_retries}): {e}")
+            else:
+                last_failure = {
+                    "kind": "http",
+                    "message": f"BookMyShow returned HTTP {resp.status_code} {resp.reason}",
+                    "status_code": resp.status_code,
+                    "reason": resp.reason,
+                    "server": resp.headers.get("server", ""),
+                    "cf_ray": resp.headers.get("cf-ray", ""),
+                    "response_snippet": resp.text[:500],
+                    "attempts": attempt,
+                }
+                print(f"  HTTP {resp.status_code} {resp.reason} (attempt {attempt}/{max_retries})")
+                if resp.status_code in (403, 429) and attempt < max_retries:
+                    wait = 3 * attempt
+                    print(f"  Transient block — retrying in {wait}s...")
+                    time.sleep(wait)
+                    continue
+                print(f"  Response snippet: {resp.text[:500]!r}")
         except requests.RequestException as e:
-            print(f"  Request failed: {e}")
+            last_failure = {
+                "kind": "request_exception",
+                "message": f"{type(e).__name__}: {e}",
+                "status_code": None, "reason": "", "server": "", "cf_ray": "",
+                "response_snippet": "", "attempts": attempt,
+            }
+            print(f"  Request failed (attempt {attempt}/{max_retries}): {type(e).__name__}: {e}")
             if attempt < max_retries:
                 time.sleep(3 * attempt)
                 continue
+
+    if not last_failure:
+        last_failure = {
+            "kind": "unknown",
+            "message": "Request failed without a captured HTTP response or exception.",
+            "status_code": None, "reason": "", "server": "", "cf_ray": "",
+            "response_snippet": "", "attempts": max_retries,
+        }
+    last_failure["event_code"] = event_code
+    last_failure["date_code"] = date_code or "(default)"
+    if failure_details is not None:
+        failure_details.update(last_failure)
+    print("  FETCH_FAILURE: " + json.dumps(last_failure, ensure_ascii=False))
     return None
 
 
@@ -1256,16 +1300,28 @@ def process_watch(watch, store, legacy_mode):
     all_shows = []
     all_dates = []
     failed_dates = set()
+    fetch_errors = []
     movie_info = {"name": "Unknown", "language": ""}
 
     for i, dc in enumerate(date_list):
         if i > 0:
             time.sleep(2)  # space out requests to avoid tripping rate limits
+        failure_details = {}
         data = fetch_bms(event_code, dc, region_code,
-                         region_slug_r, lat, lon, geohash)
+                         region_slug_r, lat, lon, geohash,
+                         failure_details=failure_details)
         if not data:
             print(f"  ⚠️  No data for date {dc or '(default)'}")
             failed_dates.add(dc)
+            fetch_errors.append(failure_details or {
+                "kind": "unknown",
+                "message": "No data returned and no detailed failure was captured.",
+                "status_code": None,
+                "date_code": dc or "(default)",
+                "event_code": event_code,
+            })
+            fetch_errors[-1].setdefault("date_code", dc or "(default)")
+            fetch_errors[-1].setdefault("event_code", event_code)
             continue
 
         if movie_info["name"] == "Unknown":
@@ -1297,8 +1353,17 @@ def process_watch(watch, store, legacy_mode):
 
     if not all_shows:
         print("  ❌ No showtimes found.")
+        if fetch_errors:
+            error_summary = "; ".join(
+                f"{e.get('date_code', '?')}: {e.get('message', 'unknown fetch error')}"
+                for e in fetch_errors
+            )
+            error_message = f"BookMyShow fetch failed; no availability conclusion is possible. {error_summary}"
+        else:
+            error_message = "BookMyShow returned valid responses, but no showtimes were present."
         return {"name": label, "movie_info": movie_info, "filtered": [], "changes": [],
-                "error": "No showtimes found.", "failed_dates": sorted(failed_dates),
+                "error": error_message, "failed_dates": sorted(failed_dates),
+                "fetch_errors": fetch_errors,
                 "event_code": event_code, "new_failures": new_failures}
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
@@ -1379,9 +1444,61 @@ def process_watch(watch, store, legacy_mode):
         print(f"    {s.venue_name} — {s.time}{fmt} [{s.date_code}] — {cats}")
 
     return {"name": label, "movie_info": movie_info, "filtered": filtered,
-            "changes": changes, "error": None, "failed_dates": sorted(failed_dates),
+            "changes": changes,
+            "error": (f"BookMyShow fetch failed for {len(fetch_errors)} date(s); "
+                      "availability data is incomplete." if fetch_errors else None),
+            "failed_dates": sorted(failed_dates), "fetch_errors": fetch_errors,
             "event_code": event_code, "region_slug": region_slug_r,
             "new_failures": new_failures}
+
+
+# ──────────────────────────────────────────────────────────────────────
+# GITHUB ACTIONS DIAGNOSTICS
+# ──────────────────────────────────────────────────────────────────────
+def write_github_summary(results):
+    """Write exact fetch-failure evidence to the GitHub Actions step summary."""
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY", "")
+    if not summary_path:
+        return
+    failures = []
+    for result in results:
+        for error in result.get("fetch_errors") or []:
+            failures.append((result.get("name") or "Unknown movie", error))
+    if not failures:
+        content = "## BMS Ticket Checker\n\nAll BookMyShow requests returned usable responses.\n"
+    else:
+        lines = [
+            "## ❌ BMS Ticket Checker — fetch failure",
+            "",
+            f"**Failed request(s): {len(failures)}**. The workflow will be marked failed because ticket availability could not be verified.",
+            "",
+            "> The status and response below are observable evidence. HTTP 403 means access was forbidden; it does not expose the server's private blocking rule.",
+            "",
+        ]
+        for movie, error in failures:
+            snippet = (error.get("response_snippet") or "(No response body)")
+            snippet = snippet.replace("\\", "\\\\").replace("\n", "\n    ").replace("\r", "")
+            lines.extend([
+                f"### {movie} — {error.get('date_code', '(unknown date)')}",
+                "",
+                f"- **Failure type:** {error.get('kind', 'unknown')}",
+                f"- **Exact error:** {error.get('message', 'No error message captured')}",
+                f"- **HTTP status:** {error.get('status_code') if error.get('status_code') is not None else 'No HTTP response'}",
+                f"- **Server:** {error.get('server') or 'Not provided'}",
+                f"- **Cloudflare Ray ID:** {error.get('cf_ray') or 'Not provided'}",
+                f"- **Attempts:** {error.get('attempts', 'unknown')}",
+                "",
+                "**Response body snippet (first 500 characters):**",
+                "",
+                "    " + snippet,
+                "",
+            ])
+        content = "\n".join(lines)
+    try:
+        with open(summary_path, "a", encoding="utf-8") as summary:
+            summary.write(content + "\n")
+    except OSError as exc:
+        print(f"WARNING: Could not write GitHub step summary: {exc}")
 
 
 # ──────────────────────────────────────────────────────────────────────
@@ -1408,6 +1525,8 @@ def main():
             if r:
                 results.append(r)
                 all_new_failures.extend(r.get("new_failures") or [])
+                if r.get("fetch_errors"):
+                    any_errors = True
         except Exception as e:
             any_errors = True
             label = watch["name"] or watch["url"]
@@ -1416,6 +1535,7 @@ def main():
                              "changes": [], "error": str(e)})
 
     save_store(store)
+    write_github_summary(results)
 
     # Fetch-failure alert: fires independently of the ticket-alert emails
     # below, whenever any movie/date combination just crossed
@@ -1431,9 +1551,10 @@ def main():
         send_combined_email(results)
 
     print(f"\n  Done. {len(watches)} movie(s) checked.")
-    if any_errors and len(watches) == 1:
-        # Preserve the original single-movie script's exit-code behavior
-        # (non-zero exit on failure) when there's only one watch to check.
+    if any_errors:
+        failed_movie_count = sum(1 for r in results if r.get("fetch_errors") or r.get("error"))
+        print(f"\n❌ Workflow failed: {failed_movie_count} movie(s) had a fetch/check error.")
+        print("See the FETCH_FAILURE log lines and the GitHub Actions step summary for exact diagnostic details.")
         sys.exit(1)
 
 
