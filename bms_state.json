@@ -44,6 +44,10 @@
       "20261108": {
         "count": 2,
         "alerted": true
+      },
+      "20261109": {
+        "count": 0,
+        "alerted": false
       }
     },
     "ET00520748": {
@@ -2273,15 +2277,52 @@
     }
   },
   "ET00523997": {
-    "shows": {},
+    "shows": {
+      "MAYJ|241627|20261109|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "10:00 AM",
+        "date": "20261109",
+        "time_code": "1000",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "MAYJ|241628|20261109|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "02:00 PM",
+        "date": "20261109",
+        "time_code": "1400",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "MAYJ|241629|20261109|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "06:00 PM",
+        "date": "20261109",
+        "time_code": "1800",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      },
+      "MAYJ|241630|20261109|FIRST CLASS 3D": {
+        "venue": "MAYAJAAL Multiplex: ECR, Chennai",
+        "time": "10:00 PM",
+        "date": "20261109",
+        "time_code": "2200",
+        "cat": "FIRST CLASS 3D",
+        "price": "219.20",
+        "status": "3"
+      }
+    },
     "dates": {
       "20261105": "AVAILABLE",
       "20261106": "AVAILABLE",
       "20261107": "AVAILABLE",
-      "20261108": "BOOKABLE",
-      "20261109": "AVAILABLE",
+      "20261108": "AVAILABLE",
       "20261110": "NOT_OPEN",
-      "20261111": "NOT_OPEN"
+      "20261111": "NOT_OPEN",
+      "20261109": "BOOKABLE"
     }
   }
 }
