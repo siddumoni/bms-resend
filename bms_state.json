@@ -65,6 +65,20 @@
         "count": 1,
         "alerted": false
       }
+    },
+    "ET00520976": {
+      "20261030": {
+        "count": 1,
+        "alerted": false
+      },
+      "20261031": {
+        "count": 1,
+        "alerted": false
+      },
+      "20261101": {
+        "count": 1,
+        "alerted": false
+      }
     }
   },
   "ET00518674": {
