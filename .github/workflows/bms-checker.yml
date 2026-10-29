@@ -8,7 +8,9 @@ on:
 
 jobs:
   check-tickets:
-    runs-on: ubuntu-latest
+    # Diagnostic experiment: Windows-hosted runner uses a different runner
+    # image/network path. This is a normal access test, not a Cloudflare bypass.
+    runs-on: windows-latest
     timeout-minutes: 5
     permissions:
       contents: write
@@ -26,10 +28,11 @@ jobs:
         run: uv sync --frozen
 
       - name: Diagnose runner public IP and country
+        shell: bash
         continue-on-error: true
         run: |
           set -uo pipefail
-          echo "Runner cloud/region are shown in the job's Set up job logs."
+          echo "Runner OS/image and region are shown in the job's Set up job logs."
           IP="$(curl --fail --silent --show-error --max-time 10 https://api.ipify.org)" || exit 0
           echo "Runner public egress IP: ${IP}"
           echo "Trying IP country lookup (fallback provider)..."
@@ -56,6 +59,7 @@ jobs:
 
       - name: Commit updated state
         if: always()
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
