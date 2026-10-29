@@ -292,9 +292,18 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                     "attempts": attempt,
                 }
                 print(f"  HTTP {resp.status_code} {resp.reason} (attempt {attempt}/{max_retries})")
-                if resp.status_code in (403, 429) and attempt < max_retries:
+                # A 403 is an explicit access-denied response, not a transient
+                # network failure. Retrying the same request only repeats load
+                # and cannot legitimately resolve a security-policy decision.
+                if resp.status_code == 403:
+                    print("  Access denied (403); stopping retries. Check the provider's permitted access options.")
+                    print(f"  Response snippet: {resp.text[:500]!r}")
+                    break
+                # 429 explicitly indicates rate limiting, so a conservative
+                # backoff may help. Other HTTP errors are not blindly retried.
+                if resp.status_code == 429 and attempt < max_retries:
                     wait = 3 * attempt
-                    print(f"  Transient block — retrying in {wait}s...")
+                    print(f"  Rate limited (429) — retrying in {wait}s...")
                     time.sleep(wait)
                     continue
                 print(f"  Response snippet: {resp.text[:500]!r}")
