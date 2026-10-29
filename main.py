@@ -1462,8 +1462,22 @@ def write_github_summary(results):
         return
     failures = []
     for result in results:
+        movie = result.get("name") or "Unknown movie"
         for error in result.get("fetch_errors") or []:
-            failures.append((result.get("name") or "Unknown movie", error))
+            failures.append((movie, error))
+        result_error = result.get("error")
+        if (result_error and not result.get("fetch_errors")
+                and result_error != "BookMyShow returned valid responses, but no showtimes were present."):
+            failures.append((movie, {
+                "kind": "check_error",
+                "message": result_error,
+                "status_code": None,
+                "date_code": "(check-level error)",
+                "attempts": 0,
+                "response_snippet": "",
+                "server": "",
+                "cf_ray": "",
+            }))
     if not failures:
         content = "## BMS Ticket Checker\n\nAll BookMyShow requests returned usable responses.\n"
     else:
@@ -1525,7 +1539,9 @@ def main():
             if r:
                 results.append(r)
                 all_new_failures.extend(r.get("new_failures") or [])
-                if r.get("fetch_errors"):
+                if (r.get("fetch_errors")
+                        or (r.get("error") and r.get("error") !=
+                            "BookMyShow returned valid responses, but no showtimes were present.")):
                     any_errors = True
         except Exception as e:
             any_errors = True
