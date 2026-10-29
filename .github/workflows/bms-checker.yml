@@ -26,14 +26,19 @@ jobs:
         run: uv sync --frozen
 
       - name: Diagnose runner public IP and country
+        continue-on-error: true
         run: |
-          set -euo pipefail
-          echo "Runner public egress IP:"
-          curl --fail --silent --show-error --max-time 10 https://api.ipify.org
-          echo
-          echo "Runner IP country and network (IP, country code/name, ASN/org only):"
-          curl --fail --silent --show-error --max-time 10 https://ipapi.co/json/ \
-            | jq '{ip, country_code, country_name, org}'
+          set -uo pipefail
+          echo "Runner cloud/region are shown in the job's Set up job logs."
+          IP="$(curl --fail --silent --show-error --max-time 10 https://api.ipify.org)" || exit 0
+          echo "Runner public egress IP: ${IP}"
+          echo "Trying IP country lookup (fallback provider)..."
+          if curl --fail --silent --show-error --max-time 10 "https://ipwho.is/${IP}" \
+            | jq '{ip, country, country_code, connection: {isp: .connection.isp, org: .connection.org, asn: .connection.asn}}'; then
+            exit 0
+          fi
+          echo "::warning::Country lookup failed or was rate-limited; public IP and runner cloud/region are still available in logs."
+          exit 0
 
       - name: Run checker
         env:
