@@ -2,6 +2,9 @@ name: BMS Ticket Checker
 
 on:
   workflow_dispatch:  # Manual trigger button
+  push:
+    branches:
+      - bms-403-diagnostics-20261029
 
 jobs:
   check-tickets:
@@ -21,6 +24,16 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --frozen
+
+      - name: Diagnose runner public IP and country
+        run: |
+          set -euo pipefail
+          echo "Runner public egress IP:"
+          curl --fail --silent --show-error --max-time 10 https://api.ipify.org
+          echo
+          echo "Runner IP country and network (IP, country code/name, ASN/org only):"
+          curl --fail --silent --show-error --max-time 10 https://ipapi.co/json/ \
+            | jq '{ip, country_code, country_name, org}'
 
       - name: Run checker
         env:
