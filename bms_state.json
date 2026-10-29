@@ -26,16 +26,16 @@
     },
     "ET00523997": {
       "20261106": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       },
       "20261107": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       },
       "20261108": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       }
     }
   },
