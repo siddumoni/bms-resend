@@ -2,10 +2,15 @@ name: BMS Ticket Checker
 
 on:
   workflow_dispatch:  # Manual trigger button
+  push:
+    branches:
+      - bms-403-diagnostics-20261029
 
 jobs:
   check-tickets:
-    runs-on: ubuntu-latest
+    # Diagnostic experiment: Windows-hosted runner uses a different runner
+    # image/network path. This is a normal access test, not a Cloudflare bypass.
+    runs-on: windows-latest
     timeout-minutes: 5
     permissions:
       contents: write
@@ -22,6 +27,22 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen
 
+      - name: Diagnose runner public IP and country
+        shell: bash
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          echo "Runner OS/image and region are shown in the job's Set up job logs."
+          IP="$(curl --fail --silent --show-error --max-time 10 https://api.ipify.org)" || exit 0
+          echo "Runner public egress IP: ${IP}"
+          echo "Trying IP country lookup (fallback provider)..."
+          if curl --fail --silent --show-error --max-time 10 "https://ipwho.is/${IP}" \
+            | jq '{ip, country, country_code, connection: {isp: .connection.isp, org: .connection.org, asn: .connection.asn}}'; then
+            exit 0
+          fi
+          echo "::warning::Country lookup failed or was rate-limited; public IP and runner cloud/region are still available in logs."
+          exit 0
+
       - name: Run checker
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
@@ -34,10 +55,14 @@ jobs:
           BMS_FORMAT: ${{ vars.BMS_FORMAT }}
           BMS_WATCHES: ${{ vars.BMS_WATCHES }}
           BMS_FAIL_THRESHOLD: ${{ vars.BMS_FAIL_THRESHOLD }}
-        run: uv run main.py
+          PYTHONUTF8: "1"
+        # Windows does not ship an IANA timezone database for zoneinfo.
+        # Add tzdata and force UTF-8 console output for this cross-platform test.
+        run: uv run --with tzdata main.py
 
       - name: Commit updated state
         if: always()
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
