@@ -24,12 +24,12 @@
         "alerted": false
       },
       "20261107": {
-        "count": 4,
+        "count": 5,
         "alerted": true
       },
       "20261108": {
-        "count": 4,
-        "alerted": true
+        "count": 0,
+        "alerted": false
       }
     },
     "ET00523997": {
