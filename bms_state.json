@@ -2333,6 +2333,24 @@
   },
   "ET00518059": {
     "shows": {
+      "PVPZ|40308|20261030|ELITE": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:25 PM",
+        "date": "20261030",
+        "time_code": "1625",
+        "cat": "ELITE",
+        "price": "183.80",
+        "status": "3"
+      },
+      "PVPZ|40308|20261030|BUDGET": {
+        "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
+        "time": "04:25 PM",
+        "date": "20261030",
+        "time_code": "1625",
+        "cat": "BUDGET",
+        "price": "54.35",
+        "status": "3"
+      },
       "PCAN|47329|20261030|PRIME": {
         "venue": "PVR: VR Chennai, Anna Nagar",
         "time": "04:30 PM",
