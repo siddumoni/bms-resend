@@ -1437,20 +1437,26 @@ def process_watch(watch, store, legacy_mode):
     if not all_shows:
         if fetch_errors:
             print("  ⚠️  Could not verify showtimes because one or more requests failed.")
-        else:
-            print("  ❌ No showtimes found in successful responses.")
-        if fetch_errors:
             error_summary = "; ".join(
                 f"{e.get('date_code', '?')}: {e.get('message', 'unknown fetch error')}"
                 for e in fetch_errors
             )
-            error_message = f"BookMyShow fetch failed; no availability conclusion is possible. {error_summary}"
+            error_message = (
+                "BookMyShow fetch failed; no availability conclusion is possible. "
+                f"{error_summary}"
+            )
         else:
-            error_message = "BookMyShow returned valid responses, but no showtimes were present."
+            # A valid API response with no venue/showtime entries is a normal
+            # no-availability state: theatres may not have opened bookings yet.
+            # Keep the successful empty result distinct from request failures.
+            print("  ℹ️  No showtimes have been released by the theatres yet.")
+            error_message = None
+
         return {"name": label, "movie_info": movie_info, "filtered": [], "changes": [],
                 "error": error_message, "failed_dates": sorted(failed_dates),
                 "fetch_errors": fetch_errors,
-                "event_code": event_code, "new_failures": new_failures}
+                "event_code": event_code, "region_slug": region_slug_r,
+                "new_failures": new_failures}
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
 
@@ -1553,8 +1559,7 @@ def write_github_summary(results):
         for error in result.get("fetch_errors") or []:
             failures.append((movie, error))
         result_error = result.get("error")
-        if (result_error and not result.get("fetch_errors")
-                and result_error != "BookMyShow returned valid responses, but no showtimes were present."):
+        if result_error and not result.get("fetch_errors"):
             failures.append((movie, {
                 "kind": "check_error",
                 "message": result_error,
@@ -1637,9 +1642,7 @@ def main():
             if r:
                 results.append(r)
                 all_new_failures.extend(r.get("new_failures") or [])
-                if (r.get("fetch_errors")
-                        or (r.get("error") and r.get("error") !=
-                            "BookMyShow returned valid responses, but no showtimes were present.")):
+                if r.get("fetch_errors") or r.get("error"):
                     any_errors = True
         except Exception as e:
             any_errors = True
