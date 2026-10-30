@@ -2369,24 +2369,6 @@
         "price": "54.35",
         "status": "3"
       },
-      "PVSR|29100|20261030|ELITE": {
-        "venue": "PVR: Sathyam, Royapettah",
-        "time": "12:50 PM",
-        "date": "20261030",
-        "time_code": "1250",
-        "cat": "ELITE",
-        "price": "183.80",
-        "status": "3"
-      },
-      "PVSR|29100|20261030|BUDGET": {
-        "venue": "PVR: Sathyam, Royapettah",
-        "time": "12:50 PM",
-        "date": "20261030",
-        "time_code": "1250",
-        "cat": "BUDGET",
-        "price": "54.35",
-        "status": "0"
-      },
       "PVES|35749|20261030|ELITE": {
         "venue": "HDFC Millennia PVR: Escape-Express Avenue Mall",
         "time": "03:10 PM",
