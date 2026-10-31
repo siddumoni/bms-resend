@@ -274,7 +274,7 @@ def retry_delay_seconds(resp=None, attempt=1):
     if retry_after:
         try:
             return min(max(0, int(float(retry_after))), 300)
-        except (TypeError, ValueError):
+        except (TypeError, ValueError, OverflowError):
             try:
                 retry_at = parsedate_to_datetime(retry_after)
                 if retry_at.tzinfo is None:
@@ -450,6 +450,8 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
             "cf_mitigated": "", "cf_cache_status": "", "retry_after": "",
             "response_snippet": "", "attempts": max_retries,
         }
+    if cloudflare_recheck_used:
+        last_failure["recovery_recheck"] = "one delayed recheck completed; access remained denied"
     last_failure["event_code"] = event_code
     last_failure["date_code"] = date_code or "(default)"
     if failure_details is not None:
