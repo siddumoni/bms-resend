@@ -4,14 +4,20 @@ on:
   workflow_dispatch:  # Manual trigger button
   push:
     branches:
+      - main
       - bms-403-diagnostics-20261029
+
+# Serialize scheduled/manual/push runs so they cannot race while writing bms_state.json.
+concurrency:
+  group: bms-ticket-checker-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   check-tickets:
     # Diagnostic experiment: Windows-hosted runner uses a different runner
     # image/network path. This is a normal access test, not a Cloudflare bypass.
     runs-on: windows-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
     permissions:
       contents: write
 
