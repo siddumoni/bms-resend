@@ -12,7 +12,8 @@ import sys
 import json
 import time
 from html import escape
-from datetime import datetime
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
 from dataclasses import dataclass, field
 from urllib.parse import urlparse
@@ -267,6 +268,23 @@ def response_diagnostics(resp, elapsed_ms):
     }
 
 
+def retry_delay_seconds(resp=None, attempt=1):
+    """Return a conservative retry delay, honoring a valid Retry-After header."""
+    retry_after = (resp.headers.get("Retry-After", "") if resp is not None else "").strip()
+    if retry_after:
+        try:
+            return min(max(0, int(float(retry_after))), 300)
+        except (TypeError, ValueError, OverflowError):
+            try:
+                retry_at = parsedate_to_datetime(retry_after)
+                if retry_at.tzinfo is None:
+                    retry_at = retry_at.replace(tzinfo=timezone.utc)
+                return min(max(0, int((retry_at - datetime.now(timezone.utc)).total_seconds())), 300)
+            except (TypeError, ValueError, OverflowError):
+                pass
+    return min(5 * (2 ** max(0, attempt - 1)), 60)
+
+
 def fetch_bms(event_code, date_code, region_code, region_slug,
               lat, lon, geohash, max_retries=3, failure_details=None,
               referer_url=None):
@@ -279,9 +297,7 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
         "Accept": "application/json, text/plain, */*",
         "Accept-Language": "en-US,en;q=0.9",
         # Keep the Referer aligned with the exact configured movie URL.
-        # This corrects the page-path mismatch without attempting to bypass
-        # provider access controls. Retain a conservative fallback for callers
-        # that do not provide the source URL.
+        # This is normal request context, not an attempt to bypass access controls.
         "Referer": referer_url or (
             f"https://in.bookmyshow.com/movies/"
             f"{region_slug}/buytickets/{event_code}/"
@@ -308,6 +324,8 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
         "lat": lat, "lon": lon,
     }
     last_failure = {}
+    cloudflare_recheck_used = False
+
     for attempt in range(1, max_retries + 1):
         request_started = time.monotonic()
         try:
@@ -315,6 +333,7 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                                 params=params, timeout=15)
             elapsed_ms = round((time.monotonic() - request_started) * 1000)
             request_diag = response_diagnostics(resp, elapsed_ms)
+
             if resp.status_code == 200:
                 try:
                     data = resp.json()
@@ -341,6 +360,11 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                         "attempts": attempt,
                     }
                     print(f"  Invalid JSON from BookMyShow (attempt {attempt}/{max_retries}): {e}")
+                    if attempt < max_retries:
+                        wait = retry_delay_seconds(attempt=attempt)
+                        print(f"  Retrying invalid JSON response in {wait}s...")
+                        time.sleep(wait)
+                        continue
             else:
                 last_failure = {
                     "kind": "http",
@@ -357,21 +381,46 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
                     "attempts": attempt,
                 }
                 print(f"  HTTP {resp.status_code} {resp.reason} (attempt {attempt}/{max_retries})")
-                # A 403 is an explicit access-denied response, not a transient
-                # network failure. Retrying the same request only repeats load
-                # and cannot legitimately resolve a security-policy decision.
+
                 if resp.status_code == 403:
-                    print("  Access denied (403); stopping retries. Check the provider's permitted access options.")
+                    # A Cloudflare denial can sometimes be temporary, but repeating
+                    # it rapidly is counterproductive. Make one delayed recheck only
+                    # when the response carries Cloudflare evidence; never attempt
+                    # to solve or evade the provider's security challenge.
+                    response_text = (resp.text or "").lower()
+                    is_cloudflare = (
+                        "cloudflare" in (resp.headers.get("server", "") or "").lower()
+                        or bool(resp.headers.get("cf-ray"))
+                        or bool(resp.headers.get("cf-mitigated"))
+                        or (
+                            "text/html" in (resp.headers.get("content-type", "") or "").lower()
+                            and "cloudflare" in response_text
+                        )
+                    )
+                    if is_cloudflare and not cloudflare_recheck_used and attempt < max_retries:
+                        cloudflare_recheck_used = True
+                        last_failure["recovery_recheck"] = "one delayed Cloudflare recheck scheduled"
+                        print("  Cloudflare 403 detected; waiting 120s before one recovery recheck.")
+                        time.sleep(120)
+                        continue
+                    print("  Access denied (403); no further automatic retries. Check the provider's permitted access options.")
                     print(f"  Response snippet: {resp.text[:500]!r}")
                     break
-                # 429 explicitly indicates rate limiting, so a conservative
-                # backoff may help. Other HTTP errors are not blindly retried.
-                if resp.status_code == 429 and attempt < max_retries:
-                    wait = 3 * attempt
-                    print(f"  Rate limited (429) — retrying in {wait}s...")
+
+                retryable = (
+                    resp.status_code in (408, 425, 429)
+                    or 500 <= resp.status_code <= 599
+                )
+                if retryable and attempt < max_retries:
+                    wait = retry_delay_seconds(resp, attempt)
+                    reason = "Retry-After" if resp.headers.get("Retry-After") else "exponential backoff"
+                    print(f"  Transient HTTP {resp.status_code}; retrying in {wait}s ({reason}).")
                     time.sleep(wait)
                     continue
+
                 print(f"  Response snippet: {resp.text[:500]!r}")
+                break
+
         except requests.RequestException as e:
             last_failure = {
                 "kind": "request_exception",
@@ -388,7 +437,9 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
             }
             print(f"  Request failed (attempt {attempt}/{max_retries}): {type(e).__name__}: {e}")
             if attempt < max_retries:
-                time.sleep(3 * attempt)
+                wait = retry_delay_seconds(attempt=attempt)
+                print(f"  Retrying network error in {wait}s...")
+                time.sleep(wait)
                 continue
 
     if not last_failure:
@@ -399,6 +450,8 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
             "cf_mitigated": "", "cf_cache_status": "", "retry_after": "",
             "response_snippet": "", "attempts": max_retries,
         }
+    if cloudflare_recheck_used:
+        last_failure["recovery_recheck"] = "one delayed recheck completed; access remained denied"
     last_failure["event_code"] = event_code
     last_failure["date_code"] = date_code or "(default)"
     if failure_details is not None:
