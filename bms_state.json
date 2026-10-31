@@ -24,8 +24,8 @@
         "alerted": false
       },
       "20261107": {
-        "count": 1,
-        "alerted": false
+        "count": 2,
+        "alerted": true
       },
       "20261108": {
         "count": 0,
