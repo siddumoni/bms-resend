@@ -33,6 +33,9 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen
 
+      - name: Run retry policy unit tests
+        run: uv run python -m unittest discover -s tests -v
+
       - name: Diagnose runner public IP and country
         shell: bash
         continue-on-error: true
