@@ -24,7 +24,7 @@
         "alerted": false
       },
       "20261107": {
-        "count": 1,
+        "count": 0,
         "alerted": false
       },
       "20261108": {
@@ -2396,6 +2396,18 @@
       "20261104": "NOT_OPEN",
       "20261105": "NOT_OPEN",
       "20261030": "BOOKABLE"
+    }
+  },
+  "ET00516631": {
+    "shows": {},
+    "dates": {
+      "20261106": "AVAILABLE",
+      "20261107": "BOOKABLE",
+      "20261108": "AVAILABLE",
+      "20261109": "AVAILABLE",
+      "20261110": "AVAILABLE",
+      "20261111": "AVAILABLE",
+      "20261112": "AVAILABLE"
     }
   }
 }
