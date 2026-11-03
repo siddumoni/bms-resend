@@ -2400,563 +2400,95 @@
   },
   "ET00516631": {
     "shows": {
-      "AGSM|58105|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
+      "GKCP|4620|20261106|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
         "time": "06:00 AM",
         "date": "20261106",
         "time_code": "0600",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "1"
+        "cat": "LOUNGE 1",
+        "price": "190.00",
+        "status": "0"
       },
-      "AGSM|58105|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
+      "GKCP|4620|20261106|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
         "time": "06:00 AM",
         "date": "20261106",
         "time_code": "0600",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
+        "status": "2"
       },
-      "AGSM|58118|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
+      "GKCP|4623|20261106|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
         "time": "06:05 AM",
         "date": "20261106",
         "time_code": "0605",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "2"
+        "cat": "LOUNGE 1",
+        "price": "190.00",
+        "status": "3"
       },
-      "AGSM|58118|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
+      "GKCP|4623|20261106|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
         "time": "06:05 AM",
         "date": "20261106",
         "time_code": "0605",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58119|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:15 AM",
-        "date": "20261106",
-        "time_code": "0615",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "2"
-      },
-      "AGSM|58119|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:15 AM",
-        "date": "20261106",
-        "time_code": "0615",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58114|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:30 AM",
-        "date": "20261106",
-        "time_code": "0630",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "1"
-      },
-      "AGSM|58114|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:30 AM",
-        "date": "20261106",
-        "time_code": "0630",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58046|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:15 AM",
-        "date": "20261106",
-        "time_code": "0915",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "2"
-      },
-      "AGSM|58046|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:15 AM",
-        "date": "20261106",
-        "time_code": "0915",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57955|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:00 AM",
-        "date": "20261106",
-        "time_code": "1000",
-        "cat": "DIAMOND",
-        "price": "183.00",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
         "status": "3"
       },
-      "AGSM|57955|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:00 AM",
+      "GKCP|4632|20261106|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "09:20 AM",
         "date": "20261106",
-        "time_code": "1000",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57920|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:20 AM",
-        "date": "20261106",
-        "time_code": "1020",
-        "cat": "DIAMOND",
-        "price": "183.00",
+        "time_code": "0920",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
         "status": "3"
       },
-      "AGSM|57920|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:20 AM",
+      "GKCP|4632|20261106|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "09:20 AM",
         "date": "20261106",
-        "time_code": "1020",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58047|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:20 PM",
-        "date": "20261106",
-        "time_code": "1220",
-        "cat": "DIAMOND",
-        "price": "183.00",
+        "time_code": "0920",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
         "status": "3"
       },
-      "AGSM|58047|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:20 PM",
+      "GKCP|4621|20261106|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "01:00 PM",
         "date": "20261106",
-        "time_code": "1220",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57956|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:55 PM",
-        "date": "20261106",
-        "time_code": "1255",
-        "cat": "DIAMOND",
-        "price": "183.00",
+        "time_code": "1300",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
         "status": "3"
       },
-      "AGSM|57956|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:55 PM",
+      "GKCP|4621|20261106|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "01:00 PM",
         "date": "20261106",
-        "time_code": "1255",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
+        "time_code": "1300",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
+        "status": "3"
       },
-      "AGSM|57957|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:55 PM",
+      "GKCP|4622|20261106|LOUNGE 1": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "11:20 PM",
         "date": "20261106",
-        "time_code": "1555",
-        "cat": "DIAMOND",
-        "price": "183.00",
+        "time_code": "2320",
+        "cat": "LOUNGE 1",
+        "price": "190.00",
         "status": "3"
       },
-      "AGSM|57957|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:55 PM",
+      "GKCP|4622|20261106|SIGNATURE CLASS": {
+        "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
+        "time": "11:20 PM",
         "date": "20261106",
-        "time_code": "1555",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57958|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:00 PM",
-        "date": "20261106",
-        "time_code": "1900",
-        "cat": "DIAMOND",
-        "price": "183.00",
+        "time_code": "2320",
+        "cat": "SIGNATURE CLASS",
+        "price": "190.00",
         "status": "3"
-      },
-      "AGSM|57958|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:00 PM",
-        "date": "20261106",
-        "time_code": "1900",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58048|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:20 PM",
-        "date": "20261106",
-        "time_code": "1920",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58048|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:20 PM",
-        "date": "20261106",
-        "time_code": "1920",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57959|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:00 PM",
-        "date": "20261106",
-        "time_code": "2200",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57959|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:00 PM",
-        "date": "20261106",
-        "time_code": "2200",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58049|20261106|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:30 PM",
-        "date": "20261106",
-        "time_code": "2230",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58049|20261106|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:30 PM",
-        "date": "20261106",
-        "time_code": "2230",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "ACON|48423|20261106|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "10:15 AM",
-        "date": "20261106",
-        "time_code": "1015",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "ACON|48423|20261106|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "10:15 AM",
-        "date": "20261106",
-        "time_code": "1015",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "ACON|48424|20261106|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "01:20 PM",
-        "date": "20261106",
-        "time_code": "1320",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "ACON|48424|20261106|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "01:20 PM",
-        "date": "20261106",
-        "time_code": "1320",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "ACON|48425|20261106|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "04:30 PM",
-        "date": "20261106",
-        "time_code": "1630",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "ACON|48425|20261106|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "04:30 PM",
-        "date": "20261106",
-        "time_code": "1630",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "ACON|48426|20261106|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "07:45 PM",
-        "date": "20261106",
-        "time_code": "1945",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "ACON|48426|20261106|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "07:45 PM",
-        "date": "20261106",
-        "time_code": "1945",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "ACON|48427|20261106|DIAMOND": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "10:55 PM",
-        "date": "20261106",
-        "time_code": "2255",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "ACON|48427|20261106|PEARL": {
-        "venue": "AGS Cinemas OMR: Navlur",
-        "time": "10:55 PM",
-        "date": "20261106",
-        "time_code": "2255",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58106|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:30 AM",
-        "date": "20261107",
-        "time_code": "0630",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58106|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "06:30 AM",
-        "date": "20261107",
-        "time_code": "0630",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58115|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:20 AM",
-        "date": "20261107",
-        "time_code": "0720",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58115|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:20 AM",
-        "date": "20261107",
-        "time_code": "0720",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58050|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:15 AM",
-        "date": "20261107",
-        "time_code": "0915",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58050|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "09:15 AM",
-        "date": "20261107",
-        "time_code": "0915",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57960|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:00 AM",
-        "date": "20261107",
-        "time_code": "1000",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57960|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:00 AM",
-        "date": "20261107",
-        "time_code": "1000",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57921|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:20 AM",
-        "date": "20261107",
-        "time_code": "1020",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57921|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:20 AM",
-        "date": "20261107",
-        "time_code": "1020",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58051|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:20 PM",
-        "date": "20261107",
-        "time_code": "1220",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58051|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:20 PM",
-        "date": "20261107",
-        "time_code": "1220",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57961|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:55 PM",
-        "date": "20261107",
-        "time_code": "1255",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57961|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "12:55 PM",
-        "date": "20261107",
-        "time_code": "1255",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57962|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:55 PM",
-        "date": "20261107",
-        "time_code": "1555",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57962|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "03:55 PM",
-        "date": "20261107",
-        "time_code": "1555",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57963|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:00 PM",
-        "date": "20261107",
-        "time_code": "1900",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57963|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:00 PM",
-        "date": "20261107",
-        "time_code": "1900",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58052|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:20 PM",
-        "date": "20261107",
-        "time_code": "1920",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58052|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "07:20 PM",
-        "date": "20261107",
-        "time_code": "1920",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|57964|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:05 PM",
-        "date": "20261107",
-        "time_code": "2205",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|57964|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:05 PM",
-        "date": "20261107",
-        "time_code": "2205",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
-      },
-      "AGSM|58053|20261107|DIAMOND": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:30 PM",
-        "date": "20261107",
-        "time_code": "2230",
-        "cat": "DIAMOND",
-        "price": "183.00",
-        "status": "3"
-      },
-      "AGSM|58053|20261107|PEARL": {
-        "venue": "AGS Cinemas: Maduravoyal",
-        "time": "10:30 PM",
-        "date": "20261107",
-        "time_code": "2230",
-        "cat": "PEARL",
-        "price": "54.00",
-        "status": "0"
       }
     },
     "dates": {
