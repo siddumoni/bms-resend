@@ -2632,7 +2632,7 @@
         "time_code": "1640",
         "cat": "BUDGET",
         "price": "54.35",
-        "status": "1"
+        "status": "0"
       },
       "PVPZ|40615|20261106|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -2902,7 +2902,7 @@
         "time_code": "1615",
         "cat": "BUDGET",
         "price": "54.35",
-        "status": "2"
+        "status": "1"
       },
       "PVPZ|40634|20261107|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
