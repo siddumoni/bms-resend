@@ -2506,7 +2506,7 @@
         "time_code": "1635",
         "cat": "SIGNATURE CLASS",
         "price": "190.00",
-        "status": "3"
+        "status": "2"
       },
       "GKCP|4622|20261106|LOUNGE 1": {
         "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
@@ -2542,7 +2542,7 @@
         "time_code": "0620",
         "cat": "BUDGET",
         "price": "54.35",
-        "status": "0"
+        "status": "1"
       },
       "PVPZ|40728|20261106|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
