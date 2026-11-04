@@ -2461,7 +2461,7 @@
         "time_code": "0925",
         "cat": "LOUNGE 1",
         "price": "190.00",
-        "status": "1"
+        "status": "0"
       },
       "GKCP|4637|20261106|SIGNATURE CLASS": {
         "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
@@ -2515,7 +2515,7 @@
         "time_code": "2320",
         "cat": "LOUNGE 1",
         "price": "190.00",
-        "status": "1"
+        "status": "0"
       },
       "GKCP|4622|20261106|SIGNATURE CLASS": {
         "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
@@ -2524,7 +2524,7 @@
         "time_code": "2320",
         "cat": "SIGNATURE CLASS",
         "price": "190.00",
-        "status": "2"
+        "status": "1"
       },
       "PVPZ|40612|20261106|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -2848,7 +2848,7 @@
         "time_code": "1000",
         "cat": "BUDGET",
         "price": "54.35",
-        "status": "1"
+        "status": "0"
       },
       "PVPZ|40623|20261107|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
@@ -2956,7 +2956,7 @@
         "time_code": "2000",
         "cat": "BUDGET",
         "price": "54.35",
-        "status": "2"
+        "status": "1"
       },
       "PVPZ|40626|20261107|ELITE": {
         "venue": "PVR: Palazzo, The Nexus Vijaya Mall",
