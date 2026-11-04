@@ -2956,7 +2956,7 @@
         "time_code": "2325",
         "cat": "BUDGET",
         "price": "54.35",
-        "status": "2"
+        "status": "1"
       },
       "GKCP|4644|20261107|LOUNGE 1": {
         "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
@@ -3055,7 +3055,7 @@
         "time_code": "2359",
         "cat": "LOUNGE 1",
         "price": "190.00",
-        "status": "2"
+        "status": "3"
       },
       "GKCP|4643|20261107|SIGNATURE CLASS": {
         "venue": "GK Cinemas RGB + Laser SRL 4D: Porur",
